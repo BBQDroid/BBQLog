@@ -480,7 +480,7 @@
 	</oem>
 	<oem name="Samsung">
 		<device>
-			<name>Captivate (AT&T)</name>
+			<name>Captivate (AT&amp;T)</name>
 			<model>Captivate</model>
 			<image>images/devices/samsung_i9100.jpg</image>
 			<code>captivatemtd</code>
@@ -543,8 +543,8 @@
 			</repos>
 		</device>
 		<device>
-			<name>Galaxy S II (AT&T)</name>
-			<model>GT-I9100 (AT&T)</model>
+			<name>Galaxy S II (AT&amp;T)</name>
+			<model>GT-I9100 (AT&amp;T)</model>
 			<image>images/devices/samsung_i9100.jpg</image>
 			<code>galaxys2att</code>
 			<repos>
@@ -570,7 +570,7 @@
 			</repos>
 		</device>
 		<device>
-			<name>Galaxy S II (AT&T)</name>
+			<name>Galaxy S II (AT&amp;T)</name>
 			<model>SGH-I777</model>
 			<image>images/devices/samsung_i9100.jpg</image>
 			<code>i777</code>
@@ -656,7 +656,7 @@
 			<image>images/devices/samsung_i9100.jpg</image>
 			<code>p1n</code>
 			<repos>
-				<git name="android_device_samsung_p1"n />
+				<git name="android_device_samsung_p1n" />
 			</repos>
 		</device>
 		<device>
