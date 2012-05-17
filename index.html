@@ -1,0 +1,69 @@
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" /> 
+		<base href="/log/" />
+		<title>BBQLog - CyanogenMod Changelog</title>
+
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/template.css" type="text/css" media="screen" />
+
+	</head>
+<body>
+<div class="navbar" style="padding-bottom:8px">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="/"><img src="images/logo.png"></img></a>
+			<div class="nav-collapse">
+				<ul class="nav" id="nav_DevicesList">
+				</ul>
+			</div><!--/.nav-collapse -->
+			
+			<div class="nav-collapse pull-right">
+				<ul class="nav">
+					<li class="dropdown">
+				    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">CM Version<b class="caret"></b></a>
+				    	<ul class="dropdown-menu" style="width:250px">
+				      		<li><a href="#"><img src="images/cm7_logo.png" style="float:left;height:35px;margin-right:10px" /><strong>CyanogenMod 7</strong><br />(Gingerbread)</a></li>
+				      		<li><a href="#"><img src="images/cm9_logo.png" style="float:left;height:35px;margin-right:10px" /><strong>CyanogenMod 9</strong><br />(Ice Cream Sandwidch)</a></li>
+
+				    	</ul>
+				  	</li>
+					<li><a href="settings">Settings</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span3">
+			<ul class="nav nav-list" id="log_NightliesList">
+				<li class="nav-header">Loading nightlies…</li>
+			</ul>
+		</div>
+		<div class="span9">
+			<h2 class="page-header">Changes in <span id="log_NightlyTitle">the process of being loaded...</span></h1>
+			<ul class="nav nav-list" id="log_Changeset"></ul>
+		</div>
+	</div>
+	<hr>
+	<footer>
+		<p>&copy; BBQDroid 2012</p>
+	</footer>
+</div><!--/.fluid-container-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.js"></script>
+<script type="text/javascript" src="scripts/log.js"></script>
+</body>
+</html>
