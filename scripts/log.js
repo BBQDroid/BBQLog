@@ -28,7 +28,7 @@ var global_PreviousDevice = "";
 
 function updateBodyData() {
 	var url = window.location.hash.substring(1);
-	var params = url.split("-");
+	var params = url.split("/");
 	
 	console.log("Params: " + params[0] + " - " + params[1]);
 	
@@ -62,7 +62,7 @@ function loadDevices() {
 			
 			// for each device
 			$(this).find("device").each(function() {
-				htmlAppend += ('<li><a href="#' + $(this).children("code").text() + '-cm9-next"><img src="' + $(this).children("image").text() + '" style="float:left;height:35px;margin-right:10px" /><strong>' + $(this).children("name").text() + '</strong><br />'+$(this).children("model").text()+'</a></li>');
+				htmlAppend += ('<li><a href="#' + $(this).children("code").text() + '/cm9/next"><img src="' + $(this).children("image").text() + '" style="float:left;height:35px;margin-right:10px" /><strong>' + $(this).children("name").text() + '</strong><br />'+$(this).children("model").text()+'</a></li>');
 				
 				var code = $(this).children("code").text();
 				global_DeviceCodeRepos[code] = [];
@@ -111,7 +111,7 @@ function updateListNightlies(_device, _version) {
 		global_NightliesCodeToPreviousDate.length = 0;		// this sounds a bit haxxy, but it's the easiest way.
 		
 		// add "next nightly" and "downloads" option
-		$("#log_NightliesList").append('<li><a href="#'+_device+'-'+_version+'-next">Next nightly</a></li><li><a href="http://get.cm/?device='+_device+'" target="_blank">Downloads</a></li>');
+		$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/next">Next nightly</a></li><li><a href="http://get.cm/?device='+_device+'" target="_blank">Downloads</a></li>');
 		
 		var currMonth = "";
 		var lastNightlyCode = "";
@@ -127,7 +127,7 @@ function updateListNightlies(_device, _version) {
 			}
 			
 			
-			$("#log_NightliesList").append('<li><a href="#'+_device+'-'+_version+'-'+date("Ymd",nightlyTime)+'">' + date('l dS', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
+			$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+date("Ymd",nightlyTime)+'">' + date('l dS', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
 			
 			if (nightlyTime > global_LastNightlyDate)
 				global_LastNightlyDate = nightlyTime;
