@@ -2,11 +2,6 @@
  *  Initialization
  */
 $(function() {
-	// Load body, if none go to home
-	if (window.location.hash == "" || window.location.hash == "#") {
-		window.location.hash = "#";
-	}
-	
 	loadDevices();
 	
 	updateBodyData();
@@ -18,26 +13,42 @@ $(function() {
 		}
 	});
 	$(window).scroll(function(){
-		if  ($(window).scrollTop() == $("#log_Changeset").height() - $(window).height()){
-			
+		// if the bottom of the changeset div is showing start loading the new changes
+		if ($(window).scrollTop() + $(window).height() >= $("#log_Changeset").offset().top + $("#log_Changeset").height() - 250) {
+			if (global_ChangesetHasMore) {
+				updateChangeset(global_CurrentDevice, global_CurrentVersion, global_CurrentDate, undefined, true, global_ChangesetMoreSortCode);
+			}
 		}
 	});
 });
 
-var global_PreviousDevice = "";
+var global_CurrentDevice = "";
+var global_CurrentVersion = "";
+var global_CurrentDate = "";
 
 function updateBodyData() {
 	var url = window.location.hash.substring(1);
 	var params = url.split("/");
 	
-	console.log("Params: " + params[0] + " - " + params[1]);
-	
-	if (global_PreviousDevice != params[0])
+	if (global_CurrentDevice != params[0]) {
 		updateListNightlies(params[0], params[1]);
-		
-	updateChangeset(params[0], params[1], params[2]);
-	
-	global_PreviousDevice = params[0];
+	}
+
+	// scroll up if needed (to avoid loading changes down to the current scroll)
+	if ($(window).scrollTop() > 0) {
+		$('body').animate({scrollTop : 0}, 'fast', function() {
+			updateChangeset(params[0], params[1], params[2]);
+		});
+		$('#log_Changeset').fadeOut('fast', function() {
+			$(this).fadeIn(0);
+		});
+	} else {
+		updateChangeset(params[0], params[1], params[2]);
+	}
+
+	global_CurrentDevice = params[0];
+	global_CurrentVersion = params[1];
+	global_CurrentDate = params[2];
 }
 
 
@@ -52,17 +63,17 @@ function loadDevices() {
 		url:"devices.xml",
 		dataType:"xml"})
 	.done(function(data) {
-		console.log(data);
-		
+		$("#nav_DevicesList").html('');
 		$(data).find("oem").each(function() {
-			console.log("entering oem");
-			
-			// add OEM tab
-			var htmlAppend = '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">' + $(this).attr("name") + '</a><ul class="dropdown-menu" style="width:250px">';
+
+			var oem = $('<li class="dropdown"></li>');
+			$('<a class="dropdown-toggle" data-toggle="dropdown">' + $(this).attr("name") + '</a>').appendTo(oem);
+
+			var devices = $('<ul class="dropdown-menu" style="width:250px"></ul>').appendTo(oem);
 			
 			// for each device
 			$(this).find("device").each(function() {
-				htmlAppend += ('<li><a href="#' + $(this).children("code").text() + '/cm9/next"><img src="' + $(this).children("image").text() + '" style="float:left;height:35px;margin-right:10px" /><strong>' + $(this).children("name").text() + '</strong><br />'+$(this).children("model").text()+'</a></li>');
+				var device = $('<li><a href="#' + $(this).children("code").text() + '/cm9/next"><img src="' + $(this).children("image").text() + '" style="float:left;height:35px;margin-right:10px" /><strong>' + $(this).children("name").text() + '</strong><br />'+$(this).children("model").text()+' / '+$(this).children("code").text()+'</a></li>').appendTo(devices);
 				
 				var code = $(this).children("code").text();
 				global_DeviceCodeRepos[code] = [];
@@ -72,11 +83,8 @@ function loadDevices() {
 					global_DeviceCodeRepos[code].push($(this).attr("name"));
 				});
 			});
-
-			// eof
-			htmlAppend += ("</ul></li>");
 			
-			$("#nav_DevicesList").append(htmlAppend);
+			$("#nav_DevicesList").append(oem);
 		});
 	});
 }
@@ -115,9 +123,16 @@ function updateListNightlies(_device, _version) {
 		
 		var currMonth = "";
 		var lastNightlyCode = "";
+
+		var amount = 9;
 		
 		// for each nightly
 		$(xmlParse).find('item').each(function() {
+			if (amount <= 0) {
+				return;
+			}
+			amount--;
+
 			var nightlyTime = strtotime($(this).children("pubDate").text());
 			
 			// if the current month changes, show a new header line
@@ -146,14 +161,24 @@ function updateListNightlies(_device, _version) {
 		
 }
 
-function updateChangeset(_device, _version, _date) {
+var global_ChangesetHasMore = false;
+var global_ChangesetMoreSortCode = '';
+
+function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) {
+	_amount = typeof _amount !== 'undefined' ? _amount : 25;
+	_append = typeof _append !== 'undefined' ? _append : false;
+	_sortCode = typeof _sortCode !== 'undefined' ? _sortCode : '';
+
 	if (global_NightliesListReady == false && _device != '') {
 		// the nightlies list isn't ready, which will fail ageQuery below. We delay this function
 		console.log("Nightlies not ready, delaying changeset");
 		$("#log_Changeset").html("<li><h6>Please wait while nightlies are being loaded…</h6></<li>");
-		setTimeout(function() { updateChangeset(_device,_version,_date) }, 500);
+		setTimeout(function() { updateChangeset(_device,_version,_date, _amount, _append, _sortCode) }, 500);
 		return;	
 	}
+
+	global_ChangesetHasMore = false;
+	global_ChangesetMoreSortCode = '';
 	
 	// if no device is set, show all latest changes. Else, show device+date
 	if (_device == '') {
@@ -163,7 +188,9 @@ function updateChangeset(_device, _version, _date) {
 	}
 	
 	
-	$("#log_Changeset").html("<li><h6>Please wait while changes are being loaded…</h6></<li>");
+	if (!_append) {
+		$("#log_Changeset").html("<li><h6>Please wait while changes are being loaded…</h6></<li>");
+	}
 	
 	
 	// compute age for old nightlies
@@ -174,10 +201,12 @@ function updateChangeset(_device, _version, _date) {
 	}
 	
 	// load all changes from gerrit
-	$.getJSON("gerrit_proxy.php?url=/rpc/ChangeListService&params=" + encodeURI("status:merged branch:ics " + ageQuery), function(data) {
-		// clear current changesets
-		$("#log_Changeset").html('');
-		
+	$.getJSON("gerrit_proxy.php?url=/rpc/ChangeListService&params=" + encodeURI("status:merged branch:ics " + ageQuery) + "&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
+		if (!_append) {
+			// clear current changesets
+			$("#log_Changeset").html('');
+		}
+
 		console.log("Changeset contains " + data.result.changes.length + " elements.");
 		
 		for (var i = 0; i < data.result.changes.length; i++) {
@@ -200,9 +229,9 @@ function updateChangeset(_device, _version, _date) {
 			
 			// set a specific style for translation
 			var itemStyle = "padding-left:10px;";
-			if (data.result.changes[i].subject.indexOf("translat") != -1 || data.result.changes[i].subject.indexOf("Translat") != -1)
+			if (data.result.changes[i].subject.indexOf("translat") != -1 || data.result.changes[i].subject.indexOf("Translat") != -1) {
 				itemStyle +="opacity:0.5;border-left:2px solid #9933CC;";
-			else {
+			} else {
 				// if it's a repo for the device, put it in a special color
 				var found = false;
 				if (global_DeviceCodeRepos[_device] != undefined) {
@@ -223,9 +252,13 @@ function updateChangeset(_device, _version, _date) {
 			
 			$("#log_Changeset").append('<li style="' + itemStyle + '"><a href="javascript:;" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name.substring(12) + '</span></h6></a></li>'); 
 			
-			// we download a max of 100 elements (0 => 99)
-			if (i == 99) {
-				$("#log_Changeset").append('<li><h6>This changeset has been truncated as it seems to contain more than 100 elements.</h6></li>');
+			if (i == _amount - 1) {
+				global_ChangesetHasMore = true;
+				global_ChangesetMoreSortCode = data.result.changes[i].sortKey;
+				// if the bottom of the changeset div is already showing, start loading the new changes
+				if ($(window).scrollTop() + $(window).height() >= $("#log_Changeset").offset().top + $("#log_Changeset").height() - 250) {
+					updateChangeset(_device, _version, _date, _amount, true, global_ChangesetMoreSortCode);
+				}
 				break;
 			}
 		}

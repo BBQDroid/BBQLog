@@ -1,10 +1,18 @@
 <?php
 
-$amount = 100;
+if (!isset($_GET['params']) || !isset($_GET['url'])) {
+	return;
+}
 
-$data_string = json_encode(array("jsonrpc" => "2.0", "method" => "allQueryNext", "params" => array($_GET['params'], "z", $amount), "id" => 1));
+$params = array($_GET['params']);
+if (!empty($_GET['sortCode'])) {
+	array_push($params, $_GET['sortCode']);
+} else {
+	array_push($params, "z");
+}
+array_push($params, $_GET['amount']);
 
-//die('http://review.cyanogenmod.com' . '/gerrit' . $_GET['url']);
+$data_string = json_encode(array("jsonrpc" => "2.0", "method" => "allQueryNext", "params" => $params, "id" => 1));
 
 $ch = curl_init('http://review.cyanogenmod.com' . '/gerrit' . $_GET['url']);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
