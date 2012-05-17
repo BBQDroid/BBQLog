@@ -39,31 +39,496 @@
 				<git name="android_device_htc_bravo" />
 			</repos>
 		</device>
+		<device>
+			<name>Desire CDMA</name>
+			<model>Bravo CDMA</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>bravoc</code>
+			<repos>
+				<git name="android_device_htc_bravoc" />
+			</repos>
+		</device>
+		<device>
+			<name>Wildfire</name>
+			<model>Buzz</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>buzz</code>
+			<repos>
+				<git name="android_device_htc_buzz" />
+			</repos>
+		</device>
+		<device>
+			<name>Tattoo</name>
+			<model>click</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>click</code>
+			<repos>
+				<git name="android_device_htc_click" />
+			</repos>
+		</device>
+		<device>
+			<name>Eris</name>
+			<model>Desirec</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>desirec</code>
+			<repos>
+				<git name="android_device_htc_desirec" />
+			</repos>
+		</device>
+		<device>
+			<name>myTouch 4G Slide</name>
+			<model>Doubleshot</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>doubleshot</code>
+			<repos>
+				<git name="android_device_htc_doubleshot" />
+			</repos>
+		</device>
+		<device>
+			<name>Dream / Magic</name>
+			<model>Sapphire</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>dream_sapphire</code>
+			<repos>
+				<git name="android_device_htc_dream_sapphire" />
+			</repos>
+		</device>
+		<device>
+			<name>myTouch 3G Slide</name>
+			<model>Espresso</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>espresso</code>
+			<repos>
+				<git name="android_device_htc_espresso" />
+			</repos>
+		</device>
+		<device>
+			<name>myTouch 4G Panache</name>
+			<model>Glacier</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>glacier</code>
+			<repos>
+				<git name="android_device_htc_glacier" />
+			</repos>
+		</device>
+		<device>
+			<name>Hero</name>
+			<model>Hero</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>hero</code>
+			<repos>
+				<git name="android_device_htc_hero" />
+			</repos>
+		</device>
+		<device>
+			<name>Hero CDMA</name>
+			<model>Hero CDMA</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>heroc</code>
+			<repos>
+				<git name="android_device_htc_heroc" />
+			</repos>
+		</device>
+		<device>
+			<name>Incredible</name>
+			<model>Inc</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>inc</code>
+			<repos>
+				<git name="android_device_htc_inc" />
+			</repos>
+		</device>
+		<device>
+			<name>Legend</name>
+			<model>Legend</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>legend</code>
+			<repos>
+				<git name="android_device_htc_legend" />
+			</repos>
+		</device>
+		<device>
+			<name>Aria</name>
+			<model>Liberty</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>liberty</code>
+			<repos>
+				<git name="android_device_htc_liberty" />
+			</repos>
+		</device>
+		<device>
+			<name>Nexus One</name>
+			<model>Passion</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>passion</code>
+			<repos>
+				<git name="android_device_htc_passion" />
+			</repos>
+		</device>
+		<device>
+			<name>Sensation</name>
+			<model>Pyramid</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>pyramid</code>
+			<repos>
+				<git name="android_device_htc_pyramid" />
+			</repos>
+		</device>
+		<device>
+			<name>Desire S</name>
+			<model>Saga</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>saga</code>
+			<repos>
+				<git name="android_device_htc_saga" />
+			</repos>
+		</device>
+		<device>
+			<name>Evo Shift 4G</name>
+			<model>Speedy</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>speedy</code>
+			<repos>
+				<git name="android_device_htc_speedy" />
+			</repos>
+		</device>
+		<device>
+			<name>EVO 4G</name>
+			<model>Supersonic</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>supersonic</code>
+			<repos>
+				<git name="android_device_htc_supersonic" />
+			</repos>
+		</device>
+		<device>
+			<name>Desire Z</name>
+			<model>vision</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>vision</code>
+			<repos>
+				<git name="android_device_htc_vision" />
+			</repos>
+		</device>
+		<device>
+			<name>Incredible S</name>
+			<model>vivo</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>vivo</code>
+			<repos>
+				<git name="android_device_htc_vivo" />
+			</repos>
+		</device>
+		<device>
+			<name>Incredible 2</name>
+			<model>Vivow</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>vivow</code>
+			<repos>
+				<git name="android_device_htc_vivow" />
+			</repos>
+		</device>
 	</oem>
 	<oem name="Huawei">
-		
+		<device>
+			<name>Ideos</name>
+			<model>U8150</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>u8150</code>
+			<repos>
+				<git name="android_device_huawei_u8150" />
+			</repos>
+		</device>
+		<device>
+			<name>Pulse (T-Mobile)</name>
+			<model>U8220</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>u8220</code>
+			<repos>
+				<git name="android_device_huawei_u8220" />
+			</repos>
+		</device>
 	</oem>
 	<oem name="LGE">
-		
+		<device>
+			<name>Optimus Pro</name>
+			<model>C660</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>c660</code>
+			<repos>
+				<git name="android_device_lge_c660" />
+			</repos>
+		</device>
+		<device>
+			<name>Optimus Hub</name>
+			<model>E510</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>e510</code>
+			<repos>
+				<git name="android_device_lge_e510" />
+			</repos>
+		</device>
+		<device>
+			<name>Optimus Sol</name>
+			<model>E730</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>e730</code>
+			<repos>
+				<git name="android_device_lge_e730" />
+			</repos>
+		</device>
+		<device>
+			<name>myTouch</name>
+			<model>E739</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>e739</code>
+			<repos>
+				<git name="android_device_lge_e739" />
+			</repos>
+		</device>
+		<device>
+			<name>Optimus One</name>
+			<model>P500</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p500</code>
+			<repos>
+				<git name="android_device_lge_p500" />
+			</repos>
+		</device>
+		<device>
+			<name>Optimus 3D</name>
+			<model>P920</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p920</code>
+			<repos>
+				<git name="android_device_lge_p920" />
+			</repos>
+		</device>
+		<device>
+			<name>Thrill 4G</name>
+			<model>P925</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p925</code>
+			<repos>
+				<git name="android_device_lge_p925" />
+			</repos>
+		</device>
+		<device>
+			<name>Optimus LTE</name>
+			<model>P930</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p930</code>
+			<repos>
+				<git name="android_device_lge_p930" />
+			</repos>
+		</device>
+		<device>
+			<name>Optimus Black</name>
+			<model>P970</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p970</code>
+			<repos>
+				<git name="android_device_lge_p970" />
+			</repos>
+		</device>
+		<device>
+			<name>Optimus 2X</name>
+			<model>P990</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p990</code>
+			<repos>
+				<git name="android_device_lge_p990" />
+			</repos>
+		</device>
+		<device>
+			<name>G2x</name>
+			<model>P999</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p999</code>
+			<repos>
+				<git name="android_device_lge_p999" />
+			</repos>
+		</device>
 	</oem>
 	<oem name="Motorola">
-		
+		<device>
+			<name>Droid 2 (CDMA)</name>
+			<model>Droid 2</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>cdma_droid2</code>
+			<repos>
+				<git name="android_device_motorola_cdma_droid2" />
+			</repos>
+		</device>
+		<device>
+			<name>Droid 2 (CDMA) Global</name>
+			<model>Droid 2 Global</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>cdma_droid2we</code>
+			<repos>
+				<git name="android_device_motorola_cdma_droid2we" />
+			</repos>
+		</device>
+		<device>
+			<name>Droid X (CDMA)</name>
+			<model>Droid X</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>cdma_shadow</code>
+			<repos>
+				<git name="android_device_motorola_cdma_shadow" />
+			</repos>
+		</device>
+		<device>
+			<name>Droid 2</name>
+			<model>Droid 2</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>droid2</code>
+			<repos>
+				<git name="android_device_motorola_droid2" />
+			</repos>
+		</device>
+		<device>
+			<name>Droid 2 Global</name>
+			<model>Droid 2</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>droid2we</code>
+			<repos>
+				<git name="android_device_motorola_droid2we" />
+			</repos>
+		</device>
+		<device>
+			<name>Defy</name>
+			<model>Jordan</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>defy</code>
+			<repos>
+				<git name="android_device_motorola_defy" />
+			</repos>
+		</device>
+		<device>
+			<name>Cliq</name>
+			<model>Morisson</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>morrison</code>
+			<repos>
+				<git name="android_device_motorola_morrison" />
+			</repos>
+		</device>
+		<device>
+			<name>Backflip</name>
+			<model>Motus</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>motus</code>
+			<repos>
+				<git name="android_device_motorola_motus" />
+			</repos>
+		</device>
+		<device>
+			<name>Atrix 4G</name>
+			<model>Olympus</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>olympus</code>
+			<repos>
+				<git name="android_device_motorola_olympus" />
+			</repos>
+		</device>
+		<device>
+			<name>Droid X</name>
+			<model>shadow</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>shadow</code>
+			<repos>
+				<git name="android_device_motorola_shadow" />
+			</repos>
+		</device>
+		<device>
+			<name>Droid</name>
+			<model>sholes</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>sholes</code>
+			<repos>
+				<git name="android_device_motorola_sholes" />
+			</repos>
+		</device>
+		<device>
+			<name>Xoom (Verizon)</name>
+			<model>Stingray</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>stingray</code>
+			<repos>
+				<git name="android_device_motorola_stingray" />
+			</repos>
+		</device>
+		<device>
+			<name>Xoom (Wi-Fi)</name>
+			<model>Wingray</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>wingray</code>
+			<repos>
+				<git name="android_device_motorola_wingray" />
+			</repos>
+		</device>
+		<device>
+			<name>Cliq XT</name>
+			<model>Droid 2</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>Zeppelin</code>
+			<repos>
+				<git name="android_device_motorola_zeppelin" />
+			</repos>
+		</device>
 	</oem>
 	<oem name="Samsung">
 		<device>
-			<name>Galaxy S</name>
-			<model>GT-I9000 / aries</model>
+			<name>Captivate (AT&T)</name>
+			<model>Captivate</model>
 			<image>images/devices/samsung_i9100.jpg</image>
-			<code>aries</code>
+			<code>captivatemtd</code>
 			<repos>
-				<git name="android_device_samsung_aries" />
+				<git name="android_device_samsung_captivatemtd" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy Ace</name>
+			<model>Cooper</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>cooper</code>
+			<repos>
+				<git name="android_device_samsung_cooper" />
 			</repos>
 		</device>
 		<device>
 			<name>Nexus S</name>
-			<model>GT-xxxx / crespo</model>
+			<model>Crespo</model>
 			<image>images/devices/samsung_i9100.jpg</image>
 			<code>crespo</code>
+			<repos>
+				<git name="android_device_samsung_crespo" />
+			</repos>
+		</device>
+		<device>
+			<name>Nexus S 4G</name>
+			<model>Crespo 4G</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>crespo4g</code>
+			<repos>
+				<git name="android_device_samsung_crespo4g" />
+			</repos>
+		</device>
+		<device>
+			<name>Epic 4G</name>
+			<model>SPH-D700</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>epicmtd</code>
+			<repos>
+				<git name="android_device_samsung_crespo" />
+			</repos>
+		</device>
+		<device>
+			<name>Fascinate (Verizon)</name>
+			<model>Fascinate</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>fascinatemtd</code>
 			<repos>
 				<git name="android_device_samsung_crespo" />
 			</repos>
@@ -78,8 +543,44 @@
 			</repos>
 		</device>
 		<device>
+			<name>Galaxy S II (AT&T)</name>
+			<model>GT-I9100 (AT&T)</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>galaxys2att</code>
+			<repos>
+				<git name="android_device_samsung_galaxys2att" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy S</name>
+			<model>GT-I9000B</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>galaxysbmtd</code>
+			<repos>
+				<git name="android_device_samsung_galaxysbmtd" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy S</name>
+			<model>GT-I9000</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>galaxysmtd</code>
+			<repos>
+				<git name="android_device_samsung_galaxysmtd" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy S II (AT&T)</name>
+			<model>SGH-I777</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>i777</code>
+			<repos>
+				<git name="android_device_samsung_i777" />
+			</repos>
+		</device>
+		<device>
 			<name>Galaxy Nexus GSM</name>
-			<model>GT-I9250 / maguro</model>
+			<model>GT-I9250 / Maguro</model>
 			<image>images/devices/samsung_i9100.jpg</image>
 			<code>maguro</code>
 			<repos>
@@ -88,7 +589,7 @@
 		</device>
 		<device>
 			<name>Galaxy Nexus CDMA</name>
-			<model>GT-I9250 / toro</model>
+			<model>GT-I9250 / Toro</model>
 			<image>images/devices/samsung_i9100.jpg</image>
 			<code>toro</code>
 			<repos>
@@ -113,8 +614,98 @@
 				<git name="android_device_samsung_n7000" />
 			</repos>
 		</device>
+		<device>
+			<name>Mesmerize</name>
+			<model>Mesmerize</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>mesmerizemtd</code>
+			<repos>
+				<git name="android_device_samsung_mesmerizemtd" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy Tab 7</name>
+			<model>P1</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p1</code>
+			<repos>
+				<git name="android_device_samsung_p1" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy Tab 7 CDMA</name>
+			<model>P1 CDMA</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p1c</code>
+			<repos>
+				<git name="android_device_samsung_p1c" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy Tab 7</name>
+			<model>P1 L</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p1l</code>
+			<repos>
+				<git name="android_device_samsung_p1l" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy Tab 7</name>
+			<model>P1 N</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p1n</code>
+			<repos>
+				<git name="android_device_samsung_p1"n />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy Tab 10.1 (T-Mobile)</name>
+			<model>P4 (t-mobile)</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p4tmo</code>
+			<repos>
+				<git name="android_device_samsung_p4tmo" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy Tab 10.1 (Wi-Fi)</name>
+			<model>P1</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>p4wifi</code>
+			<repos>
+				<git name="android_device_samsung_p4wifi" />
+			</repos>
+		</device>
+		<device>
+			<name>Showcase</name>
+			<model>Showcase</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>showcasemtd</code>
+			<repos>
+				<git name="android_device_samsung_showcasemtd" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy Mini</name>
+			<model>Tass</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>tass</code>
+			<repos>
+				<git name="android_device_samsung_tass" />
+			</repos>
+		</device>
+		<device>
+			<name>Vibrant (T-Mobile)</name>
+			<model>Vibrant</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>vibrantmtd</code>
+			<repos>
+				<git name="android_device_samsung_vibrantmtd" />
+			</repos>
+		</device>
 	</oem>
-	<oem name="Sony">
+	<oem name="Sony (SEMC)">
 		<device>
 			<name>Xperia Arc</name>
 			<model>Anzu</model>
@@ -124,15 +715,141 @@
 				<git name="android_device_semc_anzu" />
 			</repos>
 		</device>
+		<device>
+			<name>Walkman</name>
+			<model>Coconut</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>coconut</code>
+			<repos>
+				<git name="android_device_semc_coconut" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia X10</name>
+			<model>ES209ra</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>es209ra</code>
+			<repos>
+				<git name="android_device_semc_es209ra" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia Neo</name>
+			<model>Hallon</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>hallon</code>
+			<repos>
+				<git name="android_device_semc_hallon" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia Pro</name>
+			<model>Iyokan</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>iyokan</code>
+			<repos>
+				<git name="android_device_semc_iyokan" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia Mini Pro</name>
+			<model>Mango</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>mango</code>
+			<repos>
+				<git name="android_device_semc_mango" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia X10 Mini Pro</name>
+			<model>Mimmi</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>mimmi</code>
+			<repos>
+				<git name="android_device_semc_mimmi" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia X10 Mini</name>
+			<model>Robyn</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>robyn</code>
+			<repos>
+				<git name="android_device_semc_robyn" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia Active</name>
+			<model>Satsuma</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>satsuma</code>
+			<repos>
+				<git name="android_device_semc_satsuma" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia X8</name>
+			<model>Shakira</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>shakira</code>
+			<repos>
+				<git name="android_device_semc_shakira" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia Mini</name>
+			<model>Smultron</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>smultron</code>
+			<repos>
+				<git name="android_device_semc_smultron" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia Ray</name>
+			<model>Urushi</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>urushi</code>
+			<repos>
+				<git name="android_device_semc_urushi" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia Play R800i</name>
+			<model>Zeus</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>zeus</code>
+			<repos>
+				<git name="android_device_semc_zeus" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia Play CDMA R800x</name>
+			<model>Zeusc</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>zeusc</code>
+			<repos>
+				<git name="android_device_semc_zeusc" />
+			</repos>
+		</device>
 	</oem>
 	<oem name="ZTE">
 		<device>
-			<name>Xperia Arc</name>
-			<model>Anzu</model>
+			<name>Blade</name>
+			<model>Blade</model>
 			<image>images/devices/samsung_i9100.jpg</image>
-			<code>anzu</code>
+			<code>blade</code>
 			<repos>
-				<git name="android_device_semc_anzu" />
+				<git name="android_device_zte_blade" />
+			</repos>
+		</device>
+		<device>
+			<name>V9</name>
+			<model>V9</model>
+			<image>images/devices/samsung_i9100.jpg</image>
+			<code>v9</code>
+			<repos>
+				<git name="android_device_zte_v9" />
 			</repos>
 		</device>
 	</oem>
