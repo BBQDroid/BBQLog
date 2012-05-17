@@ -580,7 +580,7 @@
 		</device>
 		<device>
 			<name>Galaxy Nexus GSM</name>
-			<model>GT-I9250 / Maguro</model>
+			<model>GT-I9250</model>
 			<image>images/devices/samsung_i9100.jpg</image>
 			<code>maguro</code>
 			<repos>
@@ -589,7 +589,7 @@
 		</device>
 		<device>
 			<name>Galaxy Nexus CDMA</name>
-			<model>GT-I9250 / Toro</model>
+			<model>GT-I9250</model>
 			<image>images/devices/samsung_i9100.jpg</image>
 			<code>toro</code>
 			<repos>
@@ -598,7 +598,7 @@
 		</device>
 		<device>
 			<name>Galaxy Nexus Sprint</name>
-			<model>GT-I9250 / toroplus</model>
+			<model>GT-I9250</model>
 			<image>images/devices/samsung_i9100.jpg</image>
 			<code>toroplus</code>
 			<repos>
