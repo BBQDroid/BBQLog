@@ -238,7 +238,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 				var found = false;
 				if (global_DeviceCodeRepos[_device] != undefined) {
 					for (var j = 0; j < global_DeviceCodeRepos[_device].length; j++) {
-						if (global_DeviceCodeRepos[_device][j] == data.result.changes[i].project.key.name.substring(12)) {
+						if (data.result.changes[i].project.key.name.indexOf(global_DeviceCodeRepos[_device][j]) != -1) {
 							found = true;
 							itemStyle += "border-left:2px solid #99CC00";
 							break;
@@ -252,7 +252,9 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 				}
 			}
 
-			$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="http://review.cyanogenmod.com/#/c/' + data.result.changes[i].id.id + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name.substring(12) + '</span></h6></a></li>'); 
+			// show only if it's not another device
+			if (_device == '' || found || data.result.changes[i].project.key.name.indexOf("android_device_") == -1)
+				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="http://review.cyanogenmod.com/#/c/' + data.result.changes[i].id.id + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name.substring(12) + '</span></h6></a></li>'); 
 			
 			if (i == _amount - 1) {
 				global_ChangesetHasMore = true;
