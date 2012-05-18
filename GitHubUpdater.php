@@ -33,7 +33,10 @@ $startTime = microtime(true);
 // Temp - Import tables
 actionStart("Starting repositories processing...");
 
-$repositories = mysql_query("SELECT DISTINCT * FROM repositories GROUP BY GitUsername,Repository;") or die(mysql_error());
+if (!empty($_GET['repo']))
+	$repositories = mysql_query("SELECT * FROM repositories WHERE Repository='".mysql_real_escape_string($_GET['repo'])."' ");
+else
+	$repositories = mysql_query("SELECT DISTINCT * FROM repositories GROUP BY GitUsername,Repository;") or die(mysql_error());
 
 while ($repo = mysql_fetch_assoc($repositories)) {
 	// load last commit of the branch
@@ -82,7 +85,7 @@ while ($repo = mysql_fetch_assoc($repositories)) {
 			$lastReached = false;
 			
 			foreach($commits_json as $commit) {
-				if ($commit['sha'] == $lastCommitDB) {
+				if ($commit['sha'] == $lastCommitDB || strtotime($commit['commit']['author']['date']) < time()-3600*24*31*4) { // max 4 months
 					$lastReached = true;
 					break;
 				}
@@ -103,14 +106,9 @@ while ($repo = mysql_fetch_assoc($repositories)) {
 	}  
 }
 
-actionDone("Commits updated");/*
-actionStart("Dumping commits...");
+actionDone("Commits updated");
 
-$commits = mysql_query("SELECT * FROM commits;")  or die(mysql_error());
-
-while ($commit = mysql_fetch_assoc($commits)) {
-  print_r($commit);
-}*/
-
-
+actionStart("Cleaning 4+months old commits");
+mysql_query("DELETE FROM commits WHERE CommitDate < '".date("Y-m-d H:i:s", time()-3600*24*31*4). "'");
+actionDone("Cleaned " . mysql_affected_rows() . " commits");
 ?>
