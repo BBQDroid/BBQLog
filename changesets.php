@@ -7,11 +7,29 @@ mysql_connect($CFG['SQL']['Host'], $CFG['SQL']['User'], $CFG['SQL']['Pass']);
 mysql_select_db($CFG['SQL']['DB']);
 
 if (!empty($_GET['sortCode']))
-	$commitDateClause = " AND CommitDate < '" . date("Y-m-d H:i:s", $_GET['sortCode']) . "' ";
+	$commitDateClause = " commits.CommitDate < '" . date("Y-m-d H:i:s", $_GET['sortCode']) . "' AND ";
 else
 	$commitDateClause = "";
 
-$commits = mysql_query("SELECT * FROM commits $commitDateClause AND GitUsername IN () ORDER BY CommitDate DESC LIMIT 30");
+$RomName = mysql_real_escape_string($_GET['RomName']);
+$RomVersion = mysql_real_escape_string($_GET['Version']);
+
+$commits = mysql_query("
+    SELECT * FROM (SELECT * FROM repositories WHERE IDRomVersion=
+    (
+        SELECT IDRomVersion FROM roms_versions WHERE VersionName='9' AND IDRom=
+        (
+            SELECT IDRom FROM roms WHERE Name='CyanogenMod' LIMIT 1
+        ) LIMIT 1
+    ) GROUP BY GitUsername) repos, commits
+    WHERE
+    $commitDateClause
+    commits.GitUsername=repos.GitUsername AND
+    commits.Repository=repos.Repository AND
+    commits.Branch=repos.Branch
+    ORDER BY CommitDate DESC
+    LIMIT 30
+");
 
 $jsonData = array();
 
