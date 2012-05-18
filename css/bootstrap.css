@@ -3207,6 +3207,7 @@ input[type="submit"].btn.btn-mini {
   text-decoration: none;
   color:#efefef;
   background-color: #000000;
+  border-left:inherit;
 }
 
 .nav > .pull-right {
@@ -3266,6 +3267,7 @@ input[type="submit"].btn.btn-mini {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   background-color: #206e8b;
+  border:inherit;
 }
 
 .nav-list [class^="icon-"] {
