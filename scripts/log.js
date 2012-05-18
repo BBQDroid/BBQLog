@@ -8,9 +8,7 @@ $(function() {
 	
 	// Setup event listeners
 	$(window).bind( 'hashchange', function(e) { 
-		if (window.location.hash != "" && window.location.hash != "#") {
-			updateBodyData();
-		}
+		updateBodyData();
 	});
 	$(window).scroll(function(){
 		// if the bottom of the changeset div is showing start loading the new changes
