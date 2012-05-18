@@ -201,7 +201,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	}
 	
 	// load all changes from gerrit
-	$.getJSON("changesets.php?amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
+	$.getJSON("changesets.php?RomName=CyanogenMod&Version=9&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
 		if (!_append) {
 			// clear current changesets
 			$("#log_Changeset").html('');
@@ -252,7 +252,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 
 			// show only if it's not another device
 			if (_device == '' || found || data.result.changes[i].project.key.name.indexOf("android_device_") == -1)
-				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="http://review.cyanogenmod.com/#/c/' + data.result.changes[i].id.id + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>'); 
+				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>'); 
 			
 			if (i == _amount - 1) {
 				global_ChangesetHasMore = true;

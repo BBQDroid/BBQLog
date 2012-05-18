@@ -17,11 +17,11 @@ $RomVersion = mysql_real_escape_string($_GET['Version']);
 $commits = mysql_query("
     SELECT * FROM (SELECT * FROM repositories WHERE IDRomVersion=
     (
-        SELECT IDRomVersion FROM roms_versions WHERE VersionName='9' AND IDRom=
+        SELECT IDRomVersion FROM roms_versions WHERE VersionName='$RomVersion' AND IDRom=
         (
-            SELECT IDRom FROM roms WHERE Name='CyanogenMod' LIMIT 1
+            SELECT IDRom FROM roms WHERE Name='$RomName' LIMIT 1
         ) LIMIT 1
-    ) GROUP BY GitUsername) repos, commits
+    )) repos, commits
     WHERE
     $commitDateClause
     commits.GitUsername=repos.GitUsername AND
@@ -38,7 +38,7 @@ while ($commit = mysql_fetch_assoc($commits)) {
 	if (strpos($message, "\n") != 0)
 		$message = substr($message, 0, strpos($message, "\n"));
 
-	$jsonData["result"]["changes"][] = array("id"=>0, "project"=>array("key"=>array("name"=>$commit['Repository'])), "lastUpdatedOn"=>$commit['CommitDate'], "subject"=>$message, "sortKey"=>strtotime($commit['CommitDate']));
+	$jsonData["result"]["changes"][] = array("id"=>0, "project"=>array("key"=>array("name"=>$commit['Repository'])), "lastUpdatedOn"=>$commit['CommitDate'], "subject"=>$message, "sortKey"=>strtotime($commit['CommitDate']), "repository"=>$commit['Repository'], "sha"=>$commit['SHA'], "gituser"=>$commit['GitUsername']);
 }
 
 echo json_encode($jsonData);

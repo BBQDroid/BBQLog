@@ -1,5 +1,5 @@
 <?php
-
+set_time_limit(0);
 require_once("config.php");
 
 function esc($txt) {
@@ -10,6 +10,7 @@ function actionDone($msg) {
 	global $startTime;	
 	echo "$msg (" . number_format(floatval(microtime(true) - $startTime), 5) . "s) <br />";
 	$startTime = microtime(true);
+	echo str_repeat(' ',256);
 	flush_buffers();
 }
 function actionStart($msg) {
@@ -67,10 +68,11 @@ while ($repo = mysql_fetch_assoc($repositories)) {
 		actionStart("Fetching branch " . $branch['Branch'] . " of repo " . $repo['Repository'] . "...");
 		$commitSHA = $lastCommitSHA;
 		$nbFetched = 0;
+		$previousFetchedCommit = "";
 		while (true) {
-			if ($nbFetched == 20) // we limit max 20 requests per branch (thats 2000 commits)
+			if ($nbFetched == 20 || $previousFetchedCommit == $commitSHA) // we limit max 20 requests per branch (thats 2000 commits)
 				break;
-			
+			$previousFetchedCommit = $commitSHA;
 			actionStart("Grabbing https://api.github.com/repos/".$repo['GitUsername']."/".$repo['Repository']."/commits?per_page=100&sha=$commitSHA ...");
 			
 			$commits_json = json_decode(file_get_contents("https://api.github.com/repos/".$repo['GitUsername']."/".$repo['Repository']."/commits?per_page=100&sha=$commitSHA"),true);
