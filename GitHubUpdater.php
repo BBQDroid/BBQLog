@@ -1,5 +1,7 @@
 <?php
 
+require_once("config.php");
+
 function esc($txt) {
   return mysql_real_escape_string($txt);
 }
