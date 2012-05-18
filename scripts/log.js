@@ -249,8 +249,8 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 					itemStyle += "border-left:2px solid #0099CC;";
 				}
 			}
-			
-			$("#log_Changeset").append('<li style="' + itemStyle + '"><a href="javascript:;" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name.substring(12) + '</span></h6></a></li>'); 
+
+			$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="http://review.cyanogenmod.com/#/c/' + data.result.changes[i].id.id + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name.substring(12) + '</span></h6></a></li>'); 
 			
 			if (i == _amount - 1) {
 				global_ChangesetHasMore = true;
