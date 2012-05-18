@@ -127,34 +127,36 @@ function updateListNightlies(_device, _version) {
 		var amount = 9;
 		
 		// for each nightly
+		var stop = false;
 		$(xmlParse).find('item').each(function() {
-			if (amount <= 0) {
-				return;
-			}
-			amount--;
-
 			var nightlyTime = strtotime($(this).children("pubDate").text());
-			
+			var nightlyCode = $(this).children("title").text().substring(12, 20);
+
 			// if the current month changes, show a new header line
-			if (currMonth != date("m", nightlyTime)) {
+			if (currMonth != date("m", nightlyTime) && !stop) {
 				$("#log_NightliesList").append('<li class="nav-header">' + date("M Y", nightlyTime) + '</li>');
 				currMonth = date("m", nightlyTime);
 			}
 			
-			
-			$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+date("Ymd",nightlyTime)+'">' + date('l dS', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
+			if (!stop)			
+				$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+nightlyCode+'">' + date('l dS', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
 			
 			if (nightlyTime > global_LastNightlyDate)
 				global_LastNightlyDate = nightlyTime;
 				
-			global_NightliesCodeToDate[date("Ymd",nightlyTime)] = nightlyTime;
+			global_NightliesCodeToDate[nightlyCode] = nightlyTime;
 			
-			if (lastNightlyCode != "")
+			if (lastNightlyCode != "") {
 				global_NightliesCodeToPreviousDate[lastNightlyCode] = nightlyTime;
-				
-			lastNightlyCode = date("Ymd",nightlyTime);
+			}
+
+			amount--;
+			lastNightlyCode = nightlyCode;
+			if (amount <= 1) {
+				stop = true;
+				return;
+			}
 		});
-		
 		
 		global_NightliesListReady = true;
 	});
