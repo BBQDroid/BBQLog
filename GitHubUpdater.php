@@ -1,11 +1,29 @@
 <?php
+
+/**
+ * Git Hub Updater script
+ * Fetch changes from GitHub and pull them into a local database
+ *
+ * Copyright (c) The BBQTeam 2012
+ *
+ */
+
+// Configs
 set_time_limit(0);
 require_once("config.php");
 
+// Helper functions
+/**
+ * Escape the string to be given to MySQL
+ */
 function esc($txt) {
   return mysql_real_escape_string($txt);
 }
 
+/**
+ * Output a message with the time it took relative to the latest action done
+ * and flush buffers
+ */
 function actionDone($msg) {
 	global $startTime;	
 	echo "$msg (" . number_format(floatval(microtime(true) - $startTime), 5) . "s) <br />";
@@ -16,23 +34,29 @@ function actionDone($msg) {
 function actionStart($msg) {
 	echo $msg . "<br />";
 }
+
+/**
+ * Flush OB buffers
+ */
 function flush_buffers(){
     ob_flush();
     flush();
 }
 
+
 ob_start();
 
-
+// Connect to MySQL
 mysql_connect($CFG['SQL']['Host'], $CFG['SQL']['User'], $CFG['SQL']['Pass']) or die(mysql_error());
 mysql_select_db($CFG['SQL']['DB']) or die(mysql_error());
 
-
 $startTime = microtime(true);
 
-// Temp - Import tables
+
+// Start import
 actionStart("Starting repositories processing...");
 
+// If a specific repo is passed in GET, update only this repository
 if (!empty($_GET['repo']))
 	$repositories = mysql_query("SELECT * FROM repositories WHERE Repository='".mysql_real_escape_string($_GET['repo'])."' ");
 else
@@ -58,7 +82,6 @@ while ($repo = mysql_fetch_assoc($repositories)) {
 		
 		// get the last commit in db
 		$query = mysql_query("SELECT SHA FROM commits WHERE GitUsername='".esc($repo['GitUsername'])."' AND Repository='".esc($repo['Repository'])."' AND Branch='".esc($branch['Branch'])."' ORDER BY CommitDate DESC LIMIT 1");
-		
 		$fetch = mysql_fetch_assoc($query);
 		
 		$lastCommitDB = $fetch['SHA'];
@@ -72,15 +95,13 @@ while ($repo = mysql_fetch_assoc($repositories)) {
 		$commitSHA = $lastCommitSHA;
 		$nbFetched = 0;
 		$previousFetchedCommit = "";
-		while (true) {
-			if ($nbFetched == 20 || $previousFetchedCommit == $commitSHA) // we limit max 20 requests per branch (thats 2000 commits)
-				break;
+
+		while ($nbFetched < 20 && $previousFetchedCommit != $commitSHA) { // we limit max 20 requests per branch (thats 2000 commits)
 			$previousFetchedCommit = $commitSHA;
+			
 			actionStart("Grabbing https://api.github.com/repos/".$repo['GitUsername']."/".$repo['Repository']."/commits?per_page=100&sha=$commitSHA ...");
 			
 			$commits_json = json_decode(file_get_contents("https://api.github.com/repos/".$repo['GitUsername']."/".$repo['Repository']."/commits?per_page=100&sha=$commitSHA"),true);
-			
-			echo "(".count($commits_json)." commits)<br>";
 			
 			$lastReached = false;
 			
@@ -108,6 +129,7 @@ while ($repo = mysql_fetch_assoc($repositories)) {
 
 actionDone("Commits updated");
 
+// We keep only the commits of the last 4 months
 actionStart("Cleaning 4+months old commits");
 mysql_query("DELETE FROM commits WHERE CommitDate < '".date("Y-m-d H:i:s", time()-3600*24*31*4). "'");
 actionDone("Cleaned " . mysql_affected_rows() . " commits");
