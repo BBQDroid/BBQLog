@@ -709,7 +709,7 @@
 		<device>
 			<name>Xperia Arc</name>
 			<model>Anzu</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_anzu.png</image>
 			<code>anzu</code>
 			<repos>
 				<git name="android_device_semc_anzu" />
@@ -718,7 +718,7 @@
 		<device>
 			<name>Walkman</name>
 			<model>Coconut</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_coconut.jpg</image>
 			<code>coconut</code>
 			<repos>
 				<git name="android_device_semc_coconut" />
@@ -727,7 +727,7 @@
 		<device>
 			<name>Xperia X10</name>
 			<model>ES209ra</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_es209ra.jpg</image>
 			<code>es209ra</code>
 			<repos>
 				<git name="android_device_semc_es209ra" />
@@ -736,7 +736,7 @@
 		<device>
 			<name>Xperia Neo</name>
 			<model>Hallon</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_hallon.jpg</image>
 			<code>hallon</code>
 			<repos>
 				<git name="android_device_semc_hallon" />
@@ -745,7 +745,7 @@
 		<device>
 			<name>Xperia Pro</name>
 			<model>Iyokan</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_iyokan.jpg</image>
 			<code>iyokan</code>
 			<repos>
 				<git name="android_device_semc_iyokan" />
@@ -754,7 +754,7 @@
 		<device>
 			<name>Xperia Mini Pro</name>
 			<model>Mango</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_mango.jpg</image>
 			<code>mango</code>
 			<repos>
 				<git name="android_device_semc_mango" />
@@ -763,7 +763,7 @@
 		<device>
 			<name>Xperia X10 Mini Pro</name>
 			<model>Mimmi</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_mimmi.jpg</image>
 			<code>mimmi</code>
 			<repos>
 				<git name="android_device_semc_mimmi" />
@@ -772,7 +772,7 @@
 		<device>
 			<name>Xperia X10 Mini</name>
 			<model>Robyn</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_robyn.jpg</image>
 			<code>robyn</code>
 			<repos>
 				<git name="android_device_semc_robyn" />
@@ -781,7 +781,7 @@
 		<device>
 			<name>Xperia Active</name>
 			<model>Satsuma</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_satsuma.jpg</image>
 			<code>satsuma</code>
 			<repos>
 				<git name="android_device_semc_satsuma" />
@@ -790,7 +790,7 @@
 		<device>
 			<name>Xperia X8</name>
 			<model>Shakira</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_shakira.jpg</image>
 			<code>shakira</code>
 			<repos>
 				<git name="android_device_semc_shakira" />
@@ -799,7 +799,7 @@
 		<device>
 			<name>Xperia Mini</name>
 			<model>Smultron</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_smultron.jpg</image>
 			<code>smultron</code>
 			<repos>
 				<git name="android_device_semc_smultron" />
@@ -808,7 +808,7 @@
 		<device>
 			<name>Xperia Ray</name>
 			<model>Urushi</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_urushi.jpg</image>
 			<code>urushi</code>
 			<repos>
 				<git name="android_device_semc_urushi" />
@@ -817,7 +817,7 @@
 		<device>
 			<name>Xperia Play R800i</name>
 			<model>Zeus</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_zeus.jpg</image>
 			<code>zeus</code>
 			<repos>
 				<git name="android_device_semc_zeus" />
@@ -826,7 +826,7 @@
 		<device>
 			<name>Xperia Play CDMA R800x</name>
 			<model>Zeusc</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/semc_zeus.jpg</image>
 			<code>zeusc</code>
 			<repos>
 				<git name="android_device_semc_zeusc" />
