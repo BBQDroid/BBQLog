@@ -1,4 +1,22 @@
 /**
+ * Copyright (c) 2012 - The BBQTeam
+ */
+
+var global_CurrentDevice = "";
+var global_CurrentVersion = "";
+var global_CurrentDate = "";
+var global_DeviceCodeRepos = [];
+
+var global_LastNightlyDate = 0;
+var global_NightliesCodeToDate = [];
+var global_NightliesCodeToPreviousDate = [];
+var global_NightliesListReady = false;
+
+var global_ChangesetHasMore = false;
+var global_ChangesetMoreSortCode = '';
+
+
+/**
  *  Initialization
  */
 $(function() {
@@ -20,10 +38,9 @@ $(function() {
 	});
 });
 
-var global_CurrentDevice = "";
-var global_CurrentVersion = "";
-var global_CurrentDate = "";
-
+/**
+ * Update body contents based on the URL
+ */
 function updateBodyData() {
 	var url = window.location.hash.substring(1);
 	var params = url.split("/");
@@ -38,7 +55,7 @@ function updateBodyData() {
 			updateChangeset(params[0], params[1], params[2]);
 		});
 		$('#log_Changeset').fadeOut('fast', function() {
-			$(this).fadeIn(0);
+			$(this).fadeIn(100);
 		});
 	} else {
 		updateChangeset(params[0], params[1], params[2]);
@@ -50,7 +67,7 @@ function updateBodyData() {
 }
 
 
-var global_DeviceCodeRepos = [];
+
 
 /**
  *  Load devices list from devices.xml
@@ -63,7 +80,7 @@ function loadDevices() {
 	.done(function(data) {
 		$("#nav_DevicesList").html('');
 		$(data).find("oem").each(function() {
-
+			// Add dropdowns for each OEMs
 			var oem = $('<li class="dropdown"></li>');
 			$('<a class="dropdown-toggle" data-toggle="dropdown">' + $(this).attr("name") + '</a>').appendTo(oem);
 
@@ -76,7 +93,6 @@ function loadDevices() {
 				var code = $(this).children("code").text();
 				global_DeviceCodeRepos[code] = [];
 
-				
 				$(this).children("repos").find("git").each(function() {
 					global_DeviceCodeRepos[code].push($(this).attr("name"));
 				});
@@ -87,18 +103,14 @@ function loadDevices() {
 	});
 }
 
-
-
-
-var global_LastNightlyDate = 0;
-var global_NightliesCodeToDate = [];
-var global_NightliesCodeToPreviousDate = [];
-var global_NightliesListReady = false;
-
-
+/**
+ * Update the list of nightlies for the specified device
+ */
 function updateListNightlies(_device, _version) {
 	global_NightliesListReady = false;
 	if (_device == '') {
+		// If no device indicated, just display an empty list and
+		// tell the list is ready
 		$("#log_NightliesList").html("");
 		global_NightliesListReady = true;
 		return;	
@@ -161,19 +173,21 @@ function updateListNightlies(_device, _version) {
 		
 }
 
-var global_ChangesetHasMore = false;
-var global_ChangesetMoreSortCode = '';
 
+/**
+ * Updates the changeset list
+ */
 function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) {
 	_amount = typeof _amount !== 'undefined' ? _amount : 25;
 	_append = typeof _append !== 'undefined' ? _append : false;
 	_sortCode = typeof _sortCode !== 'undefined' ? _sortCode : '';
 
 	if (global_NightliesListReady == false && _device != '') {
-		// the nightlies list isn't ready, which will fail ageQuery below. We delay this function
+		// the nightlies list isn't ready, which will fail changeset filtering. We delay this function
 		console.log("Nightlies not ready, delaying changeset");
-		$("#log_Changeset").html("<li><h6>Please wait while nightlies are being loaded…</h6></<li>");
-		setTimeout(function() { updateChangeset(_device,_version,_date, _amount, _append, _sortCode) }, 500);
+		$("#log_Changeset").html("<li><h6>Please wait while nightlies are being loaded...</h6></<li>");
+		
+		setTimeout(function() { updateChangeset(_device,_version,_date, _amount, _append, _sortCode) }, 300);
 		return;	
 	}
 
@@ -181,8 +195,9 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	global_ChangesetMoreSortCode = '';
 	
 	var versionNum = 9;
-	if (_version == "cm7")
+	if (_version == "cm7") {
 		versionNum = 7;
+	}
 	
 	// if no device is set, show all latest changes. Else, show device+date
 	if (_device == '') {
@@ -193,7 +208,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	
 	
 	if (!_append) {
-		$("#log_Changeset").html("<li><h6>Please wait while changes are being loaded…</h6></<li>");
+		$("#log_Changeset").html("<li><h6>Please wait while changes are being loaded...</h6></<li>");
 	}
 	
 	
@@ -211,11 +226,9 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	// load all changes
 	$.getJSON("changesets.php?RomName=CyanogenMod&Version=" + versionNum + ageQuery + "&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
 		if (!_append) {
-			// clear current changesets
+			// clear current changesets if we're not appending to current list (due to scroll)
 			$("#log_Changeset").html('');
 		}
-
-		console.log("Changeset contains " + data.result.changes.length + " elements.");
 		
 		for (var i = 0; i < data.result.changes.length; i++) {
 			// if not "next" nightly, skip until changes of that nightly
@@ -258,14 +271,15 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 				}
 			}
 
-			// show only if it's not another device
+			// show only if it's not a change for another device
 			if (_device == '' || found || data.result.changes[i].project.key.name.indexOf("android_device_") == -1)
 				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>'); 
 			
 			if (i == _amount - 1) {
 				global_ChangesetHasMore = true;
 				global_ChangesetMoreSortCode = data.result.changes[i].sortKey;
-				// if the bottom of the changeset div is already showing, start loading the new changes
+				
+				// if the bottom of the changeset div is already displayed, start loading the new changes
 				if ($(window).scrollTop() + $(window).height() >= $("#log_Changeset").offset().top + $("#log_Changeset").height() - 250) {
 					updateChangeset(_device, _version, _date, _amount, true, global_ChangesetMoreSortCode);
 				}
@@ -275,6 +289,9 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	});
 }
 
+/**
+ * Change the URL to fit specified CM version
+ */
 function setCMVersion(num) {
 	window.location = "#" + global_CurrentDevice + "/cm" + num +"/" + global_CurrentDate;
 }
@@ -283,6 +300,10 @@ function setCMVersion(num) {
 
 
 
+
+/**
+ * PHPJS functions
+ */
 
 function time () {
    return Math.floor(new Date().getTime() / 1000);
@@ -293,21 +314,6 @@ function time () {
 function strtotime (str, now) {
     // http://kevin.vanzonneveld.net
     // +   original by: Caio Ariede (http://caioariede.com)
-    // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-    // +      input by: David
-    // +   improved by: Caio Ariede (http://caioariede.com)
-    // +   improved by: Brett Zamir (http://brett-zamir.me)
-    // +   bugfixed by: Wagner B. Soares
-    // +   bugfixed by: Artur Tchernychev
-    // %        note 1: Examples all have a fixed timestamp to prevent tests to fail because of variable time(zones)
-    // *     example 1: strtotime('+1 day', 1129633200);
-    // *     returns 1: 1129719600
-    // *     example 2: strtotime('+1 week 2 days 4 hours 2 seconds', 1129633200);
-    // *     returns 2: 1130425202
-    // *     example 3: strtotime('last month', 1129633200);
-    // *     returns 3: 1127041200
-    // *     example 4: strtotime('2009-05-04 08:30:00');
-    // *     returns 4: 1241418600
     var i, l, match, s, parse = '';
 
     str = str.replace(/\s{2,}|^\s|\s$/g, ' '); // unecessary spaces
