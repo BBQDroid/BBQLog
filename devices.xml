@@ -253,7 +253,7 @@
 		<device>
 			<name>Optimus Pro</name>
 			<model>C660</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_c660.jpg</image>
 			<code>c660</code>
 			<repos>
 				<git name="android_device_lge_c660" />
@@ -262,7 +262,7 @@
 		<device>
 			<name>Optimus Hub</name>
 			<model>E510</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_e510.jpg</image>
 			<code>e510</code>
 			<repos>
 				<git name="android_device_lge_e510" />
@@ -271,7 +271,7 @@
 		<device>
 			<name>Optimus Sol</name>
 			<model>E730</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_e730.jpg</image>
 			<code>e730</code>
 			<repos>
 				<git name="android_device_lge_e730" />
@@ -280,7 +280,7 @@
 		<device>
 			<name>myTouch</name>
 			<model>E739</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_e739.jpg</image>
 			<code>e739</code>
 			<repos>
 				<git name="android_device_lge_e739" />
@@ -289,7 +289,7 @@
 		<device>
 			<name>Optimus One</name>
 			<model>P500</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_p500.png</image>
 			<code>p500</code>
 			<repos>
 				<git name="android_device_lge_p500" />
@@ -298,7 +298,7 @@
 		<device>
 			<name>Optimus 3D</name>
 			<model>P920</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_p920.jpg</image>
 			<code>p920</code>
 			<repos>
 				<git name="android_device_lge_p920" />
@@ -307,7 +307,7 @@
 		<device>
 			<name>Thrill 4G</name>
 			<model>P925</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_p925.jpg</image>
 			<code>p925</code>
 			<repos>
 				<git name="android_device_lge_p925" />
@@ -325,7 +325,7 @@
 		<device>
 			<name>Optimus Black</name>
 			<model>P970</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_p970.png</image>
 			<code>p970</code>
 			<repos>
 				<git name="android_device_lge_p970" />
@@ -334,7 +334,7 @@
 		<device>
 			<name>Optimus 2X</name>
 			<model>P990</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_p990.jpg</image>
 			<code>p990</code>
 			<repos>
 				<git name="android_device_lge_p990" />
@@ -343,7 +343,7 @@
 		<device>
 			<name>G2x</name>
 			<model>P999</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_p999.jpg</image>
 			<code>p999</code>
 			<repos>
 				<git name="android_device_lge_p999" />
