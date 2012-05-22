@@ -230,6 +230,15 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 			// clear current changesets if we're not appending to current list (due to scroll)
 			$("#log_Changeset").html('');
 		}
+
+		// If the query returned nothing
+		if (data.result == undefined && !_append) {
+			if (_date == "next")
+				$("#log_Changeset").html("<h6>There has been no changes since the latest nightly.</h6>");
+			else
+				$("#log_Changeset").html("<h6>There has been no changes since the previous nightly</h6>");
+			return;
+		}
 		
 		for (var i = 0; i < data.result.changes.length; i++) {
 			// if not "next" nightly, skip until changes of that nightly
