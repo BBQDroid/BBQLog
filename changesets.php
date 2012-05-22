@@ -8,6 +8,10 @@ mysql_select_db($CFG['SQL']['DB']);
 
 if (!empty($_GET['sortCode']))
 	$commitDateClause = " commits.CommitDate < '" . date("Y-m-d H:i:s", $_GET['sortCode']) . "' AND ";
+else if (!empty($_GET['startDate']) && !empty($_GET['endDate']))
+	$commitDateClause = " commits.CommitDate < '" . date("Y-m-d H:i:s", $_GET['startDate']) ."' AND commits.CommitDate > '".date("Y-m-d H:i:s", $_GET['endDate'])."' AND ";
+else if (!empty($_GET['endDate']))
+	$commitDateClause = " commits.CommitDate > '" . date("Y-m-d H:i:s", $_GET['endDate'])."' AND ";
 else
 	$commitDateClause = "";
 

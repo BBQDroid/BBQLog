@@ -196,12 +196,16 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	// compute age for old nightlies
 	var ageQuery = "";
 	
-	if (_date != "next") {
-		ageQuery = "age:" + (time() - global_NightliesCodeToDate[_date]) + "s:" + (time() - global_NightliesCodeToPreviousDate[_date]) + "s";
+	if (_device == '') {
+		ageQuery = "";
+	} else if (_date != "next") {
+		ageQuery = "&startDate=" + global_NightliesCodeToDate[_date] + "&endDate=" + global_NightliesCodeToPreviousDate[_date];
+	} else {
+		ageQuery = "&endDate=" + global_LastNightlyDate;
 	}
 	
-	// load all changes from gerrit
-	$.getJSON("changesets.php?RomName=CyanogenMod&Version=9&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
+	// load all changes
+	$.getJSON("changesets.php?RomName=CyanogenMod&Version=9" + ageQuery + "&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
 		if (!_append) {
 			// clear current changesets
 			$("#log_Changeset").html('');
