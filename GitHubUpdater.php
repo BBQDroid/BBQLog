@@ -106,12 +106,12 @@ while ($repo = mysql_fetch_assoc($repositories)) {
 			$lastReached = false;
 			
 			foreach($commits_json as $commit) {
-				if ($commit['sha'] == $lastCommitDB || strtotime($commit['commit']['author']['date']) < time()-3600*24*31*4) { // max 4 months
+				if ($commit['sha'] == $lastCommitDB || strtotime($commit['commit']['committer']['date']) < time()-3600*24*31*4) { // max 4 months
 					$lastReached = true;
 					break;
 				}
 				
-				mysql_query("INSERT IGNORE INTO commits(SHA,GitUsername,Repository,Branch,Author,Message,CommitDate) VALUES('" . esc($commit['sha']) ."', '".esc($repo['GitUsername'])."' ,'".esc($repo['Repository'])."', '".esc($branch['Branch'])."', '".esc($commit['committer']['login'])."', '".esc($commit['commit']['message'])."', '".esc($commit['commit']['author']['date'])."');") or die(mysql_error());
+				mysql_query("INSERT IGNORE INTO commits(SHA,GitUsername,Repository,Branch,Author,Message,CommitDate) VALUES('" . esc($commit['sha']) ."', '".esc($repo['GitUsername'])."' ,'".esc($repo['Repository'])."', '".esc($branch['Branch'])."', '".esc($commit['committer']['login'])."', '".esc($commit['commit']['message'])."', '".esc($commit['commit']['committer']['date'])."');") or die(mysql_error());
 				
 				$commitSHA = $commit['sha'];
 			}
