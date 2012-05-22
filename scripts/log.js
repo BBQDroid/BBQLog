@@ -152,12 +152,14 @@ function updateListNightlies(_device, _version) {
 			
 			if (nightlyTime > global_LastNightlyDate)
 				global_LastNightlyDate = nightlyTime;
-				
-			global_NightliesCodeToDate[nightlyCode] = nightlyTime;
-			
+
 			if (lastNightlyCode != "") {
 				global_NightliesCodeToPreviousDate[lastNightlyCode] = nightlyTime;
 			}
+			
+			if (global_NightliesCodeToDate[nightlyCode] == undefined)
+				global_NightliesCodeToDate[nightlyCode] = nightlyTime;
+			
 
 			amount--;
 			lastNightlyCode = nightlyCode;
