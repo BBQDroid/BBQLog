@@ -105,7 +105,7 @@
 		<device>
 			<name>myTouch 4G Panache</name>
 			<model>Glacier</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_glacier.jpg</image>
 			<code>glacier</code>
 			<repos>
 				<git name="android_device_htc_glacier" />
@@ -114,7 +114,7 @@
 		<device>
 			<name>Hero</name>
 			<model>Hero</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_hero.jpg</image>
 			<code>hero</code>
 			<repos>
 				<git name="android_device_htc_hero" />
@@ -123,7 +123,7 @@
 		<device>
 			<name>Hero CDMA</name>
 			<model>Hero CDMA</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_hero.jpg</image>
 			<code>heroc</code>
 			<repos>
 				<git name="android_device_htc_heroc" />
@@ -132,7 +132,7 @@
 		<device>
 			<name>Incredible</name>
 			<model>Inc</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_inc.png</image>
 			<code>inc</code>
 			<repos>
 				<git name="android_device_htc_inc" />
@@ -141,7 +141,7 @@
 		<device>
 			<name>Legend</name>
 			<model>Legend</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_legend.jpg</image>
 			<code>legend</code>
 			<repos>
 				<git name="android_device_htc_legend" />
@@ -150,7 +150,7 @@
 		<device>
 			<name>Aria</name>
 			<model>Liberty</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_liberty.png</image>
 			<code>liberty</code>
 			<repos>
 				<git name="android_device_htc_liberty" />
@@ -159,7 +159,7 @@
 		<device>
 			<name>Nexus One</name>
 			<model>Passion</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_passion.jpg</image>
 			<code>passion</code>
 			<repos>
 				<git name="android_device_htc_passion" />
@@ -168,7 +168,7 @@
 		<device>
 			<name>Sensation</name>
 			<model>Pyramid</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_pyramid.jpg</image>
 			<code>pyramid</code>
 			<repos>
 				<git name="android_device_htc_pyramid" />
@@ -177,7 +177,7 @@
 		<device>
 			<name>Desire S</name>
 			<model>Saga</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_saga.jpg</image>
 			<code>saga</code>
 			<repos>
 				<git name="android_device_htc_saga" />
@@ -186,7 +186,7 @@
 		<device>
 			<name>Evo Shift 4G</name>
 			<model>Speedy</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_speedy.jpg</image>
 			<code>speedy</code>
 			<repos>
 				<git name="android_device_htc_speedy" />
@@ -195,7 +195,7 @@
 		<device>
 			<name>EVO 4G</name>
 			<model>Supersonic</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_supersonic.jpg</image>
 			<code>supersonic</code>
 			<repos>
 				<git name="android_device_htc_supersonic" />
@@ -204,7 +204,7 @@
 		<device>
 			<name>Desire Z</name>
 			<model>vision</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_vision.jpg</image>
 			<code>vision</code>
 			<repos>
 				<git name="android_device_htc_vision" />
@@ -213,7 +213,7 @@
 		<device>
 			<name>Incredible S</name>
 			<model>vivo</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_vivo.jpg</image>
 			<code>vivo</code>
 			<repos>
 				<git name="android_device_htc_vivo" />
@@ -222,7 +222,7 @@
 		<device>
 			<name>Incredible 2</name>
 			<model>Vivow</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_vivow.jpg</image>
 			<code>vivow</code>
 			<repos>
 				<git name="android_device_htc_vivow" />
