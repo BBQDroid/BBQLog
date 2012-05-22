@@ -354,7 +354,7 @@
 		<device>
 			<name>Droid 2 (CDMA)</name>
 			<model>Droid 2</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_droid2.png</image>
 			<code>cdma_droid2</code>
 			<repos>
 				<git name="android_device_motorola_cdma_droid2" />
@@ -363,7 +363,7 @@
 		<device>
 			<name>Droid 2 (CDMA) Global</name>
 			<model>Droid 2 Global</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_droid2.png</image>
 			<code>cdma_droid2we</code>
 			<repos>
 				<git name="android_device_motorola_cdma_droid2we" />
@@ -372,7 +372,7 @@
 		<device>
 			<name>Droid X (CDMA)</name>
 			<model>Droid X</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_droidx.jpg</image>
 			<code>cdma_shadow</code>
 			<repos>
 				<git name="android_device_motorola_cdma_shadow" />
@@ -381,7 +381,7 @@
 		<device>
 			<name>Droid 2</name>
 			<model>Droid 2</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_droid2.png</image>
 			<code>droid2</code>
 			<repos>
 				<git name="android_device_motorola_droid2" />
@@ -390,7 +390,7 @@
 		<device>
 			<name>Droid 2 Global</name>
 			<model>Droid 2</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_droid2.png</image>
 			<code>droid2we</code>
 			<repos>
 				<git name="android_device_motorola_droid2we" />
@@ -399,7 +399,7 @@
 		<device>
 			<name>Defy</name>
 			<model>Jordan</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_defy.png</image>
 			<code>defy</code>
 			<repos>
 				<git name="android_device_motorola_defy" />
@@ -408,7 +408,7 @@
 		<device>
 			<name>Cliq</name>
 			<model>Morisson</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_cliq.jpg</image>
 			<code>morrison</code>
 			<repos>
 				<git name="android_device_motorola_morrison" />
@@ -417,7 +417,7 @@
 		<device>
 			<name>Backflip</name>
 			<model>Motus</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_backflip.png</image>
 			<code>motus</code>
 			<repos>
 				<git name="android_device_motorola_motus" />
@@ -426,7 +426,7 @@
 		<device>
 			<name>Atrix 4G</name>
 			<model>Olympus</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_olympus.jpg</image>
 			<code>olympus</code>
 			<repos>
 				<git name="android_device_motorola_olympus" />
@@ -435,7 +435,7 @@
 		<device>
 			<name>Droid X</name>
 			<model>shadow</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_droidx.jpg</image>
 			<code>shadow</code>
 			<repos>
 				<git name="android_device_motorola_shadow" />
@@ -444,7 +444,7 @@
 		<device>
 			<name>Droid</name>
 			<model>sholes</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_droid.jpg</image>
 			<code>sholes</code>
 			<repos>
 				<git name="android_device_motorola_sholes" />
@@ -453,7 +453,7 @@
 		<device>
 			<name>Xoom (Verizon)</name>
 			<model>Stingray</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_xoom.jpg</image>
 			<code>stingray</code>
 			<repos>
 				<git name="android_device_motorola_stingray" />
@@ -462,7 +462,7 @@
 		<device>
 			<name>Xoom (Wi-Fi)</name>
 			<model>Wingray</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/motorola_xoom.jpg</image>
 			<code>wingray</code>
 			<repos>
 				<git name="android_device_motorola_wingray" />
@@ -470,9 +470,9 @@
 		</device>
 		<device>
 			<name>Cliq XT</name>
-			<model>Droid 2</model>
-			<image>images/devices/samsung_i9100.jpg</image>
-			<code>Zeppelin</code>
+			<model>Cliq XT</model>
+			<image>images/devices/motorola_cliqxt.jpg</image>
+			<code>zeppelin</code>
 			<repos>
 				<git name="android_device_motorola_zeppelin" />
 			</repos>
@@ -892,7 +892,7 @@
 		<device>
 			<name>Zero</name>
 			<model>Geeksphone</model>
-			<image>images/devices/geeksphone_zero.jpg</image>
+			<image>images/devices/geeksphone_zero.png</image>
 			<code>zero</code>
 			<repos>
 			</repos>
