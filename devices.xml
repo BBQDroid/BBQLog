@@ -4,7 +4,7 @@
 		<device>
 			<name>Transformer Pad</name>
 			<model>TF101</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/asus_tf101.jpg</image>
 			<code>tf101</code>
 			<repos>
 				<git name="android_device_asus_tf101" />
@@ -13,7 +13,7 @@
 		<device>
 			<name>Transformer Prime</name>
 			<model>TF201</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/asus_tf201.jpg</image>
 			<code>tf201</code>
 			<repos>
 				<git name="android_device_asus_tf201" />
@@ -24,7 +24,7 @@
 		<device>
 			<name>Desire HD</name>
 			<model>Ace</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_ace.jpg</image>
 			<code>ace</code>
 			<repos>
 				<git name="android_device_htc_ace" />
@@ -33,7 +33,7 @@
 		<device>
 			<name>Desire</name>
 			<model>Bravo</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_bravo.jpg</image>
 			<code>bravo</code>
 			<repos>
 				<git name="android_device_htc_bravo" />
@@ -42,7 +42,7 @@
 		<device>
 			<name>Desire CDMA</name>
 			<model>Bravo CDMA</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_bravo.jpg</image>
 			<code>bravoc</code>
 			<repos>
 				<git name="android_device_htc_bravoc" />
@@ -51,7 +51,7 @@
 		<device>
 			<name>Wildfire</name>
 			<model>Buzz</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_buzz.jpg</image>
 			<code>buzz</code>
 			<repos>
 				<git name="android_device_htc_buzz" />
@@ -60,7 +60,7 @@
 		<device>
 			<name>Tattoo</name>
 			<model>click</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_click.jpg</image>
 			<code>click</code>
 			<repos>
 				<git name="android_device_htc_click" />
@@ -69,7 +69,7 @@
 		<device>
 			<name>Eris</name>
 			<model>Desirec</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_bravo.jpg</image>
 			<code>desirec</code>
 			<repos>
 				<git name="android_device_htc_desirec" />
@@ -78,7 +78,7 @@
 		<device>
 			<name>myTouch 4G Slide</name>
 			<model>Doubleshot</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_doubleshot.jpg</image>
 			<code>doubleshot</code>
 			<repos>
 				<git name="android_device_htc_doubleshot" />
@@ -87,7 +87,7 @@
 		<device>
 			<name>Dream / Magic</name>
 			<model>Sapphire</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_dream_sapphire.jpg</image>
 			<code>dream_sapphire</code>
 			<repos>
 				<git name="android_device_htc_dream_sapphire" />
@@ -96,7 +96,7 @@
 		<device>
 			<name>myTouch 3G Slide</name>
 			<model>Espresso</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/htc_espresso.jpg</image>
 			<code>espresso</code>
 			<repos>
 				<git name="android_device_htc_espresso" />

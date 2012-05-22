@@ -87,7 +87,7 @@ function loadDevices() {
 			
 			// for each device
 			$(this).find("device").each(function() {
-				var device = $('<li><a href="#' + $(this).children("code").text() + '/cm9/next"><img src="' + $(this).children("image").text() + '" style="float:left;height:35px;margin-right:10px" /><strong>' + $(this).children("name").text() + '</strong><br />'+$(this).children("model").text()+' / '+$(this).children("code").text()+'</a></li>').appendTo(devices);
+				var device = $('<li style="vertical-align:middle;"><a href="#' + $(this).children("code").text() + '/cm9/next"><span style="width:35px;text-align:center;float:left;margin-right:10px;background:white;border-radius:3px;border:1px solid white;"><img src="' + $(this).children("image").text() + '" style="max-height:35px;max-width:35px;" /></span><strong>' + $(this).children("name").text() + '</strong><br />'+$(this).children("model").text()+' / '+$(this).children("code").text()+'</a></li>').appendTo(devices);
 				
 				var code = $(this).children("code").text();
 				global_DeviceCodeRepos[code] = [];
