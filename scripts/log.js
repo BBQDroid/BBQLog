@@ -2,7 +2,7 @@
  * Copyright (c) 2012 - The BBQTeam
  */
 
-var global_CurrentDevice = "";
+var global_CurrentDevice = undefined;
 var global_CurrentVersion = "";
 var global_CurrentDate = "";
 var global_DeviceCodeRepos = [];
@@ -21,7 +21,6 @@ var global_ChangesetMoreSortCode = '';
  */
 $(function() {
 	loadDevices();
-	
 	updateBodyData();
 	
 	// Setup event listeners
@@ -108,10 +107,10 @@ function loadDevices() {
  */
 function updateListNightlies(_device, _version) {
 	global_NightliesListReady = false;
-	if (_device == '') {
+	if (_device == '' || _device == undefined) {
 		// If no device indicated, just display an empty list and
 		// tell the list is ready
-		$("#log_NightliesList").html("");
+		$("#log_NightliesList").html("<li class='nav-header'>Please select a device to show its nightlies.</li>");
 		global_NightliesListReady = true;
 		return;	
 	}
