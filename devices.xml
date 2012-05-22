@@ -233,7 +233,7 @@
 		<device>
 			<name>Ideos</name>
 			<model>U8150</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/huawei_u8150.jpg</image>
 			<code>u8150</code>
 			<repos>
 				<git name="android_device_huawei_u8150" />
@@ -242,7 +242,7 @@
 		<device>
 			<name>Pulse (T-Mobile)</name>
 			<model>U8220</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/huawei_u8220.jpg</image>
 			<code>u8220</code>
 			<repos>
 				<git name="android_device_huawei_u8220" />
@@ -482,7 +482,7 @@
 		<device>
 			<name>Captivate (AT&amp;T)</name>
 			<model>Captivate</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_captivate.jpg</image>
 			<code>captivatemtd</code>
 			<repos>
 				<git name="android_device_samsung_captivatemtd" />
@@ -491,7 +491,7 @@
 		<device>
 			<name>Galaxy Ace</name>
 			<model>Cooper</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_cooper.jpg</image>
 			<code>cooper</code>
 			<repos>
 				<git name="android_device_samsung_cooper" />
@@ -500,7 +500,7 @@
 		<device>
 			<name>Nexus S</name>
 			<model>Crespo</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_crespo.jpg</image>
 			<code>crespo</code>
 			<repos>
 				<git name="android_device_samsung_crespo" />
@@ -509,7 +509,7 @@
 		<device>
 			<name>Nexus S 4G</name>
 			<model>Crespo 4G</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_crespo.jpg</image>
 			<code>crespo4g</code>
 			<repos>
 				<git name="android_device_samsung_crespo4g" />
@@ -518,19 +518,19 @@
 		<device>
 			<name>Epic 4G</name>
 			<model>SPH-D700</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_epicmtd.jpg</image>
 			<code>epicmtd</code>
 			<repos>
-				<git name="android_device_samsung_crespo" />
+				<git name="android_device_samsung_epicmtd" />
 			</repos>
 		</device>
 		<device>
 			<name>Fascinate (Verizon)</name>
 			<model>Fascinate</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_fascinate.jpg</image>
 			<code>fascinatemtd</code>
 			<repos>
-				<git name="android_device_samsung_crespo" />
+				<git name="android_device_samsung_fascinatemtd" />
 			</repos>
 		</device>
 		<device>
@@ -554,7 +554,7 @@
 		<device>
 			<name>Galaxy S</name>
 			<model>GT-I9000B</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_galaxysbmtd.jpg</image>
 			<code>galaxysbmtd</code>
 			<repos>
 				<git name="android_device_samsung_galaxysbmtd" />
@@ -563,7 +563,7 @@
 		<device>
 			<name>Galaxy S</name>
 			<model>GT-I9000</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_galaxysbmtd.jpg</image>
 			<code>galaxysmtd</code>
 			<repos>
 				<git name="android_device_samsung_galaxysmtd" />
@@ -581,7 +581,7 @@
 		<device>
 			<name>Galaxy Nexus GSM</name>
 			<model>GT-I9250</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_maguro.jpg</image>
 			<code>maguro</code>
 			<repos>
 				<git name="android_device_samsung_maguro" />
@@ -590,7 +590,7 @@
 		<device>
 			<name>Galaxy Nexus CDMA</name>
 			<model>GT-I9250</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_maguro.jpg</image>
 			<code>toro</code>
 			<repos>
 				<git name="android_device_samsung_toro" />
@@ -599,7 +599,7 @@
 		<device>
 			<name>Galaxy Nexus Sprint</name>
 			<model>GT-I9250</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_maguro.jpg</image>
 			<code>toroplus</code>
 			<repos>
 				<git name="android_device_samsung_toroplus" />
@@ -608,7 +608,7 @@
 		<device>
 			<name>Galaxy Note</name>
 			<model>GT-N7000</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_n7000.jpg</image>
 			<code>n7000</code>
 			<repos>
 				<git name="android_device_samsung_n7000" />
@@ -617,7 +617,7 @@
 		<device>
 			<name>Mesmerize</name>
 			<model>Mesmerize</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_mesmerize.jpg</image>
 			<code>mesmerizemtd</code>
 			<repos>
 				<git name="android_device_samsung_mesmerizemtd" />
@@ -626,7 +626,7 @@
 		<device>
 			<name>Galaxy Tab 7</name>
 			<model>P1</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_p1.jpg</image>
 			<code>p1</code>
 			<repos>
 				<git name="android_device_samsung_p1" />
@@ -635,7 +635,7 @@
 		<device>
 			<name>Galaxy Tab 7 CDMA</name>
 			<model>P1 CDMA</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_p1.jpg</image>
 			<code>p1c</code>
 			<repos>
 				<git name="android_device_samsung_p1c" />
@@ -644,7 +644,7 @@
 		<device>
 			<name>Galaxy Tab 7</name>
 			<model>P1 L</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_p1.jpg</image>
 			<code>p1l</code>
 			<repos>
 				<git name="android_device_samsung_p1l" />
@@ -653,7 +653,7 @@
 		<device>
 			<name>Galaxy Tab 7</name>
 			<model>P1 N</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_p1.jpg</image>
 			<code>p1n</code>
 			<repos>
 				<git name="android_device_samsung_p1n" />
@@ -662,7 +662,7 @@
 		<device>
 			<name>Galaxy Tab 10.1 (T-Mobile)</name>
 			<model>P4 (t-mobile)</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_p4.jpg</image>
 			<code>p4tmo</code>
 			<repos>
 				<git name="android_device_samsung_p4tmo" />
@@ -670,8 +670,8 @@
 		</device>
 		<device>
 			<name>Galaxy Tab 10.1 (Wi-Fi)</name>
-			<model>P1</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<model>P4</model>
+			<image>images/devices/samsung_p4.jpg</image>
 			<code>p4wifi</code>
 			<repos>
 				<git name="android_device_samsung_p4wifi" />
@@ -680,7 +680,7 @@
 		<device>
 			<name>Showcase</name>
 			<model>Showcase</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_mesmerize.jpg</image>
 			<code>showcasemtd</code>
 			<repos>
 				<git name="android_device_samsung_showcasemtd" />
@@ -689,7 +689,7 @@
 		<device>
 			<name>Galaxy Mini</name>
 			<model>Tass</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_tass.jpg</image>
 			<code>tass</code>
 			<repos>
 				<git name="android_device_samsung_tass" />
@@ -698,7 +698,7 @@
 		<device>
 			<name>Vibrant (T-Mobile)</name>
 			<model>Vibrant</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_vibrant.jpg</image>
 			<code>vibrantmtd</code>
 			<repos>
 				<git name="android_device_samsung_vibrantmtd" />
