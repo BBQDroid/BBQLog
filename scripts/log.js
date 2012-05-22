@@ -180,11 +180,15 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	global_ChangesetHasMore = false;
 	global_ChangesetMoreSortCode = '';
 	
+	var versionNum = 9;
+	if (_version == "cm7")
+		versionNum = 7;
+	
 	// if no device is set, show all latest changes. Else, show device+date
 	if (_device == '') {
-		$("#log_NightlyTitle").html("CyanogenMod for all devices<br /><small>Narrow down your query by selecting a device.</small>");	
+		$("#log_NightlyTitle").html("CyanogenMod " + versionNum + " for all devices<br /><small>Narrow down your query by selecting a device.</small>");	
 	} else {
-		$("#log_NightlyTitle").text(_date + " nightly for " + _device);
+		$("#log_NightlyTitle").text(_date + " " + _version + " nightly for " + _device);
 	}
 	
 	
@@ -205,7 +209,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	}
 	
 	// load all changes
-	$.getJSON("changesets.php?RomName=CyanogenMod&Version=9" + ageQuery + "&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
+	$.getJSON("changesets.php?RomName=CyanogenMod&Version=" + versionNum + ageQuery + "&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
 		if (!_append) {
 			// clear current changesets
 			$("#log_Changeset").html('');
@@ -268,11 +272,12 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 				break;
 			}
 		}
-		
-
 	});
 }
 
+function setCMVersion(num) {
+	window.location = "#" + global_CurrentDevice + "/cm" + num +"/" + global_CurrentDate;
+}
 
 
 
@@ -655,3 +660,5 @@ function date (format, timestamp) {
     };
     return this.date(format, timestamp);
 }
+
+
