@@ -142,6 +142,12 @@ function updateListNightlies(_device, _version) {
 			if ($(this).children("title").text().indexOf("NIGHTLY") <= 0)
 				return;
 
+			// if we have a CM7 nightly and we are in CM9 changeset mode, redirect
+			if (_version == "cm9" && $(this).children("title").text().indexOf("cm-7") > 0) {
+				window.location = "#" + _device + '/cm7/next';
+				updateBodyData();
+			}
+
 			var nightlyTime = strtotime($(this).children("pubDate").text());
 			var nightlyCode = $(this).children("title").text().substring(12, 20);
 
