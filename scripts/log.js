@@ -139,6 +139,9 @@ function updateListNightlies(_device, _version) {
 		// for each nightly
 		var stop = false;
 		$(xmlParse).find('item').each(function() {
+			if ($(this).children("title").text().indexOf("NIGHTLY") <= 0)
+				return;
+
 			var nightlyTime = strtotime($(this).children("pubDate").text());
 			var nightlyCode = $(this).children("title").text().substring(12, 20);
 
@@ -148,7 +151,7 @@ function updateListNightlies(_device, _version) {
 				currMonth = date("m", nightlyTime);
 			}
 			
-			if (!stop)			
+			if (!stop)
 				$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+nightlyCode+'">' + date('l dS', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
 			
 			if (nightlyTime > global_LastNightlyDate)
