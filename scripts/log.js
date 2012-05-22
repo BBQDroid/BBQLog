@@ -146,7 +146,6 @@ function updateListNightlies(_device, _version) {
 
 			// if we have a CM7 nightly and we are in CM9 changeset mode, redirect
 			if (_version == "cm9" && !cm9found && !stop && $(this).children("title").text().indexOf("cm-7") > 0) {
-				alert($(this).children("title").text().indexOf("cm-7"));
 				window.location = "#" + _device + '/cm7/next';
 				updateBodyData();
 			} else if (_version == "cm9" && $(this).children("title").text().indexOf("cm-9") > 0) {
