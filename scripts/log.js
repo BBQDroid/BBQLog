@@ -138,14 +138,19 @@ function updateListNightlies(_device, _version) {
 		
 		// for each nightly
 		var stop = false;
+		var cm9found = false;
+	
 		$(xmlParse).find('item').each(function() {
 			if ($(this).children("title").text().indexOf("NIGHTLY") <= 0)
 				return;
 
 			// if we have a CM7 nightly and we are in CM9 changeset mode, redirect
-			if (_version == "cm9" && $(this).children("title").text().indexOf("cm-7") > 0) {
+			if (_version == "cm9" && !cm9found && !stop && $(this).children("title").text().indexOf("cm-7") > 0) {
+				alert($(this).children("title").text().indexOf("cm-7"));
 				window.location = "#" + _device + '/cm7/next';
 				updateBodyData();
+			} else if (_version == "cm9" && $(this).children("title").text().indexOf("cm-9") > 0) {
+				cm9found = true;
 			}
 
 			var nightlyTime = strtotime($(this).children("pubDate").text());
