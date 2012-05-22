@@ -837,7 +837,7 @@
 		<device>
 			<name>Blade</name>
 			<model>Blade</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/zte_blade.jpg</image>
 			<code>blade</code>
 			<repos>
 				<git name="android_device_zte_blade" />
@@ -846,7 +846,7 @@
 		<device>
 			<name>V9</name>
 			<model>V9</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/zte_v9.jpg</image>
 			<code>v9</code>
 			<repos>
 				<git name="android_device_zte_v9" />
@@ -857,7 +857,7 @@
 		<device>
 			<name>Advent Vega</name>
 			<model></model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/advent_vega.jpg</image>
 			<code>vega</code>
 			<repos>
 				<git name="android_device_advent_vega" />
@@ -866,7 +866,7 @@
 		<device>
 			<name>Nook Color</name>
 			<model>Encore</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/nook_color.jpg</image>
 			<code>encore</code>
 			<repos>
 				<git name="android_device_bn_encore" />
@@ -875,16 +875,16 @@
 		<device>
 			<name>Commtiva Z71</name>
 			<model></model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/commtiva_z71.png</image>
 			<code>z71</code>
 			<repos>
-				<git name="android_device_bn_encore" />
+				<git name="android_device_commtiva_z71" />
 			</repos>
 		</device>
 		<device>
 			<name>One</name>
 			<model>Geeksphone</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/geeksphone_one.jpg</image>
 			<code>one</code>
 			<repos>
 			</repos>
@@ -892,7 +892,7 @@
 		<device>
 			<name>Zero</name>
 			<model>Geeksphone</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/geeksphone_zero.jpg</image>
 			<code>zero</code>
 			<repos>
 			</repos>
@@ -900,7 +900,7 @@
 		<device>
 			<name>HP Touchpad</name>
 			<model>Tenderloin</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/hp_tenderloin.jpg</image>
 			<code>tenderloin</code>
 			<repos>
 				<git name="android_device_hp_tenderloin" />
@@ -909,10 +909,10 @@
 		<device>
 			<name>Viewsonic G Tablet</name>
 			<model>SMB_A1002</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/viewsonic_gtablet.jpg</image>
 			<code>smb_a1002</code>
 			<repos>
-				<git name="android_device_hp_tenderloin" />
+				<git name="android_device_malata_smb_a1002" />
 			</repos>
 		</device>
 	</oem>
