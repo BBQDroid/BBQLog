@@ -46,7 +46,7 @@ function updateBodyData() {
 	var params = url.split("/");
 	
 	if (global_CurrentDevice != params[0]) {
-		updateListNightlies(params[0], params[1]);
+		updateListNightlies(params[0], params[1], params[2]);
 	}
 
 	// scroll up if needed (to avoid loading changes down to the current scroll)
@@ -110,7 +110,7 @@ function loadDevices() {
 /**
  * Update the list of nightlies for the specified device
  */
-function updateListNightlies(_device, _version) {
+function updateListNightlies(_device, _version, _date) {
 	global_NightliesListReady = false;
 	if (_device == '' || _device == undefined) {
 		// If no device indicated, just display an empty list and
@@ -143,15 +143,19 @@ function updateListNightlies(_device, _version) {
 		// for each nightly
 		var stop = false;
 		var cm9found = false;
+		var cancel = false;
 	
 		$(xmlParse).find('item').each(function() {
-			if ($(this).children("title").text().indexOf("NIGHTLY") <= 0)
+			if (cancel || $(this).children("title").text().indexOf("NIGHTLY") <= 0)
 				return;
 
 			// if we have a CM7 nightly and we are in CM9 changeset mode, redirect
 			if (_version == "cm9" && !cm9found && !stop && $(this).children("title").text().indexOf("cm-7") > 0) {
 				window.location = "#" + _device + '/cm7/next';
-				updateBodyData();
+				window.location.reload();
+				cancel=true;
+//				updateBodyData();
+				//return;
 			} else if (_version == "cm9" && $(this).children("title").text().indexOf("cm-9") > 0) {
 				cm9found = true;
 			}
