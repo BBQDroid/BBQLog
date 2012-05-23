@@ -168,7 +168,7 @@ function updateListNightlies(_device, _version) {
 			}
 			
 			if (!stop)
-				$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+nightlyTime+'">' + date('l dS', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
+				$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+nightlyTime+'">' + date('l dS (H:i)', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
 			
 			if (nightlyTime > global_LastNightlyDate)
 				global_LastNightlyDate = nightlyTime;
