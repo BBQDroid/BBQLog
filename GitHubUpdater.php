@@ -61,6 +61,8 @@ $nbGitHubRequests = 0;
 mysql_connect($CFG['SQL']['Host'], $CFG['SQL']['User'], $CFG['SQL']['Pass']) or die(mysql_error());
 mysql_select_db($CFG['SQL']['DB']) or die(mysql_error());
 
+mysql_query("START TRANSACTION;") or die(mysql_error());
+
 $startTime = microtime(true);
 
 
@@ -143,7 +145,8 @@ actionDone("Commits updated");
 
 // We keep only the commits of the last 4 months
 actionStart("Cleaning 4+months old commits");
-mysql_query("DELETE FROM commits WHERE CommitDate < '".date("Y-m-d H:i:s", time()-3600*24*31*4). "'");
+mysql_query("COMMIT;") or die(mysql_error());
+mysql_query("DELETE FROM commits WHERE CommitDate < '".date("Y-m-d H:i:s", time()-3600*24*31*4). "'") or die(mysql_error());
 actionDone("Cleaned " . mysql_affected_rows() . " commits");
 
 actionDone("GITHUB REQUESTS: " . $nbGitHubRequests);
