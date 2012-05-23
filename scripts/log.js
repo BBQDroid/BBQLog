@@ -153,7 +153,7 @@ function updateListNightlies(_device, _version, _date) {
 				return;
 
 			// if we have a CM7 nightly and we are in CM9 changeset mode, redirect
-			if (_version == "cm9" && !cm9found && !stop && $(this).children("title").text().indexOf("cm-7") > 0) {
+			if (_version == "cm9" && !cm9found && !stop && $(this).children("title").text().indexOf("cm-7") >= 0) {
 				window.location = "#" + _device + '/cm7/next';
 				window.location.reload();
 				cancel=true;
@@ -332,12 +332,16 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>'); 
 			
 			if (i == _amount - 1) {
-				global_ChangesetHasMore = true;
-				global_ChangesetMoreSortCode = data.result.changes[i].sortKey;
-				
-				// if the bottom of the changeset div is already displayed, start loading the new changes
-				if ($(window).scrollTop() + $(window).height() >= $("#log_Changeset").offset().top + $("#log_Changeset").height() - 250) {
-					updateChangeset(_device, _version, _date, _amount, true, global_ChangesetMoreSortCode);
+				if ($("#log_Changeset").children("li").size() <= 250) {
+					global_ChangesetHasMore = true;
+					global_ChangesetMoreSortCode = data.result.changes[i].sortKey;
+
+					// if the bottom of the changeset div is already displayed, start loading the new changes
+					if ($(window).scrollTop() + $(window).height() >= $("#log_Changeset").offset().top + $("#log_Changeset").height() - 250) {
+						updateChangeset(_device, _version, _date, _amount, true, global_ChangesetMoreSortCode);
+					}
+				} else {
+					$("#log_Changeset").append("<h6>This changeset has been truncated as it contains over 250 changes</h6>");
 				}
 				break;
 			}
