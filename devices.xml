@@ -316,7 +316,7 @@
 		<device>
 			<name>Optimus LTE</name>
 			<model>P930</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/lge_p930.jpg</image>
 			<code>p930</code>
 			<repos>
 				<git name="android_device_lge_p930" />
@@ -540,6 +540,7 @@
 			<code>galaxys2</code>
 			<repos>
 				<git name="android_device_samsung_galaxys2" />
+				<git name="android_kernel_samsung_smdk4210" />
 			</repos>
 		</device>
 		<device>
@@ -549,6 +550,7 @@
 			<code>galaxys2att</code>
 			<repos>
 				<git name="android_device_samsung_galaxys2att" />
+				<git name="android_kernel_samsung_smdk4210" />
 			</repos>
 		</device>
 		<device>
@@ -576,6 +578,7 @@
 			<code>i777</code>
 			<repos>
 				<git name="android_device_samsung_i777" />
+				<git name="android_kernel_samsung_smdk4210" />
 			</repos>
 		</device>
 		<device>
@@ -612,6 +615,7 @@
 			<code>n7000</code>
 			<repos>
 				<git name="android_device_samsung_n7000" />
+				<git name="android_kernel_samsung_smdk4210" />
 			</repos>
 		</device>
 		<device>
