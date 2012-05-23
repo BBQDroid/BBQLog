@@ -227,7 +227,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 		var nightlyDate = global_NightliesDateToCode[_date];
 		if (nightlyDate == undefined)
 			nightlyDate = "next";
-		$("#log_NightlyTitle").text(nightlyDate + " " + _version + " nightly for " + _device);
+		$("#log_NightlyTitle").html(nightlyDate + " " + _version + " nightly for " + _device+"<br /><small>Built on " + date("M dS (H:i)", _date) + "</small>");
 	}
 	
 	
