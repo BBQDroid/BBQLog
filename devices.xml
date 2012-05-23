@@ -400,9 +400,9 @@
 			<name>Defy</name>
 			<model>Jordan</model>
 			<image>images/devices/motorola_defy.png</image>
-			<code>defy</code>
+			<code>jordan</code>
 			<repos>
-				<git name="android_device_motorola_defy" />
+				<git name="android_device_motorola_jordan" />
 			</repos>
 		</device>
 		<device>
