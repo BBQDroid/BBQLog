@@ -16,6 +16,9 @@ var global_NightliesListReady = false;
 var global_ChangesetHasMore = false;
 var global_ChangesetMoreSortCode = '';
 
+var translations = ["translat", "localiz", "german", "french", "spanish",
+	"russian", "italian", "chinese", "dutch", "pt-br", "hebrew",
+	"hungarian", "turkish", "korean", "danish", "ukranian"];
 
 /**
  *  Initialization
@@ -290,10 +293,20 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 				if (updateTime < global_NightliesCodeToPreviousDate[_date])
 					break;
 			}
+
+			// check for translations
+			var subject = data.result.changes[i].subject.toLowerCase();
+			var translation = false;
+			for (var t = 0; t < translations.length; t++) {
+				if (subject.indexOf(translations[t]) >= 0) {
+					translation = true;
+					break;
+				}
+			}
 			
 			// set a specific style for translation
 			var itemStyle = "padding-left:10px;";
-			if (data.result.changes[i].subject.indexOf("translat") != -1 || data.result.changes[i].subject.indexOf("Translat") != -1) {
+			if (translation) {
 				itemStyle +="opacity:0.5;border-left:2px solid #9933CC;";
 			} else {
 				// if it's a repo for the device, put it in a special color
