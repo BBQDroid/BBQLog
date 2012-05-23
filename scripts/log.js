@@ -9,6 +9,7 @@ var global_DeviceCodeRepos = [];
 
 var global_LastNightlyDate = 0;
 var global_NightliesCodeToDate = [];
+var global_NightliesDateToCode = [];
 var global_NightliesCodeToPreviousDate = [];
 var global_NightliesListReady = false;
 
@@ -156,7 +157,9 @@ function updateListNightlies(_device, _version) {
 			}
 
 			var nightlyTime = strtotime($(this).children("pubDate").text());
-			var nightlyCode = $(this).children("title").text().substring(12, 20);
+			var nightlyCode = nightlyTime; //$(this).children("title").text().substring(12, 20);
+
+			global_NightliesDateToCode[nightlyTime] = $(this).children("title").text().substring(12, 20);
 
 			// if the current month changes, show a new header line
 			if (currMonth != date("m", nightlyTime) && !stop) {
@@ -165,7 +168,7 @@ function updateListNightlies(_device, _version) {
 			}
 			
 			if (!stop)
-				$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+nightlyCode+'">' + date('l dS', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
+				$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+nightlyTime+'">' + date('l dS', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
 			
 			if (nightlyTime > global_LastNightlyDate)
 				global_LastNightlyDate = nightlyTime;
@@ -221,7 +224,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	if (_device == '') {
 		$("#log_NightlyTitle").html("CyanogenMod " + versionNum + " for all devices<br /><small>Narrow down your query by selecting a device.</small>");	
 	} else {
-		$("#log_NightlyTitle").text(_date + " " + _version + " nightly for " + _device);
+		$("#log_NightlyTitle").text(global_NightliesDateToCode[_date] + " " + _version + " nightly for " + _device);
 	}
 	
 	
