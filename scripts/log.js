@@ -224,7 +224,10 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	if (_device == '') {
 		$("#log_NightlyTitle").html("CyanogenMod " + versionNum + " for all devices<br /><small>Narrow down your query by selecting a device.</small>");	
 	} else {
-		$("#log_NightlyTitle").text(global_NightliesDateToCode[_date] + " " + _version + " nightly for " + _device);
+		var nightlyDate = global_NightliesDateToCode[_date];
+		if (nightlyDate == undefined)
+			nightlyDate = "next";
+		$("#log_NightlyTitle").text(nightlyDate + " " + _version + " nightly for " + _device);
 	}
 	
 	
