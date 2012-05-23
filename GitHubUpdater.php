@@ -1,7 +1,7 @@
 <?php
 
-//if ($_SERVER['REMOTE_ADDR'] != "176.9.149.130")
-//	die("403 FROM " . $_SERVER['REMOTE_ADDR']);
+if ($_SERVER['REMOTE_ADDR'] != "176.9.149.130")
+	die("403 FROM " . $_SERVER['REMOTE_ADDR']);
 
 /**
  * Git Hub Updater script
@@ -47,7 +47,8 @@ function flush_buffers(){
 }
 
 function githubDate($date) {
-	$a = new DateTime("2012-01-25T11:23:28-08:00");
+	$a = new DateTime($date);
+	$a->setTimezone(new DateTimeZone('UTC'));
 	return $a->format("Y-m-d H:i:s");
 }
 

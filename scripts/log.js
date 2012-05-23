@@ -244,7 +244,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	} else if (_date != "next") {
 		ageQuery = "&startDate=" + global_NightliesCodeToDate[_date] + "&endDate=" + global_NightliesCodeToPreviousDate[_date];
 	} else {
-		ageQuery = "&startDate=" + global_LastNightlyDate;
+		ageQuery = "&endDate=" + global_LastNightlyDate;
 	}
 
 	console.log(ageQuery);
