@@ -4,7 +4,7 @@
 		<device>
 			<name>Transformer Pad</name>
 			<model>TF101</model>
-			<image>images/devices/asus_tf101.jpg</image>
+			<image>images/devices/asus_tf101.png</image>
 			<code>tf101</code>
 			<repos>
 				<git name="android_device_asus_tf101" />
@@ -13,7 +13,7 @@
 		<device>
 			<name>Transformer Prime</name>
 			<model>TF201</model>
-			<image>images/devices/asus_tf201.jpg</image>
+			<image>images/devices/asus_tf201.png</image>
 			<code>tf201</code>
 			<repos>
 				<git name="android_device_asus_tf201" />
@@ -24,7 +24,7 @@
 		<device>
 			<name>Desire HD</name>
 			<model>Ace</model>
-			<image>images/devices/htc_ace.jpg</image>
+			<image>images/devices/htc_ace.png</image>
 			<code>ace</code>
 			<repos>
 				<git name="android_device_htc_ace" />
@@ -33,7 +33,7 @@
 		<device>
 			<name>Desire</name>
 			<model>Bravo</model>
-			<image>images/devices/htc_bravo.jpg</image>
+			<image>images/devices/htc_bravo.png</image>
 			<code>bravo</code>
 			<repos>
 				<git name="android_device_htc_bravo" />
@@ -42,7 +42,7 @@
 		<device>
 			<name>Desire CDMA</name>
 			<model>Bravo CDMA</model>
-			<image>images/devices/htc_bravo.jpg</image>
+			<image>images/devices/htc_bravo.png</image>
 			<code>bravoc</code>
 			<repos>
 				<git name="android_device_htc_bravoc" />
@@ -51,7 +51,7 @@
 		<device>
 			<name>Wildfire</name>
 			<model>Buzz</model>
-			<image>images/devices/htc_buzz.jpg</image>
+			<image>images/devices/htc_buzz.png</image>
 			<code>buzz</code>
 			<repos>
 				<git name="android_device_htc_buzz" />
@@ -60,7 +60,7 @@
 		<device>
 			<name>Tattoo</name>
 			<model>click</model>
-			<image>images/devices/htc_click.jpg</image>
+			<image>images/devices/htc_click.png</image>
 			<code>click</code>
 			<repos>
 				<git name="android_device_htc_click" />
@@ -69,7 +69,7 @@
 		<device>
 			<name>Eris</name>
 			<model>Desirec</model>
-			<image>images/devices/htc_bravo.jpg</image>
+			<image>images/devices/htc_bravo.png</image>
 			<code>desirec</code>
 			<repos>
 				<git name="android_device_htc_desirec" />
@@ -78,7 +78,7 @@
 		<device>
 			<name>myTouch 4G Slide</name>
 			<model>Doubleshot</model>
-			<image>images/devices/htc_doubleshot.jpg</image>
+			<image>images/devices/htc_doubleshot.png</image>
 			<code>doubleshot</code>
 			<repos>
 				<git name="android_device_htc_doubleshot" />
@@ -87,7 +87,7 @@
 		<device>
 			<name>Dream / Magic</name>
 			<model>Sapphire</model>
-			<image>images/devices/htc_dream_sapphire.jpg</image>
+			<image>images/devices/htc_dream_sapphire.png</image>
 			<code>dream_sapphire</code>
 			<repos>
 				<git name="android_device_htc_dream_sapphire" />
@@ -96,7 +96,7 @@
 		<device>
 			<name>myTouch 3G Slide</name>
 			<model>Espresso</model>
-			<image>images/devices/htc_espresso.jpg</image>
+			<image>images/devices/htc_espresso.png</image>
 			<code>espresso</code>
 			<repos>
 				<git name="android_device_htc_espresso" />
@@ -105,7 +105,7 @@
 		<device>
 			<name>myTouch 4G Panache</name>
 			<model>Glacier</model>
-			<image>images/devices/htc_glacier.jpg</image>
+			<image>images/devices/htc_glacier.png</image>
 			<code>glacier</code>
 			<repos>
 				<git name="android_device_htc_glacier" />
@@ -114,7 +114,7 @@
 		<device>
 			<name>Hero</name>
 			<model>Hero</model>
-			<image>images/devices/htc_hero.jpg</image>
+			<image>images/devices/htc_hero.png</image>
 			<code>hero</code>
 			<repos>
 				<git name="android_device_htc_hero" />
@@ -123,7 +123,7 @@
 		<device>
 			<name>Hero CDMA</name>
 			<model>Hero CDMA</model>
-			<image>images/devices/htc_hero.jpg</image>
+			<image>images/devices/htc_hero.png</image>
 			<code>heroc</code>
 			<repos>
 				<git name="android_device_htc_heroc" />
@@ -141,7 +141,7 @@
 		<device>
 			<name>Legend</name>
 			<model>Legend</model>
-			<image>images/devices/htc_legend.jpg</image>
+			<image>images/devices/htc_legend.png</image>
 			<code>legend</code>
 			<repos>
 				<git name="android_device_htc_legend" />
@@ -159,7 +159,7 @@
 		<device>
 			<name>Nexus One</name>
 			<model>Passion</model>
-			<image>images/devices/htc_passion.jpg</image>
+			<image>images/devices/htc_passion.png</image>
 			<code>passion</code>
 			<repos>
 				<git name="android_device_htc_passion" />
@@ -168,7 +168,7 @@
 		<device>
 			<name>Sensation</name>
 			<model>Pyramid</model>
-			<image>images/devices/htc_pyramid.jpg</image>
+			<image>images/devices/htc_pyramid.png</image>
 			<code>pyramid</code>
 			<repos>
 				<git name="android_device_htc_pyramid" />
@@ -177,7 +177,7 @@
 		<device>
 			<name>Desire S</name>
 			<model>Saga</model>
-			<image>images/devices/htc_saga.jpg</image>
+			<image>images/devices/htc_saga.png</image>
 			<code>saga</code>
 			<repos>
 				<git name="android_device_htc_saga" />
@@ -186,7 +186,7 @@
 		<device>
 			<name>Evo Shift 4G</name>
 			<model>Speedy</model>
-			<image>images/devices/htc_speedy.jpg</image>
+			<image>images/devices/htc_speedy.png</image>
 			<code>speedy</code>
 			<repos>
 				<git name="android_device_htc_speedy" />
@@ -195,7 +195,7 @@
 		<device>
 			<name>EVO 4G</name>
 			<model>Supersonic</model>
-			<image>images/devices/htc_supersonic.jpg</image>
+			<image>images/devices/htc_supersonic.png</image>
 			<code>supersonic</code>
 			<repos>
 				<git name="android_device_htc_supersonic" />
@@ -204,7 +204,7 @@
 		<device>
 			<name>Desire Z</name>
 			<model>vision</model>
-			<image>images/devices/htc_vision.jpg</image>
+			<image>images/devices/htc_vision.png</image>
 			<code>vision</code>
 			<repos>
 				<git name="android_device_htc_vision" />
@@ -213,7 +213,7 @@
 		<device>
 			<name>Incredible S</name>
 			<model>vivo</model>
-			<image>images/devices/htc_vivo.jpg</image>
+			<image>images/devices/htc_vivo.png</image>
 			<code>vivo</code>
 			<repos>
 				<git name="android_device_htc_vivo" />
@@ -222,7 +222,7 @@
 		<device>
 			<name>Incredible 2</name>
 			<model>Vivow</model>
-			<image>images/devices/htc_vivow.jpg</image>
+			<image>images/devices/htc_vivow.png</image>
 			<code>vivow</code>
 			<repos>
 				<git name="android_device_htc_vivow" />
@@ -233,7 +233,7 @@
 		<device>
 			<name>Ideos</name>
 			<model>U8150</model>
-			<image>images/devices/huawei_u8150.jpg</image>
+			<image>images/devices/huawei_u8150.png</image>
 			<code>u8150</code>
 			<repos>
 				<git name="android_device_huawei_u8150" />
@@ -242,7 +242,7 @@
 		<device>
 			<name>Pulse (T-Mobile)</name>
 			<model>U8220</model>
-			<image>images/devices/huawei_u8220.jpg</image>
+			<image>images/devices/huawei_u8220.png</image>
 			<code>u8220</code>
 			<repos>
 				<git name="android_device_huawei_u8220" />
@@ -253,7 +253,7 @@
 		<device>
 			<name>Optimus Pro</name>
 			<model>C660</model>
-			<image>images/devices/lge_c660.jpg</image>
+			<image>images/devices/lge_c660.png</image>
 			<code>c660</code>
 			<repos>
 				<git name="android_device_lge_c660" />
@@ -262,7 +262,7 @@
 		<device>
 			<name>Optimus Hub</name>
 			<model>E510</model>
-			<image>images/devices/lge_e510.jpg</image>
+			<image>images/devices/lge_e510.png</image>
 			<code>e510</code>
 			<repos>
 				<git name="android_device_lge_e510" />
@@ -271,7 +271,7 @@
 		<device>
 			<name>Optimus Sol</name>
 			<model>E730</model>
-			<image>images/devices/lge_e730.jpg</image>
+			<image>images/devices/lge_e730.png</image>
 			<code>e730</code>
 			<repos>
 				<git name="android_device_lge_e730" />
@@ -280,7 +280,7 @@
 		<device>
 			<name>myTouch</name>
 			<model>E739</model>
-			<image>images/devices/lge_e739.jpg</image>
+			<image>images/devices/lge_e739.png</image>
 			<code>e739</code>
 			<repos>
 				<git name="android_device_lge_e739" />
@@ -298,7 +298,7 @@
 		<device>
 			<name>Optimus 3D</name>
 			<model>P920</model>
-			<image>images/devices/lge_p920.jpg</image>
+			<image>images/devices/lge_p920.png</image>
 			<code>p920</code>
 			<repos>
 				<git name="android_device_lge_p920" />
@@ -307,7 +307,7 @@
 		<device>
 			<name>Thrill 4G</name>
 			<model>P925</model>
-			<image>images/devices/lge_p925.jpg</image>
+			<image>images/devices/lge_p925.png</image>
 			<code>p925</code>
 			<repos>
 				<git name="android_device_lge_p925" />
@@ -316,7 +316,7 @@
 		<device>
 			<name>Optimus LTE</name>
 			<model>P930</model>
-			<image>images/devices/lge_p930.jpg</image>
+			<image>images/devices/lge_p930.png</image>
 			<code>p930</code>
 			<repos>
 				<git name="android_device_lge_p930" />
@@ -334,7 +334,7 @@
 		<device>
 			<name>Optimus 2X</name>
 			<model>P990</model>
-			<image>images/devices/lge_p990.jpg</image>
+			<image>images/devices/lge_p990.png</image>
 			<code>p990</code>
 			<repos>
 				<git name="android_device_lge_p990" />
@@ -343,7 +343,7 @@
 		<device>
 			<name>G2x</name>
 			<model>P999</model>
-			<image>images/devices/lge_p999.jpg</image>
+			<image>images/devices/lge_p999.png</image>
 			<code>p999</code>
 			<repos>
 				<git name="android_device_lge_p999" />
@@ -372,7 +372,7 @@
 		<device>
 			<name>Droid X (CDMA)</name>
 			<model>Droid X</model>
-			<image>images/devices/motorola_droidx.jpg</image>
+			<image>images/devices/motorola_droidx.png</image>
 			<code>cdma_shadow</code>
 			<repos>
 				<git name="android_device_motorola_cdma_shadow" />
@@ -408,7 +408,7 @@
 		<device>
 			<name>Cliq</name>
 			<model>Morisson</model>
-			<image>images/devices/motorola_cliq.jpg</image>
+			<image>images/devices/motorola_cliq.png</image>
 			<code>morrison</code>
 			<repos>
 				<git name="android_device_motorola_morrison" />
@@ -426,7 +426,7 @@
 		<device>
 			<name>Atrix 4G</name>
 			<model>Olympus</model>
-			<image>images/devices/motorola_olympus.jpg</image>
+			<image>images/devices/motorola_olympus.png</image>
 			<code>olympus</code>
 			<repos>
 				<git name="android_device_motorola_olympus" />
@@ -435,7 +435,7 @@
 		<device>
 			<name>Droid X</name>
 			<model>shadow</model>
-			<image>images/devices/motorola_droidx.jpg</image>
+			<image>images/devices/motorola_droidx.png</image>
 			<code>shadow</code>
 			<repos>
 				<git name="android_device_motorola_shadow" />
@@ -444,7 +444,7 @@
 		<device>
 			<name>Droid</name>
 			<model>sholes</model>
-			<image>images/devices/motorola_droid.jpg</image>
+			<image>images/devices/motorola_droid.png</image>
 			<code>sholes</code>
 			<repos>
 				<git name="android_device_motorola_sholes" />
@@ -453,7 +453,7 @@
 		<device>
 			<name>Xoom (Verizon)</name>
 			<model>Stingray</model>
-			<image>images/devices/motorola_xoom.jpg</image>
+			<image>images/devices/motorola_xoom.png</image>
 			<code>stingray</code>
 			<repos>
 				<git name="android_device_motorola_stingray" />
@@ -462,7 +462,7 @@
 		<device>
 			<name>Xoom (Wi-Fi)</name>
 			<model>Wingray</model>
-			<image>images/devices/motorola_xoom.jpg</image>
+			<image>images/devices/motorola_xoom.png</image>
 			<code>wingray</code>
 			<repos>
 				<git name="android_device_motorola_wingray" />
@@ -471,7 +471,7 @@
 		<device>
 			<name>Cliq XT</name>
 			<model>Cliq XT</model>
-			<image>images/devices/motorola_cliqxt.jpg</image>
+			<image>images/devices/motorola_cliqxt.png</image>
 			<code>zeppelin</code>
 			<repos>
 				<git name="android_device_motorola_zeppelin" />
@@ -482,7 +482,7 @@
 		<device>
 			<name>Captivate (AT&amp;T)</name>
 			<model>Captivate</model>
-			<image>images/devices/samsung_captivate.jpg</image>
+			<image>images/devices/samsung_captivate.png</image>
 			<code>captivatemtd</code>
 			<repos>
 				<git name="android_device_samsung_captivatemtd" />
@@ -491,7 +491,7 @@
 		<device>
 			<name>Galaxy Ace</name>
 			<model>Cooper</model>
-			<image>images/devices/samsung_cooper.jpg</image>
+			<image>images/devices/samsung_cooper.png</image>
 			<code>cooper</code>
 			<repos>
 				<git name="android_device_samsung_cooper" />
@@ -500,7 +500,7 @@
 		<device>
 			<name>Nexus S</name>
 			<model>Crespo</model>
-			<image>images/devices/samsung_crespo.jpg</image>
+			<image>images/devices/samsung_crespo.png</image>
 			<code>crespo</code>
 			<repos>
 				<git name="android_device_samsung_crespo" />
@@ -509,7 +509,7 @@
 		<device>
 			<name>Nexus S 4G</name>
 			<model>Crespo 4G</model>
-			<image>images/devices/samsung_crespo.jpg</image>
+			<image>images/devices/samsung_crespo.png</image>
 			<code>crespo4g</code>
 			<repos>
 				<git name="android_device_samsung_crespo4g" />
@@ -518,7 +518,7 @@
 		<device>
 			<name>Epic 4G</name>
 			<model>SPH-D700</model>
-			<image>images/devices/samsung_epicmtd.jpg</image>
+			<image>images/devices/samsung_epicmtd.png</image>
 			<code>epicmtd</code>
 			<repos>
 				<git name="android_device_samsung_epicmtd" />
@@ -527,7 +527,7 @@
 		<device>
 			<name>Fascinate (Verizon)</name>
 			<model>Fascinate</model>
-			<image>images/devices/samsung_fascinate.jpg</image>
+			<image>images/devices/samsung_fascinate.png</image>
 			<code>fascinatemtd</code>
 			<repos>
 				<git name="android_device_samsung_fascinatemtd" />
@@ -536,7 +536,7 @@
 		<device>
 			<name>Galaxy S II</name>
 			<model>GT-I9100</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_i9100.png</image>
 			<code>galaxys2</code>
 			<repos>
 				<git name="android_device_samsung_galaxys2" />
@@ -546,7 +546,7 @@
 		<device>
 			<name>Galaxy S II (AT&amp;T)</name>
 			<model>GT-I9100 (AT&amp;T)</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_i9100.png</image>
 			<code>galaxys2att</code>
 			<repos>
 				<git name="android_device_samsung_galaxys2att" />
@@ -556,7 +556,7 @@
 		<device>
 			<name>Galaxy S</name>
 			<model>GT-I9000B</model>
-			<image>images/devices/samsung_galaxysbmtd.jpg</image>
+			<image>images/devices/samsung_galaxysbmtd.png</image>
 			<code>galaxysbmtd</code>
 			<repos>
 				<git name="android_device_samsung_galaxysbmtd" />
@@ -565,7 +565,7 @@
 		<device>
 			<name>Galaxy S</name>
 			<model>GT-I9000</model>
-			<image>images/devices/samsung_galaxysbmtd.jpg</image>
+			<image>images/devices/samsung_galaxysbmtd.png</image>
 			<code>galaxysmtd</code>
 			<repos>
 				<git name="android_device_samsung_galaxysmtd" />
@@ -574,7 +574,7 @@
 		<device>
 			<name>Galaxy S II (AT&amp;T)</name>
 			<model>SGH-I777</model>
-			<image>images/devices/samsung_i9100.jpg</image>
+			<image>images/devices/samsung_i9100.png</image>
 			<code>i777</code>
 			<repos>
 				<git name="android_device_samsung_i777" />
@@ -584,7 +584,7 @@
 		<device>
 			<name>Galaxy Nexus GSM</name>
 			<model>GT-I9250</model>
-			<image>images/devices/samsung_maguro.jpg</image>
+			<image>images/devices/samsung_maguro.png</image>
 			<code>maguro</code>
 			<repos>
 				<git name="android_device_samsung_maguro" />
@@ -593,7 +593,7 @@
 		<device>
 			<name>Galaxy Nexus CDMA</name>
 			<model>GT-I9250</model>
-			<image>images/devices/samsung_maguro.jpg</image>
+			<image>images/devices/samsung_maguro.png</image>
 			<code>toro</code>
 			<repos>
 				<git name="android_device_samsung_toro" />
@@ -602,7 +602,7 @@
 		<device>
 			<name>Galaxy Nexus Sprint</name>
 			<model>GT-I9250</model>
-			<image>images/devices/samsung_maguro.jpg</image>
+			<image>images/devices/samsung_maguro.png</image>
 			<code>toroplus</code>
 			<repos>
 				<git name="android_device_samsung_toroplus" />
@@ -611,7 +611,7 @@
 		<device>
 			<name>Galaxy Note</name>
 			<model>GT-N7000</model>
-			<image>images/devices/samsung_n7000.jpg</image>
+			<image>images/devices/samsung_n7000.png</image>
 			<code>n7000</code>
 			<repos>
 				<git name="android_device_samsung_n7000" />
@@ -621,7 +621,7 @@
 		<device>
 			<name>Mesmerize</name>
 			<model>Mesmerize</model>
-			<image>images/devices/samsung_mesmerize.jpg</image>
+			<image>images/devices/samsung_mesmerize.png</image>
 			<code>mesmerizemtd</code>
 			<repos>
 				<git name="android_device_samsung_mesmerizemtd" />
@@ -630,7 +630,7 @@
 		<device>
 			<name>Galaxy Tab 7</name>
 			<model>P1</model>
-			<image>images/devices/samsung_p1.jpg</image>
+			<image>images/devices/samsung_p1.png</image>
 			<code>p1</code>
 			<repos>
 				<git name="android_device_samsung_p1" />
@@ -639,7 +639,7 @@
 		<device>
 			<name>Galaxy Tab 7 CDMA</name>
 			<model>P1 CDMA</model>
-			<image>images/devices/samsung_p1.jpg</image>
+			<image>images/devices/samsung_p1.png</image>
 			<code>p1c</code>
 			<repos>
 				<git name="android_device_samsung_p1c" />
@@ -648,7 +648,7 @@
 		<device>
 			<name>Galaxy Tab 7</name>
 			<model>P1 L</model>
-			<image>images/devices/samsung_p1.jpg</image>
+			<image>images/devices/samsung_p1.png</image>
 			<code>p1l</code>
 			<repos>
 				<git name="android_device_samsung_p1l" />
@@ -657,7 +657,7 @@
 		<device>
 			<name>Galaxy Tab 7</name>
 			<model>P1 N</model>
-			<image>images/devices/samsung_p1.jpg</image>
+			<image>images/devices/samsung_p1.png</image>
 			<code>p1n</code>
 			<repos>
 				<git name="android_device_samsung_p1n" />
@@ -666,7 +666,7 @@
 		<device>
 			<name>Galaxy Tab 10.1 (T-Mobile)</name>
 			<model>P4 (t-mobile)</model>
-			<image>images/devices/samsung_p4.jpg</image>
+			<image>images/devices/samsung_p4.png</image>
 			<code>p4tmo</code>
 			<repos>
 				<git name="android_device_samsung_p4tmo" />
@@ -675,7 +675,7 @@
 		<device>
 			<name>Galaxy Tab 10.1 (Wi-Fi)</name>
 			<model>P4</model>
-			<image>images/devices/samsung_p4.jpg</image>
+			<image>images/devices/samsung_p4.png</image>
 			<code>p4wifi</code>
 			<repos>
 				<git name="android_device_samsung_p4wifi" />
@@ -684,7 +684,7 @@
 		<device>
 			<name>Showcase</name>
 			<model>Showcase</model>
-			<image>images/devices/samsung_mesmerize.jpg</image>
+			<image>images/devices/samsung_mesmerize.png</image>
 			<code>showcasemtd</code>
 			<repos>
 				<git name="android_device_samsung_showcasemtd" />
@@ -693,7 +693,7 @@
 		<device>
 			<name>Galaxy Mini</name>
 			<model>Tass</model>
-			<image>images/devices/samsung_tass.jpg</image>
+			<image>images/devices/samsung_tass.png</image>
 			<code>tass</code>
 			<repos>
 				<git name="android_device_samsung_tass" />
@@ -702,7 +702,7 @@
 		<device>
 			<name>Vibrant (T-Mobile)</name>
 			<model>Vibrant</model>
-			<image>images/devices/samsung_vibrant.jpg</image>
+			<image>images/devices/samsung_vibrant.png</image>
 			<code>vibrantmtd</code>
 			<repos>
 				<git name="android_device_samsung_vibrantmtd" />
@@ -722,7 +722,7 @@
 		<device>
 			<name>Walkman</name>
 			<model>Coconut</model>
-			<image>images/devices/semc_coconut.jpg</image>
+			<image>images/devices/semc_coconut.png</image>
 			<code>coconut</code>
 			<repos>
 				<git name="android_device_semc_coconut" />
@@ -731,7 +731,7 @@
 		<device>
 			<name>Xperia X10</name>
 			<model>ES209ra</model>
-			<image>images/devices/semc_es209ra.jpg</image>
+			<image>images/devices/semc_es209ra.png</image>
 			<code>es209ra</code>
 			<repos>
 				<git name="android_device_semc_es209ra" />
@@ -740,7 +740,7 @@
 		<device>
 			<name>Xperia Neo</name>
 			<model>Hallon</model>
-			<image>images/devices/semc_hallon.jpg</image>
+			<image>images/devices/semc_hallon.png</image>
 			<code>hallon</code>
 			<repos>
 				<git name="android_device_semc_hallon" />
@@ -749,7 +749,7 @@
 		<device>
 			<name>Xperia Pro</name>
 			<model>Iyokan</model>
-			<image>images/devices/semc_iyokan.jpg</image>
+			<image>images/devices/semc_iyokan.png</image>
 			<code>iyokan</code>
 			<repos>
 				<git name="android_device_semc_iyokan" />
@@ -758,7 +758,7 @@
 		<device>
 			<name>Xperia Mini Pro</name>
 			<model>Mango</model>
-			<image>images/devices/semc_mango.jpg</image>
+			<image>images/devices/semc_mango.png</image>
 			<code>mango</code>
 			<repos>
 				<git name="android_device_semc_mango" />
@@ -767,7 +767,7 @@
 		<device>
 			<name>Xperia X10 Mini Pro</name>
 			<model>Mimmi</model>
-			<image>images/devices/semc_mimmi.jpg</image>
+			<image>images/devices/semc_mimmi.png</image>
 			<code>mimmi</code>
 			<repos>
 				<git name="android_device_semc_mimmi" />
@@ -776,7 +776,7 @@
 		<device>
 			<name>Xperia X10 Mini</name>
 			<model>Robyn</model>
-			<image>images/devices/semc_robyn.jpg</image>
+			<image>images/devices/semc_robyn.png</image>
 			<code>robyn</code>
 			<repos>
 				<git name="android_device_semc_robyn" />
@@ -785,7 +785,7 @@
 		<device>
 			<name>Xperia Active</name>
 			<model>Satsuma</model>
-			<image>images/devices/semc_satsuma.jpg</image>
+			<image>images/devices/semc_satsuma.png</image>
 			<code>satsuma</code>
 			<repos>
 				<git name="android_device_semc_satsuma" />
@@ -794,7 +794,7 @@
 		<device>
 			<name>Xperia X8</name>
 			<model>Shakira</model>
-			<image>images/devices/semc_shakira.jpg</image>
+			<image>images/devices/semc_shakira.png</image>
 			<code>shakira</code>
 			<repos>
 				<git name="android_device_semc_shakira" />
@@ -803,7 +803,7 @@
 		<device>
 			<name>Xperia Mini</name>
 			<model>Smultron</model>
-			<image>images/devices/semc_smultron.jpg</image>
+			<image>images/devices/semc_smultron.png</image>
 			<code>smultron</code>
 			<repos>
 				<git name="android_device_semc_smultron" />
@@ -812,7 +812,7 @@
 		<device>
 			<name>Xperia Ray</name>
 			<model>Urushi</model>
-			<image>images/devices/semc_urushi.jpg</image>
+			<image>images/devices/semc_urushi.png</image>
 			<code>urushi</code>
 			<repos>
 				<git name="android_device_semc_urushi" />
@@ -821,7 +821,7 @@
 		<device>
 			<name>Xperia Play R800i</name>
 			<model>Zeus</model>
-			<image>images/devices/semc_zeus.jpg</image>
+			<image>images/devices/semc_zeus.png</image>
 			<code>zeus</code>
 			<repos>
 				<git name="android_device_semc_zeus" />
@@ -830,7 +830,7 @@
 		<device>
 			<name>Xperia Play CDMA R800x</name>
 			<model>Zeusc</model>
-			<image>images/devices/semc_zeus.jpg</image>
+			<image>images/devices/semc_zeus.png</image>
 			<code>zeusc</code>
 			<repos>
 				<git name="android_device_semc_zeusc" />
@@ -841,7 +841,7 @@
 		<device>
 			<name>Blade</name>
 			<model>Blade</model>
-			<image>images/devices/zte_blade.jpg</image>
+			<image>images/devices/zte_blade.png</image>
 			<code>blade</code>
 			<repos>
 				<git name="android_device_zte_blade" />
@@ -850,7 +850,7 @@
 		<device>
 			<name>V9</name>
 			<model>V9</model>
-			<image>images/devices/zte_v9.jpg</image>
+			<image>images/devices/zte_v9.png</image>
 			<code>v9</code>
 			<repos>
 				<git name="android_device_zte_v9" />
@@ -861,7 +861,7 @@
 		<device>
 			<name>Advent Vega</name>
 			<model></model>
-			<image>images/devices/advent_vega.jpg</image>
+			<image>images/devices/advent_vega.png</image>
 			<code>vega</code>
 			<repos>
 				<git name="android_device_advent_vega" />
@@ -870,7 +870,7 @@
 		<device>
 			<name>Nook Color</name>
 			<model>Encore</model>
-			<image>images/devices/nook_color.jpg</image>
+			<image>images/devices/nook_color.png</image>
 			<code>encore</code>
 			<repos>
 				<git name="android_device_bn_encore" />
@@ -888,7 +888,7 @@
 		<device>
 			<name>One</name>
 			<model>Geeksphone</model>
-			<image>images/devices/geeksphone_one.jpg</image>
+			<image>images/devices/geeksphone_one.png</image>
 			<code>one</code>
 			<repos>
 			</repos>
@@ -904,7 +904,7 @@
 		<device>
 			<name>HP Touchpad</name>
 			<model>Tenderloin</model>
-			<image>images/devices/hp_tenderloin.jpg</image>
+			<image>images/devices/hp_tenderloin.png</image>
 			<code>tenderloin</code>
 			<repos>
 				<git name="android_device_hp_tenderloin" />
@@ -913,7 +913,7 @@
 		<device>
 			<name>Viewsonic G Tablet</name>
 			<model>SMB_A1002</model>
-			<image>images/devices/viewsonic_gtablet.jpg</image>
+			<image>images/devices/viewsonic_gtablet.png</image>
 			<code>smb_a1002</code>
 			<repos>
 				<git name="android_device_malata_smb_a1002" />
