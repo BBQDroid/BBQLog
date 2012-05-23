@@ -29,13 +29,13 @@ function esc($txt) {
  */
 function actionDone($msg) {
 	global $startTime;	
-	echo "$msg (" . number_format(floatval(microtime(true) - $startTime), 5) . "s) <br />";
+	echo "$msg (" . number_format(floatval(microtime(true) - $startTime), 5) . "s) <br />\n";
 	$startTime = microtime(true);
 	echo str_repeat(' ',256);
 	flush_buffers();
 }
 function actionStart($msg) {
-	echo $msg . "<br />";
+	echo $msg . "<br />\n";
 }
 
 /**
@@ -54,6 +54,8 @@ function githubDate($date) {
 
 
 ob_start();
+
+$nbGitHubRequests = 0;
 
 // Connect to MySQL
 mysql_connect($CFG['SQL']['Host'], $CFG['SQL']['User'], $CFG['SQL']['Pass']) or die(mysql_error());
@@ -74,6 +76,7 @@ else
 while ($repo = mysql_fetch_assoc($repositories)) {
 	// load last commit of the branch
 	$branches_json = json_decode(file_get_contents("https://api.github.com/repos/".$repo['GitUsername']."/".$repo['Repository']."/branches"), true);
+	$nbGitHubRequests++;
 	
 	$branches_sql = mysql_query("SELECT Branch FROM repositories WHERE GitUsername='".mysql_real_escape_string($repo['GitUsername'])."' AND Repository='".mysql_real_escape_string($repo['Repository'])."'");
 	
@@ -111,7 +114,7 @@ while ($repo = mysql_fetch_assoc($repositories)) {
 			actionStart("Grabbing https://api.github.com/repos/".$repo['GitUsername']."/".$repo['Repository']."/commits?per_page=100&sha=$commitSHA ...");
 			
 			$commits_json = json_decode(file_get_contents("https://api.github.com/repos/".$repo['GitUsername']."/".$repo['Repository']."/commits?per_page=100&sha=$commitSHA"),true);
-			
+			$nbGitHubRequests++;
 			$lastReached = false;
 			
 			foreach($commits_json as $commit) {
@@ -142,4 +145,6 @@ actionDone("Commits updated");
 actionStart("Cleaning 4+months old commits");
 mysql_query("DELETE FROM commits WHERE CommitDate < '".date("Y-m-d H:i:s", time()-3600*24*31*4). "'");
 actionDone("Cleaned " . mysql_affected_rows() . " commits");
+
+actionDone("GITHUB REQUESTS: " . $nbGitHubRequests);
 ?>
