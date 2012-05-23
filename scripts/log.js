@@ -238,8 +238,10 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	} else if (_date != "next") {
 		ageQuery = "&startDate=" + global_NightliesCodeToDate[_date] + "&endDate=" + global_NightliesCodeToPreviousDate[_date];
 	} else {
-		ageQuery = "&endDate=" + global_LastNightlyDate;
+		ageQuery = "&startDate=" + global_LastNightlyDate;
 	}
+
+	console.log(ageQuery);
 	
 	// load all changes
 	$.getJSON("changesets.php?RomName=CyanogenMod&Version=" + versionNum + ageQuery + "&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
@@ -270,8 +272,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 			if (_date == "next") {
 				if (updateTime < global_LastNightlyDate)
 					break;
-			}
-			else {
+			} else {
 				if (updateTime < global_NightliesCodeToPreviousDate[_date])
 					break;
 			}
