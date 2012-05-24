@@ -172,9 +172,10 @@ function updateListNightlies(_device, _version, _date) {
 				currMonth = date("m", nightlyTime);
 			}
 			
-			if (!stop)
+			if (!stop) {
 				$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+nightlyTime+'">' + date('l dS (H:i)', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
-			
+			}
+
 			if (nightlyTime > global_LastNightlyDate)
 				global_LastNightlyDate = nightlyTime;
 
@@ -221,7 +222,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	global_ChangesetMoreSortCode = '';
 
 	// Remove all load more buttons
-	$(".load_more").parent("li").fadeOut(200);
+	$(".load_more").remove();
 	
 	var versionNum = 9;
 	if (_version == "cm7") {
@@ -244,8 +245,11 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	
 	
 	if (!_append) {
-		$("#log_Changeset").html("<li><h6>Please wait while changes are being loaded...</h6></<li>");
+		$("#log_Changeset").html('');
 	}
+
+	$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;" class="loading"><a><h6 style="color:#F0F0F0">Loading...</h6></a></li>');
+
 	
 	
 	// compute age for old nightlies
@@ -267,6 +271,8 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 			// clear current changesets if we're not appending to current list (due to scroll)
 			$("#log_Changeset").html('');
 		}
+
+		$(".loading").remove();
 
 		// If the query returned nothing
 		if (data.result == undefined && !_append) {
@@ -329,15 +335,16 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 			}
 
 			// show only if it's not a change for another device/kernel
-			if (_device == '' || found || (data.result.changes[i].project.key.name.indexOf("android_device_") == -1 && data.result.changes[i].project.key.name.indexOf("android_kernel_") == -1))
-				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>'); 
+			if (_device == '' || found || (data.result.changes[i].project.key.name.indexOf("android_device_") == -1 && data.result.changes[i].project.key.name.indexOf("android_kernel_") == -1)) {
+				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>');
+			}
 			
 			if (i >= _amount - 1) {
 				if ($("#log_Changeset").children("li").size() <= 250) {
 					global_ChangesetHasMore = true;
 					global_ChangesetMoreSortCode = data.result.changes[i].sortKey;
 
-					$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;"><a class="load_more"><h6 style="color:#F0F0F0">Load more...</h6></a></li>');
+					$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;" class="load_more"><a><h6 style="color:#F0F0F0">Load more...</h6></a></li>');
 				} else {
 					$("#log_Changeset").append("<h6>This changeset has been truncated as it contains over 250 changes</h6>");
 				}
