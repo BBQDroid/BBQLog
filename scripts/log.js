@@ -31,13 +31,12 @@ $(function() {
 	$(window).bind( 'hashchange', function(e) { 
 		updateBodyData();
 	});
-	$(window).scroll(function(){
+	$(".load_more").live('click', function(){
 		// if the bottom of the changeset div is showing start loading the new changes
-		if ($(window).scrollTop() + $(window).height() >= $("#log_Changeset").offset().top + $("#log_Changeset").height() - 250) {
-			if (global_ChangesetHasMore) {
-				updateChangeset(global_CurrentDevice, global_CurrentVersion, global_CurrentDate, undefined, true, global_ChangesetMoreSortCode);
-			}
+		if (global_ChangesetHasMore) {
+			updateChangeset(global_CurrentDevice, global_CurrentVersion, global_CurrentDate, undefined, true, global_ChangesetMoreSortCode);
 		}
+		$(this).remove();
 	});
 });
 
@@ -52,7 +51,7 @@ function updateBodyData() {
 		updateListNightlies(params[0], params[1], params[2]);
 	}
 
-	// scroll up if needed (to avoid loading changes down to the current scroll)
+	// scroll up for smooth transition between changesets
 	if ($(window).scrollTop() > 0) {
 		$('body').animate({scrollTop : 0}, 'fast', function() {
 			updateChangeset(params[0], params[1], params[2]);
@@ -221,6 +220,9 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 
 	global_ChangesetHasMore = false;
 	global_ChangesetMoreSortCode = '';
+
+	// Remove all load more buttons
+	$(".load_more").remove();
 	
 	var versionNum = 9;
 	if (_version == "cm7") {
@@ -331,15 +333,12 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 			if (_device == '' || found || (data.result.changes[i].project.key.name.indexOf("android_device_") == -1 && data.result.changes[i].project.key.name.indexOf("android_kernel_") == -1))
 				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>'); 
 			
-			if (i == _amount - 1) {
+			if (i >= _amount - 1) {
 				if ($("#log_Changeset").children("li").size() <= 250) {
 					global_ChangesetHasMore = true;
 					global_ChangesetMoreSortCode = data.result.changes[i].sortKey;
 
-					// if the bottom of the changeset div is already displayed, start loading the new changes
-					if ($(window).scrollTop() + $(window).height() >= $("#log_Changeset").offset().top + $("#log_Changeset").height() - 250) {
-						updateChangeset(_device, _version, _date, _amount, true, global_ChangesetMoreSortCode);
-					}
+					$("#log_Changeset").append('<li style="background: #cccccccc"><a class="load_more"><h6>Load more...</h6></a></li>');
 				} else {
 					$("#log_Changeset").append("<h6>This changeset has been truncated as it contains over 250 changes</h6>");
 				}
