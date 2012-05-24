@@ -36,7 +36,6 @@ $(function() {
 		if (global_ChangesetHasMore) {
 			updateChangeset(global_CurrentDevice, global_CurrentVersion, global_CurrentDate, undefined, true, global_ChangesetMoreSortCode);
 		}
-		$(this).remove();
 	});
 });
 
@@ -222,7 +221,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	global_ChangesetMoreSortCode = '';
 
 	// Remove all load more buttons
-	$(".load_more").remove();
+	$(".load_more").parent("li").fadeOut(200);
 	
 	var versionNum = 9;
 	if (_version == "cm7") {
@@ -338,7 +337,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 					global_ChangesetHasMore = true;
 					global_ChangesetMoreSortCode = data.result.changes[i].sortKey;
 
-					$("#log_Changeset").append('<li style="background: #cccccccc"><a class="load_more"><h6>Load more...</h6></a></li>');
+					$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;"><a class="load_more"><h6 style="color:#F0F0F0">Load more...</h6></a></li>');
 				} else {
 					$("#log_Changeset").append("<h6>This changeset has been truncated as it contains over 250 changes</h6>");
 				}
