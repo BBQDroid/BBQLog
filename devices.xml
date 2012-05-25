@@ -466,6 +466,7 @@
 			<code>captivatemtd</code>
 			<repos>
 				<git name="android_device_samsung_captivatemtd" />
+				<git name="android_kernel_samsung_aries" />
 			</repos>
 		</device>
 		<device>
@@ -688,6 +689,7 @@
 			<code>vibrantmtd</code>
 			<repos>
 				<git name="android_device_samsung_vibrantmtd" />
+				<git name="android_kernel_samsung_aries" />
 			</repos>
 		</device>
 	</oem>
