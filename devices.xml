@@ -229,26 +229,6 @@
 			</repos>
 		</device>
 	</oem>
-	<oem name="Huawei">
-		<device>
-			<name>Ideos</name>
-			<model>U8150</model>
-			<image>images/devices/huawei_u8150.png</image>
-			<code>u8150</code>
-			<repos>
-				<git name="android_device_huawei_u8150" />
-			</repos>
-		</device>
-		<device>
-			<name>Pulse (T-Mobile)</name>
-			<model>U8220</model>
-			<image>images/devices/huawei_u8220.png</image>
-			<code>u8220</code>
-			<repos>
-				<git name="android_device_huawei_u8220" />
-			</repos>
-		</device>
-	</oem>
 	<oem name="LGE">
 		<device>
 			<name>Optimus Pro</name>
@@ -860,6 +840,24 @@
 		</device>
 	</oem>
 	<oem name="Others">
+		<device>
+			<name>Huawei Ideos</name>
+			<model>U8150</model>
+			<image>images/devices/huawei_u8150.png</image>
+			<code>u8150</code>
+			<repos>
+				<git name="android_device_huawei_u8150" />
+			</repos>
+		</device>
+		<device>
+			<name>Huawei Pulse (T-Mobile)</name>
+			<model>U8220</model>
+			<image>images/devices/huawei_u8220.png</image>
+			<code>u8220</code>
+			<repos>
+				<git name="android_device_huawei_u8220" />
+			</repos>
+		</device>
 		<device>
 			<name>Advent Vega</name>
 			<model></model>
