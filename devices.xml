@@ -544,7 +544,7 @@
 			</repos>
 		</device>
 		<device>
-			<name>Galaxy S II (AT&amp;T)</name>
+			<name>Galaxy S II (AT&amp;T) (CM7)</name>
 			<model>GT-I9100 (AT&amp;T)</model>
 			<image>images/devices/samsung_i9100.png</image>
 			<code>galaxys2att</code>
@@ -572,7 +572,7 @@
 			</repos>
 		</device>
 		<device>
-			<name>Galaxy S II (AT&amp;T)</name>
+			<name>Galaxy S II (AT&amp;T) (CM9)</name>
 			<model>SGH-I777</model>
 			<image>images/devices/samsung_i9100.png</image>
 			<code>i777</code>
