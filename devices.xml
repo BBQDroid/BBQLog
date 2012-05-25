@@ -560,6 +560,7 @@
 			<code>galaxysbmtd</code>
 			<repos>
 				<git name="android_device_samsung_galaxysbmtd" />
+				<git name="android_device_samsung_aries-common" />
 			</repos>
 		</device>
 		<device>
@@ -569,6 +570,7 @@
 			<code>galaxysmtd</code>
 			<repos>
 				<git name="android_device_samsung_galaxysmtd" />
+				<git name="android_device_samsung_aries-common" />
 			</repos>
 		</device>
 		<device>
