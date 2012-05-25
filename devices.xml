@@ -636,6 +636,7 @@
 			<code>p1</code>
 			<repos>
 				<git name="android_device_samsung_p1" />
+				<git name="android_device_samsung_p1-common" />
 			</repos>
 		</device>
 		<device>
@@ -645,6 +646,7 @@
 			<code>p1c</code>
 			<repos>
 				<git name="android_device_samsung_p1c" />
+				<git name="android_device_samsung_p1-common" />
 			</repos>
 		</device>
 		<device>
@@ -654,6 +656,7 @@
 			<code>p1l</code>
 			<repos>
 				<git name="android_device_samsung_p1l" />
+				<git name="android_device_samsung_p1-common" />
 			</repos>
 		</device>
 		<device>
@@ -663,6 +666,7 @@
 			<code>p1n</code>
 			<repos>
 				<git name="android_device_samsung_p1n" />
+				<git name="android_device_samsung_p1-common" />
 			</repos>
 		</device>
 		<device>
