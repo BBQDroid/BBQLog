@@ -8,6 +8,7 @@
 			<code>tf101</code>
 			<repos>
 				<git name="android_device_asus_tf101" />
+				<git name="android_kernel_asus_tf101" />
 			</repos>
 		</device>
 		<device>
@@ -17,6 +18,7 @@
 			<code>tf201</code>
 			<repos>
 				<git name="android_device_asus_tf201" />
+				<git name="android_kernel_asus_tf201" />
 			</repos>
 		</device>
 	</oem>
@@ -172,6 +174,11 @@
 			<code>pyramid</code>
 			<repos>
 				<git name="android_device_htc_pyramid" />
+				<git name="android_device_htc_msm8660-common" />
+				<git name="android_hardware_msm7k" />
+				<git name="android_hardware_qcom_display" />
+				<git name="android_hardware_qcom_gps" />
+				<git name="android_hardware_qcom_media" />
 			</repos>
 		</device>
 		<device>
@@ -255,6 +262,12 @@
 			<code>e730</code>
 			<repos>
 				<git name="android_device_lge_e730" />
+				<git name="android_device_lge_victor-common" />
+				<git name="lge-kernel-msm7x30" />
+				<git name="android_hardware_msm7k" />
+				<git name="android_hardware_qcom_display" />
+				<git name="android_hardware_qcom_gps" />
+				<git name="android_hardware_qcom_media" />
 			</repos>
 		</device>
 		<device>
@@ -264,6 +277,13 @@
 			<code>e739</code>
 			<repos>
 				<git name="android_device_lge_e739" />
+                                <git name="android_device_lge_victor-common" />
+                                <git name="lge-kernel-msm7x30" />
+                                <git name="android_hardware_msm7k" />
+                                <git name="android_hardware_qcom_display" />
+                                <git name="android_hardware_qcom_gps" />
+                                <git name="android_hardware_qcom_media" />
+
 			</repos>
 		</device>
 		<device>
@@ -300,6 +320,12 @@
 			<code>p930</code>
 			<repos>
 				<git name="android_device_lge_p930" />
+                                <git name="lge-kernel-iproj" />
+                                <git name="android_hardware_msm7k" />
+                                <git name="android_hardware_qcom_display" />
+                                <git name="android_hardware_qcom_gps" />
+                                <git name="android_hardware_qcom_media" />
+
 			</repos>
 		</device>
 		<device>
@@ -436,7 +462,9 @@
 			<image>images/devices/motorola_xoom.png</image>
 			<code>stingray</code>
 			<repos>
-				<git name="android_device_motorola_stingray" />
+				<git name="android_device_moto_stingray" />
+				<git name="android_device_moto_common" />
+				<git name="motorola-kernel-stingray" />
 			</repos>
 		</device>
 		<device>
@@ -445,7 +473,10 @@
 			<image>images/devices/motorola_xoom.png</image>
 			<code>wingray</code>
 			<repos>
-				<git name="android_device_motorola_wingray" />
+				<git name="android_device_moto_wingray" />
+				<git name="android_device_moto_common" />
+				<git name="motorola-kernel-stingray" />
+
 			</repos>
 		</device>
 		<device>
@@ -466,6 +497,9 @@
 			<code>captivatemtd</code>
 			<repos>
 				<git name="android_device_samsung_captivatemtd" />
+				<git name="android_device_samsung_aries-common" />
+				<git name="android_kernel_samsung_aries" />
+				<git name="android_package_apps_SamsungServiceMode" />
 			</repos>
 		</device>
 		<device>
@@ -484,6 +518,7 @@
 			<code>crespo</code>
 			<repos>
 				<git name="android_device_samsung_crespo" />
+				<git name="android_kernel_samsung_crespo" />
 			</repos>
 		</device>
 		<device>
@@ -493,6 +528,8 @@
 			<code>crespo4g</code>
 			<repos>
 				<git name="android_device_samsung_crespo4g" />
+				<git name="android_device_smasung_crespo" />
+				<git name="android_kernel_samsung_crespo" />
 			</repos>
 		</device>
 		<device>
@@ -521,6 +558,8 @@
 			<repos>
 				<git name="android_device_samsung_galaxys2" />
 				<git name="android_kernel_samsung_smdk4210" />
+				<git name="android_hardware_samsung" />
+				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
 		</device>
 		<device>
@@ -541,6 +580,8 @@
 			<repos>
 				<git name="android_device_samsung_galaxysbmtd" />
 				<git name="android_device_samsung_aries-common" />
+				<git name="android_kernel_samsung_aries" />
+				<git name="android_package_apps_SamsungServiceMode" />
 			</repos>
 		</device>
 		<device>
@@ -551,6 +592,8 @@
 			<repos>
 				<git name="android_device_samsung_galaxysmtd" />
 				<git name="android_device_samsung_aries-common" />
+				<git name="android_kernel_samsung_aries" />
+				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
 		</device>
 		<device>
@@ -561,6 +604,9 @@
 			<repos>
 				<git name="android_device_samsung_i777" />
 				<git name="android_kernel_samsung_smdk4210" />
+				<git name="android_device_samsung_galaxys2" />
+				<git name="android_hardware_samsung" />
+				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
 		</device>
 		<device>
@@ -571,6 +617,7 @@
 			<repos>
 				<git name="android_device_samsung_tuna" />
 				<git name="android_device_samsung_maguro" />
+				<git name="android_kernel_tuna" />
 			</repos>
 		</device>
 		<device>
@@ -581,6 +628,7 @@
 			<repos>
 				<git name="android_device_samsung_tuna" />
 				<git name="android_device_samsung_toro" />
+				<git name="android_kernel_samsung_tuna" />
 			</repos>
 		</device>
 		<device>
@@ -591,6 +639,7 @@
 			<repos>
 				<git name="android_device_samsung_tuna" />
 				<git name="android_device_samsung_toroplus" />
+				<git name="android_kernel_samsung_tuna" />
 			</repos>
 		</device>
 		<device>
@@ -601,6 +650,8 @@
 			<repos>
 				<git name="android_device_samsung_n7000" />
 				<git name="android_kernel_samsung_smdk4210" />
+				<git name="android_hardware_samsung" />
+				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
 		</device>
 		<device>
@@ -619,6 +670,9 @@
 			<code>p1</code>
 			<repos>
 				<git name="android_device_samsung_p1" />
+				<git name="android_device_samsung_p1-common" />
+				<git name="android_kernel_samsung_p1" />
+				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
 		</device>
 		<device>
@@ -628,6 +682,8 @@
 			<code>p1c</code>
 			<repos>
 				<git name="android_device_samsung_p1c" />
+				<git name="android_device_samsung_p1-common" />
+				<git name="android_kernel_samsung_galaxytab-cdma" />
 			</repos>
 		</device>
 		<device>
@@ -655,6 +711,7 @@
 			<code>p4tmo</code>
 			<repos>
 				<git name="android_device_samsung_p4tmo" />
+				<git name="android_device_Samsung_p4-common" />
 			</repos>
 		</device>
 		<device>
@@ -664,6 +721,7 @@
 			<code>p4wifi</code>
 			<repos>
 				<git name="android_device_samsung_p4wifi" />
+				<git name="android_device_samsung_p4=common" />
 			</repos>
 		</device>
 		<device>
@@ -691,6 +749,8 @@
 			<code>vibrantmtd</code>
 			<repos>
 				<git name="android_device_samsung_vibrantmtd" />
+				<git name="android_device_samsung_aries-common" />
+				<git name="android_kernel_samsung_aries" />
 			</repos>
 		</device>
 	</oem>
@@ -702,6 +762,12 @@
 			<code>anzu</code>
 			<repos>
 				<git name="android_device_semc_anzu" />
+				<git name="android_device_semc_mogami-common" />
+				<git name="android_device_semc_msm7x30-common" />
+				<git name="android_hardware_msm7k" />
+				<git name="android_hardware_qcom_display" />
+				<git name="android_hardware_qcom_gps" />
+				<git name="android_hardware_qcom_media" />
 			</repos>
 		</device>
 		<device>
@@ -729,6 +795,12 @@
 			<code>hallon</code>
 			<repos>
 				<git name="android_device_semc_hallon" />
+				<git name="android_device_semc_mogami-common" />
+                                <git name="android_device_semc_msm7x30-common" />
+                                <git name="android_hardware_msm7k" />
+                                <git name="android_hardware_qcom_display" />
+                                <git name="android_hardware_qcom_gps" />
+                                <git name="android_hardware_qcom_media" />
 			</repos>
 		</device>
 		<device>
@@ -911,6 +983,12 @@
 			<code>tenderloin</code>
 			<repos>
 				<git name="android_device_hp_tenderloin" />
+				<git name="hp-kernel-tenderloin" />
+				<git name="android_hardware_msm7k" />
+                                <git name="android_hardware_qcom_display" />
+                                <git name="android_hardware_qcom_gps" />
+                                <git name="android_hardware_qcom_media" />
+
 			</repos>
 		</device>
 		<device>
