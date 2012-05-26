@@ -116,7 +116,7 @@ function updateListNightlies(_device, _version, _date) {
 	if (_device == '' || _device == undefined) {
 		// If no device indicated, just display an empty list and
 		// tell the list is ready
-		$("#log_NightliesList").html("<li class='nav-header'>Please select a device to show its nightlies.</li>");
+		$("#log_NightliesList").html("<li class='nav-header'>Select a device to show its nightlies.</li>");
 		global_NightliesListReady = true;
 		return;	
 	}
