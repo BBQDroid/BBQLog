@@ -165,6 +165,7 @@ body {
   background-image: -o-linear-gradient(top, #050606, #293036);
   background-image: linear-gradient(top, #050606, #293036);
   background-repeat:repeat-x;
+  background-attachment: fixed;
 }
 
 a {
