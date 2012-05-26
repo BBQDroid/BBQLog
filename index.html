@@ -1,26 +1,29 @@
  
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/Organization">
 
 	<head>
 		<meta charset="utf-8" /> 
 		<title>BBQLog - CyanogenMod Changelog</title>
 
+		<meta itemprop="name" content="BBQLog">
+		<meta itemprop="description" content="BBQLog is a changelog for CyanogenMod">
+		<meta itemprop="image" content="http://changelog.bbqdroid.org/images/logo_flame.png">
+
 		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/template.css" type="text/css" media="screen" />
-<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount','UA-31963436-1']);
-_gaq.push(['_trackPageview']);
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount','UA-31963436-1']);
+			_gaq.push(['_trackPageview']);
 
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async=true;
-  ga.src = "http://www.google-analytics.com/ga.js";
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,s);
-})();
-
-</script>
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async=true;
+				ga.src = "http://www.google-analytics.com/ga.js";
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,s);
+			})();
+		</script>
 
 	</head>
 <body>
@@ -71,9 +74,8 @@ _gaq.push(['_trackPageview']);
 	<footer>
 		<p class="pull-left">&copy; BBQTeam 2012 - <a href="http://github.com/bbqdroid/bbqlog">BBQLog</a> by <a href="https://plus.google.com/106978520009932034644">xplodwild</a> and <a href="http://plus.google.com/106903921823168822206/">nebkat</a> - <a href="http://docs.google.com/spreadsheet/viewform?formkey=dGpzeGV2REI3QlZiRzltWnBERWFTcHc6MQ">Feedback</a>.</p>
 		<div class="pull-right">
-			<span class='st_plusone_hcount' displayText='Google +1'></span>
-			<span class='st_fblike_hcount' displayText='Facebook Like'></span>
-			<span class='st_twitter_hcount' displayText='Tweet'></span>
+			<!-- Google+ -->
+			<div class="g-plusone" data-href="http://changelog.bbqdroid.org"></div>
 		</div>
 	</footer>
 </div><!--/.fluid-container-->
@@ -83,8 +85,14 @@ _gaq.push(['_trackPageview']);
 <script type="text/javascript" src="scripts/log.js"></script>
 <script type="text/javascript" src="scripts/analytics.js"></script>
 
-<!-- Share buttons -->
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "6dcf32d0-2714-46c5-b4fd-33ff3f1b1d33"}); </script>
+<!-- Google+ -->
+<script type="text/javascript">
+	(function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/plusone.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	})();
+</script>
+
 </body>
 </html>
