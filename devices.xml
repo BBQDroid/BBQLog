@@ -637,6 +637,7 @@
 			<repos>
 				<git name="android_device_samsung_p1" />
 				<git name="android_device_samsung_p1-common" />
+				<git name="android_kernel_samsung_p1" />
 			</repos>
 		</device>
 		<device>
@@ -647,6 +648,7 @@
 			<repos>
 				<git name="android_device_samsung_p1c" />
 				<git name="android_device_samsung_p1-common" />
+				<git name="android_kernel_samsung_galaxytab-cdma" />
 			</repos>
 		</device>
 		<device>
@@ -657,6 +659,7 @@
 			<repos>
 				<git name="android_device_samsung_p1l" />
 				<git name="android_device_samsung_p1-common" />
+				<git name="android_kernel_samsung_p1" />
 			</repos>
 		</device>
 		<device>
@@ -667,6 +670,7 @@
 			<repos>
 				<git name="android_device_samsung_p1n" />
 				<git name="android_device_samsung_p1-common" />
+				<git name="android_kernel_samsung_p1" />
 			</repos>
 		</device>
 		<device>
