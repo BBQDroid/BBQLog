@@ -589,6 +589,7 @@
 			<image>images/devices/samsung_maguro.png</image>
 			<code>toroplus</code>
 			<repos>
+				<git name="android_device_samsung_tuna" />
 				<git name="android_device_samsung_toroplus" />
 			</repos>
 		</device>
