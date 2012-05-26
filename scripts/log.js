@@ -248,10 +248,18 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 		$("#log_Changeset").html('');
 	}
 
-	$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;" class="loading"><a><h6 style="color:#F0F0F0">Loading...</h6></a></li>');
+	$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;" class="loading"><a><h6 style="color:#F0F0F0">Loading<span class="loading_dots">..</span></h6></a></li>');
+	var loadingDotsInterval = setInterval(function(){
+		var dots = $('.loading .loading_dots');
+		if (dots.length <= 0) return;
+		dots.append(".");
+		console.log(dots);
+		if (dots.html().length > 3) {
+			dots.html("");
+		}
+	}, 1000);
 
-	
-	
+
 	// compute age for old nightlies
 	var ageQuery = "";
 	
@@ -263,16 +271,15 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 		ageQuery = "&endDate=" + global_LastNightlyDate;
 	}
 
-	console.log(ageQuery);
-	
 	// load all changes
 	$.getJSON("changesets.php?RomName=CyanogenMod&Version=" + versionNum + ageQuery + "&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
+		$(".loading").remove();
+		clearInterval(loadingDotsInterval);
+
 		if (!_append) {
 			// clear current changesets if we're not appending to current list (due to scroll)
 			$("#log_Changeset").html('');
 		}
-
-		$(".loading").remove();
 
 		// If the query returned nothing
 		if (data.result == undefined && !_append) {
