@@ -1,6 +1,0 @@
-<IfModule mod_expires.c>
-	<FilesMatch "^bootstrap-responsive.css$">
-		ExpiresActive on
-		ExpiresDefault "access plus 1 month"
-	</FilesMatch>
-</IfModule>
