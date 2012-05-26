@@ -569,6 +569,7 @@
 			<image>images/devices/samsung_maguro.png</image>
 			<code>maguro</code>
 			<repos>
+				<git name="android_device_samsung_tuna" />
 				<git name="android_device_samsung_maguro" />
 			</repos>
 		</device>
@@ -578,6 +579,7 @@
 			<image>images/devices/samsung_maguro.png</image>
 			<code>toro</code>
 			<repos>
+				<git name="android_device_samsung_tuna" />
 				<git name="android_device_samsung_toro" />
 			</repos>
 		</device>
