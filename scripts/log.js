@@ -14,6 +14,7 @@ var global_NightliesListReady = false;
 
 var global_ChangesetHasMore = false;
 var global_ChangesetMoreSortCode = '';
+var global_UseUTC = "";
 
 var translations = ["translat", "localiz", "german", "french", "spanish",
 	"russian", "italian", "chinese", "dutch", "pt-br", "hebrew",
@@ -23,6 +24,9 @@ var translations = ["translat", "localiz", "german", "french", "spanish",
  *  Initialization
  */
 $(function() {
+	if (navigator.userAgent.indexOf("Firefox") == -1)
+		global_UseUTC = " UTC";
+
 	loadDevices();
 	updateBodyData();
 	
@@ -179,7 +183,7 @@ function updateListNightlies(_device, _version, _date) {
 				cm9found = true;
 			}
 
-			var nightlyTime = strtotime($(this).children("pubDate").text() + " UTC");
+			var nightlyTime = strtotime($(this).children("pubDate").text() + global_UseUTC);
 			var nightlyCode = nightlyTime;
 
 			console.log(nightlyTime + " " + $(this).children("pubDate").text());
@@ -320,7 +324,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 		
 		for (var i = 0; i < data.result.changes.length; i++) {
 			// if not "next" nightly, skip until changes of that nightly
-			var updateTime = strtotime(data.result.changes[i].lastUpdatedOn + " UTC");
+			var updateTime = strtotime(data.result.changes[i].lastUpdatedOn + global_UseUTC);
 			
 			if (_date != "next" && updateTime > global_NightliesCodeToDate[_date]) {
 				continue;
@@ -370,7 +374,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 
 			// show only if it's not a change for another device/kernel
 			if (_device == '' || found || (data.result.changes[i].project.key.name.indexOf("android_device_") == -1 && data.result.changes[i].project.key.name.indexOf("android_kernel_") == -1)) {
-				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn + " UTC")) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn + " UTC")) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>');
+				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn + global_UseUTC)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn + global_UseUTC)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>');
 			}
 
 			if ($("#log_Changeset").children("li").size() < 250) {
