@@ -423,6 +423,7 @@ function strtotime (str, now) {
 
     str = str.replace(/\s{2,}|^\s|\s$/g, ' '); // unecessary spaces
     str = str.replace(/[\t\r\n]/g, ''); // unecessary chars
+    str = str.replace(/-/g, '/'); // replace - with /
     if (str === 'now') {
         return now === null || isNaN(now) ? new Date().getTime() / 1000 | 0 : now | 0;
     } else if (!isNaN(parse = Date.parse(str))) {
