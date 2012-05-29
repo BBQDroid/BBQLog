@@ -7,9 +7,8 @@ var global_CurrentVersion = "";
 var global_CurrentDate = "";
 var global_DeviceCodeRepos = [];
 
-var global_LastNightlyDate = 0;
+var global_LastNightlyCode = 0;
 var global_NightliesCodeToDate = [];
-var global_NightliesDateToCode = [];
 var global_NightliesCodeToPreviousDate = [];
 var global_NightliesListReady = false;
 
@@ -120,16 +119,28 @@ function updateListNightlies(_device, _version, _date) {
 		global_NightliesListReady = true;
 		return;	
 	}
+
+	$("#log_NightliesList").html("<li class='nav-header loading-nightlies'>Loading nightlies<span class='loading-dots'>..</span></li>");
+	var loadingDotsInterval = setInterval(function(){
+		var dots = $('.loading-nightlies .loading-dots');
+		if (dots.length <= 0) return;
+		dots.append(".");
+		if (dots.html().length > 3) {
+			dots.html("");
+		}
+	}, 1000);
+	
 	
 	// load device nightlies
 	$.get("rss_proxy.php?device=" + _device, function(data) {
 		var xmlParse = $.parseXML(data);
 		
 		// clear current nightlies list
-		$("#log_NightliesList").children().each(function() { $(this).remove(); } );
+		clearInterval(loadingDotsInterval);
+		$("#log_NightliesList").html('');
 		
 		// empty dates cache
-		global_LastNightlyDate = 0;
+		global_LastNightlyCode = 0;
 		global_NightliesCodeToDate.length = 0;
 		global_NightliesCodeToPreviousDate.length = 0;		// this sounds a bit haxxy, but it's the easiest way.
 		
@@ -145,8 +156,15 @@ function updateListNightlies(_device, _version, _date) {
 		var stop = false;
 		var cm9found = false;
 		var cancel = false;
-	
-		$(xmlParse).find('item').each(function() {
+
+		// Sort by date
+		var items = $(xmlParse).find('item').sort(function(a, b){
+			var aTime = strtotime($(a).children("pubDate").text());
+			var bTime = strtotime($(b).children("pubDate").text());
+			return aTime == bTime ? 0 : (aTime < bTime ? 1 : -1);
+		});
+
+		items.each(function(index) {
 			if (cancel || $(this).children("title").text().indexOf("NIGHTLY") <= 0)
 				return;
 
@@ -161,10 +179,10 @@ function updateListNightlies(_device, _version, _date) {
 				cm9found = true;
 			}
 
-			var nightlyTime = strtotime($(this).children("pubDate").text());
-			var nightlyCode = nightlyTime; //$(this).children("title").text().substring(12, 20);
+			var nightlyTime = strtotime($(this).children("pubDate").text() + " UTC");
+			var nightlyCode = nightlyTime;
 
-			global_NightliesDateToCode[nightlyTime] = $(this).children("title").text().substring(12, 20);
+			console.log(nightlyTime + " " + $(this).children("pubDate").text());
 
 			// if the current month changes, show a new header line
 			if (currMonth != date("m", nightlyTime) && !stop) {
@@ -173,11 +191,12 @@ function updateListNightlies(_device, _version, _date) {
 			}
 			
 			if (!stop) {
-				$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+nightlyTime+'">' + date('l dS (H:i)', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
+				$("#log_NightliesList").append('<li><a href="#'+_device+'/'+_version+'/'+nightlyCode+'">' + date('l dS (H:i)', nightlyTime) + '<br /><small>' + $(this).children("title").text() + "</small></a></li>");
 			}
 
-			if (nightlyTime > global_LastNightlyDate)
-				global_LastNightlyDate = nightlyTime;
+			if (nightlyCode > global_LastNightlyCode) {
+				global_LastNightlyCode = nightlyCode;
+			}
 
 			if (lastNightlyCode != "") {
 				global_NightliesCodeToPreviousDate[lastNightlyCode] = nightlyTime;
@@ -228,14 +247,22 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	if (_version == "cm7") {
 		versionNum = 7;
 	}
+
+	// 'latest' for latest nightly
+	if (_date == "latest") {
+		_date = global_LastNightlyCode;
+	}
 	
 	// if no device is set, show all latest changes. Else, show device+date
 	if (_device == '') {
 		$("#log_NightlyTitle").html("CyanogenMod " + versionNum + " for all devices<br /><small>Narrow down your query by selecting a device.</small>");	
 	} else {
-		var nightlyDate = global_NightliesDateToCode[_date];
-		if (nightlyDate == undefined)
+		var nightlyDate;
+		if (_date != "next") {
+			nightlyDate = date("Ymd", _date);
+		} else {
 			nightlyDate = "next";
+		}
 		var buildDate = "";
 		if (_date != "next")
 			buildDate = "<br /><small>Built on " + date("M dS (H:i)", _date) + "</small>";
@@ -248,9 +275,9 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 		$("#log_Changeset").html('');
 	}
 
-	$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;" class="loading"><a><h6 style="color:#F0F0F0">Loading<span class="loading_dots">..</span></h6></a></li>');
+	$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;" class="loading"><a><h6 style="color:#F0F0F0">Loading<span class="loading-dots">..</span></h6></a></li>');
 	var loadingDotsInterval = setInterval(function(){
-		var dots = $('.loading .loading_dots');
+		var dots = $('.loading .loading-dots');
 		if (dots.length <= 0) return;
 		dots.append(".");
 		console.log(dots);
@@ -268,7 +295,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	} else if (_date != "next") {
 		ageQuery = "&startDate=" + global_NightliesCodeToDate[_date] + "&endDate=" + global_NightliesCodeToPreviousDate[_date];
 	} else {
-		ageQuery = "&endDate=" + global_LastNightlyDate;
+		ageQuery = "&endDate=" + global_NightliesCodeToDate[global_LastNightlyCode];
 	}
 
 	// load all changes
@@ -293,7 +320,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 		
 		for (var i = 0; i < data.result.changes.length; i++) {
 			// if not "next" nightly, skip until changes of that nightly
-			var updateTime = strtotime(data.result.changes[i].lastUpdatedOn);
+			var updateTime = strtotime(data.result.changes[i].lastUpdatedOn + " UTC");
 			
 			if (_date != "next" && updateTime > global_NightliesCodeToDate[_date]) {
 				continue;
@@ -301,7 +328,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 			
 			// if we reached nightly end date, stop	
 			if (_date == "next") {
-				if (updateTime < global_LastNightlyDate)
+				if (updateTime < global_NightliesCodeToDate[global_LastNightlyCode])
 					break;
 			} else {
 				if (updateTime < global_NightliesCodeToPreviousDate[_date])
@@ -343,7 +370,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 
 			// show only if it's not a change for another device/kernel
 			if (_device == '' || found || (data.result.changes[i].project.key.name.indexOf("android_device_") == -1 && data.result.changes[i].project.key.name.indexOf("android_kernel_") == -1)) {
-				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn)) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn)) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>');
+				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn + " UTC")) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn + " UTC")) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>');
 			}
 
 			if ($("#log_Changeset").children("li").size() < 250) {
@@ -380,6 +407,11 @@ function setCMVersion(num) {
 
 function time () {
    return Math.floor(new Date().getTime() / 1000);
+}
+
+function convertTimestampToUTC(time) {
+	date = new Date(time * 1000);
+	return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()).getTime() / 1000;
 }
 
 // PHP strtotime
