@@ -140,11 +140,15 @@ function updateListNightlies(_device, _version, _date) {
 	
 	// load device nightlies
 	$.get("rss_proxy.php?device=" + _device, function(data) {
-		var xmlParse = $.parseXML(data);
-		
 		// clear current nightlies list
 		clearInterval(loadingDotsInterval);
 		$("#log_NightliesList").html('');
+
+		if (data == "error") {
+			$("#log_NightliesList").html("<li class='nav-header'>Error loading nightlies</li>");
+			return;
+		}
+		var xmlParse = $.parseXML(data);
 		
 		// empty dates cache
 		global_LastNightlyCode = 0;
