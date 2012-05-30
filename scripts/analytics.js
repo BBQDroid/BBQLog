@@ -23,8 +23,8 @@
 
 // Nebkat
 var nebkatTroll = function(){
-	var scaryAudio = $("<audio src='images/scary.mp3' preload='auto' class='troll'></audio>");
-	scaryAudio.appendTo($("body"));
+	//var scaryAudio = $("<audio src='images/scary.mp3' preload='auto' class='troll'></audio>");
+	//scaryAudio.appendTo($("body"));
 	var usePedobear = false;
 	var smallTrollInterval = setInterval(function(){
 		var x = Math.floor((Math.random()*($(window).width() + 100))+1) - 50;
@@ -40,7 +40,7 @@ var nebkatTroll = function(){
 		var x = $(window).width() / 2 - 240;
 		var y = $(window).height() / 2 - 240;
 		$("<img src='images/troll_large.png' class='troll' style='z-index:1000; position:fixed; left:"+x+"px; top:"+y+"px;'></img>").appendTo($("body"));
-		scaryAudio[0].play();
+		//scaryAudio[0].play();
 		$(window).konami(function(){
 			usePedobear = true;
 		}, "80,69,68,79,66,69,65,82");
