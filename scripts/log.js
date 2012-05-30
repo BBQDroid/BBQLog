@@ -36,6 +36,13 @@ $(function() {
 			updateChangeset(global_CurrentDevice, global_CurrentVersion, global_CurrentDate, undefined, true, global_ChangesetMoreSortCode);
 		}
 	});
+	$(".top").live('click', function(e){
+		// catch event so it doesnt go to parent
+		e.stopPropagation();
+
+		// scroll to top
+		$('html, body').animate({scrollTop:0}, 'fast');
+	});
 });
 
 /**
@@ -317,6 +324,8 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 			}
 			return;
 		}
+
+		var addedTop = false;
 		
 		for (var i = 0; i < data.result.changes.length; i++) {
 			// if not "next" nightly, skip until changes of that nightly
@@ -373,19 +382,33 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn + " UTC")) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn + " UTC")) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>');
 			}
 
+			console.log(i + " " + (data.result.changes.length - 1));
+
 			if ($("#log_Changeset").children("li").size() < 250) {
 				if (i >= _amount - 1) {
 					global_ChangesetHasMore = true;
 					global_ChangesetMoreSortCode = data.result.changes[i].sortKey;
 
-					$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;" class="load_more"><a><h6 style="color:#F0F0F0">Load more...</h6></a></li>');
+					$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;" class="load_more"><a><h6 style="color:#F0F0F0; display:inline;">Load more...</h6><h6 style="display:inline;padding-right:5px;" class="top pull-right">Top</h6></a></li>');
+					addedTop = true;
 					break;
 				}
 			} else {
-				$("#log_Changeset").append("<h6>This changeset has been truncated as it contains over 250 changes</h6>");
+				$("#log_Changeset").append('<h6 style="display:inline;">This changeset has been truncated as it contains over 250 changes</h6>');
+				addedTop = true;
 				break;
 			}
 		}
+		if ($("#log_Changeset").children("li").size() == 0) {
+			if (_date == "next") {
+				$("#log_Changeset").html("<h6>There have been no changes since the latest nightly.</h6>");
+			} else {
+				$("#log_Changeset").html("<h6>There were no changes in this nightly</h6>");
+			}
+		} else if (!addedTop) {
+			$("#log_Changeset").append('<h6 style="display:inline; padding:5px;" class="top pull-right">Top</h6>');
+		}
+				
 	});
 }
 

@@ -4,3 +4,9 @@ body {
 .sidebar-nav {
 	padding: 0px 0;
 }
+.top {
+	cursor: pointer;
+}
+.top:hover {
+	color: white;
+}
