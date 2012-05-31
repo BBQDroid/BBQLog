@@ -1,15 +1,16 @@
 <?php
 
-if ($_SERVER['REMOTE_ADDR'] != "176.9.149.130")
-	die("403 FROM " . $_SERVER['REMOTE_ADDR']);
-
 /**
- * Git Hub Updater script
+ * GitHub Updater script
  * Fetch changes from GitHub and pull them into a local database
  *
  * Copyright (c) The BBQTeam 2012
  *
  */
+
+
+if ($_SERVER['REMOTE_ADDR'] != $_SERVER['SERVER_ADDR'])
+	die("403 FROM " . $_SERVER['REMOTE_ADDR']);
 
 // Configs
 set_time_limit(0);
@@ -28,7 +29,7 @@ function esc($txt) {
  * and flush buffers
  */
 function actionDone($msg) {
-	global $startTime;	
+	global $startTime;
 	echo "$msg (" . number_format(floatval(microtime(true) - $startTime), 5) . "s) <br />\n";
 	$startTime = microtime(true);
 	echo str_repeat(' ',256);
