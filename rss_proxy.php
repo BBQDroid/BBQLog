@@ -9,10 +9,8 @@ if ($cache_exists && filemtime($cache_file) + (60 * 15) > time()) {
 if (@$ret = file_get_contents($url)) {
 	@file_put_contents($cache_file, $ret);
 	echo $ret;
-	exit();
 } else if ($cache_exists) {
 	echo file_get_contents($cache);
-	exit();
 } else {
 	echo "error";
 }
