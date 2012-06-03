@@ -561,6 +561,18 @@
 			</repos>
 		</device>
 		<device>
+			<name>Galaxy S II</name>
+			<model>GT-I9100G</model>
+			<image>images/devices/samsung_i9100.png</image>
+			<code>i9100g</code>
+			<repos>
+				<git name="android_device_samsung_i9100g" />
+				<git name="android_kernel_samsung_smdk4210" />
+				<git name="android_hardware_samsung" />
+				<git name="android_packages_apps_SamsungServiceMode" />
+			</repos>
+		</device>
+		<device>
 			<name>Galaxy S II (AT&amp;T) (CM7)</name>
 			<model>GT-I9100 (AT&amp;T)</model>
 			<image>images/devices/samsung_i9100.png</image>
