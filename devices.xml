@@ -567,7 +567,7 @@
 			<code>i9100g</code>
 			<repos>
 				<git name="android_device_samsung_i9100g" />
-				<git name="android_kernel_samsung_smdk4210" />
+				<git name="android_kernel_samsung_t1" />
 				<git name="android_hardware_samsung" />
 				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
