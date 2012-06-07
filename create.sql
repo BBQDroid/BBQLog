@@ -44,7 +44,10 @@ CREATE TABLE IF NOT EXISTS `repositories` (
   `Branch` varchar(128) NOT NULL,
   PRIMARY KEY (`IDRepository`),
   UNIQUE KEY `GitUsername` (`GitUsername`,`Repository`,`Branch`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=349 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+
+
 
 -- --------------------------------------------------------
 
@@ -56,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `roms` (
   `IDRom` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(128) NOT NULL,
   PRIMARY KEY (`IDRom`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -69,4 +72,20 @@ CREATE TABLE IF NOT EXISTS `roms_versions` (
   `IDRom` int(11) NOT NULL,
   `VersionName` varchar(50) NOT NULL,
   PRIMARY KEY (`IDRomVersion`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+
+--
+-- Dumping data for table `roms`
+--
+
+INSERT INTO `roms` (`IDRom`, `Name`) VALUES
+(1, 'CyanogenMod');
+
+--
+-- Dumping data for table `roms_versions`
+--
+
+INSERT INTO `roms_versions` (`IDRomVersion`, `IDRom`, `VersionName`) VALUES
+(1, 1, '9'),
+(2, 1, '7');
