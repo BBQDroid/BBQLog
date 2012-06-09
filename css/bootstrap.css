@@ -165,6 +165,7 @@ body {
   background-image: -o-linear-gradient(top, #050606, #293036);
   background-image: linear-gradient(top, #050606, #293036);
   background-repeat:repeat-x;
+  background-attachment: fixed;
 }
 
 a {
@@ -3808,6 +3809,7 @@ input[type="submit"].btn.btn-mini {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.10);
   border-right:1px solid #424242;
   cursor:pointer;
+  border-bottom: 3px solid transparent;
 }
 
 .navbar .btn {

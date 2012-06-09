@@ -39,7 +39,7 @@ var nebkatTroll = function(){
 	var largeTrollTimeout = setTimeout(function(){
 		var x = $(window).width() / 2 - 240;
 		var y = $(window).height() / 2 - 240;
-		$("<img src='images/troll_large.png' class='troll' style='z-index:100000000; position:fixed; left:"+x+"px; top:"+y+"px;'></img>").appendTo($("body"));
+		$("<img src='images/troll_large.png' class='troll' style='z-index:1000; position:fixed; left:"+x+"px; top:"+y+"px;'></img>").appendTo($("body"));
 		//scaryAudio[0].play();
 		$(window).konami(function(){
 			usePedobear = true;
