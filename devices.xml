@@ -549,6 +549,17 @@
 			</repos>
 		</device>
 		<device>
+			<name>Galaxy S III</name>
+			<model>GT-I9300</model>
+			<image>images/devices/samsung_i9300.png</image>
+			<code>i9300</code>
+			<repos>
+				<git name="android_device_samsung_i9300" />
+				<git name="android_kernel_samsung_smdk4412" />
+				<git name="android_hardware_samsung" />
+				<git name="android_packages_apps_SamsungServiceMode" />
+			</repo>
+		<device>
 			<name>Galaxy S II</name>
 			<model>GT-I9100</model>
 			<image>images/devices/samsung_i9100.png</image>
