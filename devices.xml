@@ -678,7 +678,7 @@
 		</device>
 		<device>
 			<name>Hercules</name>
-			<model>Hercules</name>
+			<model>Hercules</model>
 			<image>images/devices/samsung_hercules.jpg</image>
 			<code>hercules</code>
 			<repos> 
@@ -768,7 +768,7 @@
 		</device>
 		<device>
 			<name>Skyrocket</name>
-			<model>Skyrocket</name>
+			<model>Skyrocket</model>
 			<image>images/devices/samsung_skyrocket.jpg</image>
 			<code>skyrocket</code>
 			<repos>
