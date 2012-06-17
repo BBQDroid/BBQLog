@@ -676,6 +676,17 @@
 			</repos>
 		</device>
 		<device>
+			<name>Hercules</name>
+			<model>Hercules</name>
+			<image>images/devices/samsung_hercules.jpg</image>
+			<code>hercules</code>
+			<repos> 
+				<git name="android_device_samsung_hercules" />
+				<git name="android_device_samsung_msm8660-common" />
+				<git name="android_kernel_samsung_msm8660-common" />
+			</repos>
+		</device>
+		<device>
 			<name>Mesmerize</name>
 			<model>Mesmerize</model>
 			<image>images/devices/samsung_mesmerize.png</image>
@@ -752,6 +763,17 @@
 			<code>showcasemtd</code>
 			<repos>
 				<git name="android_device_samsung_showcasemtd" />
+			</repos>
+		</device>
+		<device>
+			<name>Skyrocket</name>
+			<model>Skyrocket</name>
+			<image>images/devices/samsung_skyrocket.jpg</image>
+			<code>skyrocket</code>
+			<repos>
+				<git name="android_device_samsung_skyrocket" />
+				<git name="android_device_samsung_msm8660-common" />
+				<git name="android_kernel_samsung_msm8660-common" />
 			</repos>
 		</device>
 		<device>
