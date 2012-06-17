@@ -21,6 +21,16 @@
 				<git name="android_kernel_asus_tf201" />
 			</repos>
 		</device>
+		<device>
+			<name>Transformer Pad</name>
+			<model>TF300T</model>
+			<image>images/devices/asus_tf201.png</image>
+			<code>tf300t</code>
+			<repos>
+				<git name="android_device_asus_tf300t" />
+				<git name="android_kernel_asus_tf300t" />
+			</repos>
+		</device>
 	</oem>
 	<oem name="HTC">
 		<device>
