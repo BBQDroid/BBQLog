@@ -558,7 +558,8 @@
 				<git name="android_kernel_samsung_smdk4412" />
 				<git name="android_hardware_samsung" />
 				<git name="android_packages_apps_SamsungServiceMode" />
-			</repo>
+			</repos>
+		</device>
 		<device>
 			<name>Galaxy S II</name>
 			<model>GT-I9100</model>
