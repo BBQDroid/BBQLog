@@ -559,14 +559,26 @@
 			</repos>
 		</device>
 		<device>
-			<name>Galaxy S III</name>
-			<model>GT-I9300</model>
-			<image>images/devices/samsung_i9300.png</image>
-			<code>i9300</code>
+			<name>Galaxy S</name>
+			<model>GT-I9000B</model>
+			<image>images/devices/samsung_galaxysbmtd.png</image>
+			<code>galaxysbmtd</code>
 			<repos>
-				<git name="android_device_samsung_i9300" />
-				<git name="android_kernel_samsung_smdk4412" />
-				<git name="android_hardware_samsung" />
+				<git name="android_device_samsung_galaxysbmtd" />
+				<git name="android_device_samsung_aries-common" />
+				<git name="android_kernel_samsung_aries" />
+				<git name="android_package_apps_SamsungServiceMode" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy S</name>
+			<model>GT-I9000</model>
+			<image>images/devices/samsung_galaxysbmtd.png</image>
+			<code>galaxysmtd</code>
+			<repos>
+				<git name="android_device_samsung_galaxysmtd" />
+				<git name="android_device_samsung_aries-common" />
+				<git name="android_kernel_samsung_aries" />
 				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
 		</device>
@@ -605,30 +617,6 @@
 			</repos>
 		</device>
 		<device>
-			<name>Galaxy S</name>
-			<model>GT-I9000B</model>
-			<image>images/devices/samsung_galaxysbmtd.png</image>
-			<code>galaxysbmtd</code>
-			<repos>
-				<git name="android_device_samsung_galaxysbmtd" />
-				<git name="android_device_samsung_aries-common" />
-				<git name="android_kernel_samsung_aries" />
-				<git name="android_package_apps_SamsungServiceMode" />
-			</repos>
-		</device>
-		<device>
-			<name>Galaxy S</name>
-			<model>GT-I9000</model>
-			<image>images/devices/samsung_galaxysbmtd.png</image>
-			<code>galaxysmtd</code>
-			<repos>
-				<git name="android_device_samsung_galaxysmtd" />
-				<git name="android_device_samsung_aries-common" />
-				<git name="android_kernel_samsung_aries" />
-				<git name="android_packages_apps_SamsungServiceMode" />
-			</repos>
-		</device>
-		<device>
 			<name>Galaxy S II (AT&amp;T) (CM9)</name>
 			<model>SGH-I777</model>
 			<image>images/devices/samsung_i9100.png</image>
@@ -637,6 +625,18 @@
 				<git name="android_device_samsung_i777" />
 				<git name="android_kernel_samsung_smdk4210" />
 				<git name="android_device_samsung_galaxys2" />
+				<git name="android_hardware_samsung" />
+				<git name="android_packages_apps_SamsungServiceMode" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy S III</name>
+			<model>GT-I9300</model>
+			<image>images/devices/samsung_i9300.png</image>
+			<code>i9300</code>
+			<repos>
+				<git name="android_device_samsung_i9300" />
+				<git name="android_kernel_samsung_smdk4412" />
 				<git name="android_hardware_samsung" />
 				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
