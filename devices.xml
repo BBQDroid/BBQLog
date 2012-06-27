@@ -691,7 +691,7 @@
 			<model>Hercules</model>
 			<image>images/devices/samsung_hercules.jpg</image>
 			<code>hercules</code>
-			<repos> 
+			<repos>
 				<git name="android_device_samsung_hercules" />
 				<git name="android_device_samsung_msm8660-common" />
 				<git name="android_kernel_samsung_msm8660-common" />
