@@ -176,15 +176,20 @@ function updateListNightlies(_device, _version, _date) {
 		});
 
 		items.each(function(index) {
-			if (cancel || $(this).children("title").text().indexOf("NIGHTLY") <= 0)
+			if (cancel || ($(this).children("title").text().indexOf("EXPERIMENTAL") <= 0 && $(this).children("title").text().indexOf("NIGHTLY") <= 0))
 				return;
+
+			if (_version == "cm9" && $(this).children("title").text().indexOf("cm-9") ||
+				_version == "cm7" && $(this).children("title").text().indexOf("cm-7")) {
+				return;
+			}
 
 			// if we have a CM7 nightly and we are in CM9 changeset mode, redirect
 			if (_version == "cm9" && !cm9found && !stop && $(this).children("title").text().indexOf("cm-7") >= 0) {
-				window.location = "#" + _device + '/cm7/next';
-				window.location.reload();
-				cancel=true;
-//				updateBodyData();
+				//window.location = "#" + _device + '/cm7/next';
+				//window.location.reload();
+				///cancel=true;
+//				///updateBodyData();
 				//return;
 			} else if (_version == "cm9" && $(this).children("title").text().indexOf("cm-9") > 0) {
 				cm9found = true;
@@ -235,7 +240,7 @@ function updateListNightlies(_device, _version, _date) {
  * Updates the changeset list
  */
 function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) {
-	_amount = typeof _amount !== 'undefined' ? _amount : 25;
+	_amount = typeof _amount !== 'undefined' ? _amount : 50;
 	_append = typeof _append !== 'undefined' ? _append : false;
 	_sortCode = typeof _sortCode !== 'undefined' ? _sortCode : '';
 
@@ -388,19 +393,22 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 
 			console.log(i + " " + (data.result.changes.length - 1));
 
-			if ($("#log_Changeset").children("li").size() < 250) {
-				if (i >= _amount - 1) {
-					global_ChangesetHasMore = true;
-					global_ChangesetMoreSortCode = data.result.changes[i].sortKey;
+			var realChanges = $("#log_Changeset").children("li").size();
+			if (realChanges > 0) {
+				if (realChanges < 250) {
+					if (i >= _amount - 1) {
+						global_ChangesetHasMore = true;
+						global_ChangesetMoreSortCode = data.result.changes[i].sortKey;
 
-					$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;" class="load_more"><a><h6 style="color:#F0F0F0; display:inline;">Load more...</h6><h6 style="display:inline;padding-right:5px;" class="top pull-right">Top</h6></a></li>');
+						$("#log_Changeset").append('<li style="border-bottom:1px solid #33B5E5;border-top:1px solid #33B5E5;margin-top:5px;cursor:pointer;padding-left:10px;" class="load_more"><a><h6 style="color:#F0F0F0; display:inline;">Load more...</h6><h6 style="display:inline;padding-right:5px;" class="top pull-right">Top</h6></a></li>');
+						addedTop = true;
+						break;
+					}
+				} else {
+					$("#log_Changeset").append('<h6 style="display:inline;">This changeset has been truncated as it contains over 250 changes</h6>');
 					addedTop = true;
 					break;
 				}
-			} else {
-				$("#log_Changeset").append('<h6 style="display:inline;">This changeset has been truncated as it contains over 250 changes</h6>');
-				addedTop = true;
-				break;
 			}
 		}
 		if ($("#log_Changeset").children("li").size() == 0) {
