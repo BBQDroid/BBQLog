@@ -52,6 +52,7 @@ echo "Starting repositories processing...\n";
 
 $params = getopt("c", array("repo::"));
 if (!empty($params["repo"])) {
+	echo "Processing ".$params["repo"]."\n";
 	$repo = $params["repo"];
 }
 
@@ -93,7 +94,7 @@ while ($repo = mysql_fetch_assoc($repositories)) {
                 // get the latest commit on GitHub
                 $lastCommitSHA = "";
                 foreach($branches_json as $gitBranch) {
-                        if ($gitBranch['name'] == $branch['Branch'] && $lastCommitSHA != $lastCommitDB) {
+                        if ($gitBranch['name'] == $branch['Branch'] && ($lastCommitDB == "" || $lastCommitSHA != $lastCommitDB)) {
                                 $lastCommitSHA = $gitBranch['commit']['sha'];
                                 echo "Found branch " . $branch['Branch'] . " (last commit: $lastCommitSHA)\n";
                                 break;
@@ -135,7 +136,12 @@ while ($repo = mysql_fetch_assoc($repositories)) {
 					break;
 				}
 
-				mysql_query("INSERT IGNORE INTO commits(SHA,GitUsername,Repository,Branch,Author,Message,CommitDate) VALUES('" . esc($commit['sha']) ."', '".esc($repo['GitUsername'])."' ,'".esc($repo['Repository'])."', '".esc($branch['Branch'])."', '".esc($commit['committer']['login'])."', '".esc($commit['commit']['message'])."', '".esc(githubDate($commit['commit']['committer']['date']))."');") or die(mysql_error());
+				// Merge commits
+				//if ($commit['committer'] == null) {
+				//	mysql_query("UPDATE commits SET CommitDate='".githubDate($commit['commit']['committer']['date'])."' WHERE SHA='".$commit['parents'][1]["sha"]."'");
+				//} else {
+					mysql_query("INSERT IGNORE INTO commits(SHA,GitUsername,Repository,Branch,Author,Message,CommitDate) VALUES('" . esc($commit['sha']) ."', '".esc($repo['GitUsername'])."' ,'".esc($repo['Repository'])."', '".esc($branch['Branch'])."', '".esc($commit['committer']['login'])."', '".esc($commit['commit']['message'])."', '".esc(githubDate($commit['commit']['committer']['date']))."');") or die(mysql_error());
+				//}
 				$inserts++;
 
 				$commitSHA = $commit['sha'];

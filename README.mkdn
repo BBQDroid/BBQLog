@@ -1,0 +1,38 @@
+BBQLog
+======
+
+What is it?
+-----------
+
+BBQLog is a changelog for [CyanogenMod](http://cyanogenmod.com) [nightlies](http://get.cm). 
+
+BBQLog is written mainly JavaScript and PHP is used on the server. The JavaScript loads all the data from the server and displays it on the page. The PHP is used for loading the changes from GitHub and returning them to the JavaScript.
+
+The nightlies list is fetched from the [nightlies rss](http://get.cm/rss) and the changes are fetched from the [CyanogenMod GitHub](http://github.com/CyanogenMod).
+
+
+Download
+--------
+
+BBQLog uses Git to manage changes. To download, use this command:
+    git clone git@github.com:BBQDroid/BBQLog.git
+
+This will download BBQLog and set up the Git repository in a BBQLog folder.
+    cd BBQLog
+
+
+Installation
+------------
+
+BBQLog uses a MySQL database to store changes fetched from GitHub.
+To create the database and required tables, use this command:
+    mysql < create.sql
+
+Once this is done, set up your config by editing `config.example.php` and copying it to `config.php`.
+
+
+Running
+-------
+
+BBQLog requires a cron job to update the changes from GitHub and store them in the MySQL database.
+
