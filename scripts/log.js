@@ -262,6 +262,8 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	var versionNum = 9;
 	if (_version == "cm7") {
 		versionNum = 7;
+	} else if (_version == "cm10") {
+		versionNum = 10;
 	}
 
 	// 'latest' for latest nightly
