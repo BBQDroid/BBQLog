@@ -305,6 +305,15 @@
 				<git name="android_device_lge_p500" />
 			</repos>
 		</device>
+                <device>
+			<name>Optimus Me</name>
+			<model>P350</model>
+			<image>images/devices/lge_p350.png</image>
+			<code>p500</code>
+			<repos>
+				<git name="android_device_lge_p350" />
+			</repos>
+		</device>
 		<device>
 			<name>Optimus 3D</name>
 			<model>P920</model>
