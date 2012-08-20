@@ -3,7 +3,7 @@
  */
 
 var global_CurrentDevice = undefined;
-var global_CurrentVersion = "";
+var global_CurrentVersion = "cm10"; // default
 var global_CurrentDate = "";
 var global_DeviceCodeRepos = [];
 
@@ -51,6 +51,7 @@ $(function() {
 function updateBodyData() {
 	var url = window.location.hash.substring(1);
 	var params = url.split("/");
+	var version = (params[1] == undefined ? "cm10" : params[1]);
 	
 	if (global_CurrentDevice != params[0]) {
 		updateListNightlies(params[0], params[1], params[2]);
@@ -59,25 +60,29 @@ function updateBodyData() {
 	// scroll up for smooth transition between changesets
 	if ($(window).scrollTop() > 0) {
 		$('body').animate({scrollTop : 0}, 'fast', function() {
-			updateChangeset(params[0], params[1], params[2]);
+			updateChangeset(params[0], version, params[2]);
 		});
 		$('#log_Changeset').fadeOut('fast', function() {
 			$(this).fadeIn(100);
 		});
 	} else {
-		updateChangeset(params[0], params[1], params[2]);
+		updateChangeset(params[0], version, params[2]);
 	}
 
 	global_CurrentDevice = params[0];
-	global_CurrentVersion = params[1];
+	global_CurrentVersion = version; //(params[1] == 'undefined' ? 'cm10' : params[1]);
 	global_CurrentDate = params[2];
 
 	if (_gaq != undefined)
 		_gaq.push(['_trackPageview', url]);
 }
 
-
-
+/**
+ *  Redirect to the device page based on the current selected CM version
+ */
+function redirectToDevice(_device, _date) {
+	window.location = "#" + _device + "/" + global_CurrentVersion + "/" + _date;
+}
 
 /**
  *  Load devices list from devices.xml
@@ -98,7 +103,7 @@ function loadDevices() {
 			
 			// for each device
 			$(this).find("device").each(function() {
-				var device = $('<li style="vertical-align:middle;"><a href="#' + $(this).children("code").text() + '/cm9/next"><span style="width:35px;text-align:center;float:left;margin-right:10px;background:white;border-radius:3px;border:1px solid white;"><img src="' + $(this).children("image").text() + '" style="max-height:35px;max-width:35px;" /></span><strong>' + $(this).children("name").text() + '</strong><br />'+$(this).children("model").text()+' / '+$(this).children("code").text()+'</a></li><li class="divider"></li>').appendTo(devices);
+				var device = $('<li style="vertical-align:middle;"><a href="#" onclick="redirectToDevice(\'' + $(this).children("code").text() + '\', \'next\');return false;"><span style="width:35px;text-align:center;float:left;margin-right:10px;background:white;border-radius:3px;border:1px solid white;"><img src="' + $(this).children("image").text() + '" style="max-height:35px;max-width:35px;" /></span><strong>' + $(this).children("name").text() + '</strong><br />'+$(this).children("model").text()+' / '+$(this).children("code").text()+'</a></li><li class="divider"></li>').appendTo(devices);
 					
 
 				var code = $(this).children("code").text();
@@ -179,7 +184,8 @@ function updateListNightlies(_device, _version, _date) {
 			if (cancel || ($(this).children("title").text().indexOf("EXPERIMENTAL") <= 0 && $(this).children("title").text().indexOf("NIGHTLY") <= 0))
 				return;
 
-			if (_version == "cm9" && $(this).children("title").text().indexOf("cm-9") ||
+			if (_version == "cm10" && $(this).children("title").text().indexOf("cm-10") ||
+				_version == "cm9" && $(this).children("title").text().indexOf("cm-9") ||
 				_version == "cm7" && $(this).children("title").text().indexOf("cm-7")) {
 				return;
 			}
@@ -191,6 +197,8 @@ function updateListNightlies(_device, _version, _date) {
 				///cancel=true;
 //				///updateBodyData();
 				//return;
+			} else if (_version == "cm10" && $(this).children("title").text().indexOf("cm-10") > 0) {
+				cm10found = true;
 			} else if (_version == "cm9" && $(this).children("title").text().indexOf("cm-9") > 0) {
 				cm9found = true;
 			}
@@ -259,9 +267,11 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	// Remove all load more buttons
 	$(".load_more").remove();
 	
-	var versionNum = 9;
+	var versionNum = 10;
 	if (_version == "cm7") {
 		versionNum = 7;
+	} else if (_version == "cm9") {
+		versionNum = 9;
 	} else if (_version == "cm10") {
 		versionNum = 10;
 	}
@@ -273,7 +283,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	
 	// if no device is set, show all latest changes. Else, show device+date
 	if (_device == '') {
-		$("#log_NightlyTitle").html("CyanogenMod " + versionNum + " for all devices<br /><small>Narrow down your query by selecting a device.</small>");	
+		$("#log_NightlyTitle").html("CyanogenMod " + versionNum + " for all devices<br /><small>Narrow down your query by selecting a device.</small>");
 	} else {
 		var nightlyDate;
 		if (_date != "next") {
@@ -431,6 +441,9 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
  */
 function setCMVersion(num) {
 	window.location = "#" + global_CurrentDevice + "/cm" + num +"/" + global_CurrentDate;
+	// reload nightlies based on the version
+	global_CurrentVersion = "cm"+num;
+	updateListNightlies(global_CurrentDevice, global_CurrentVersion, global_CurrentDate);
 }
 
 
