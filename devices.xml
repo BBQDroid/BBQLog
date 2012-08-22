@@ -772,6 +772,8 @@
 			<code>p1l</code>
 			<repos>
 				<git name="android_device_samsung_p1l" />
+				<git name="android_device_samsung_p1-common" />
+				<git name="android_kernel_samsung_p1" />
 			</repos>
 		</device>
 		<device>
@@ -781,6 +783,8 @@
 			<code>p1n</code>
 			<repos>
 				<git name="android_device_samsung_p1n" />
+				<git name="android_device_samsung_p1-common" />
+				<git name="android_kernel_samsung_p1" />
 			</repos>
 		</device>
 		<device>
