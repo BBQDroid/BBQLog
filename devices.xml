@@ -795,6 +795,16 @@
 			</repos>
 		</device>
 		<device>
+			<name>Galaxy Tab 10.1 (3G)</name>
+			<model>P4</model>
+			<image>images/devices/samsung_p4.png</image>
+			<code>p4</code>
+			<repos>
+				<git name="android_device_samsung_p4" />
+				<git name="android_device_samsung_p4-common" />
+			</repos>
+		</device>
+		<device>
 			<name>Showcase</name>
 			<model>Showcase</model>
 			<image>images/devices/samsung_mesmerize.png</image>
