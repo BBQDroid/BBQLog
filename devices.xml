@@ -31,6 +31,16 @@
 				<git name="android_kernel_asus_tf300t" />
 			</repos>
 		</device>
+		<device>
+			<name>Nexus 7</name>
+			<model>Grouper</model>
+			<image>images/devices/asus_grouper.png</image>
+			<code>grouper</code>
+			<repos>
+				<git name="android_device_asus_grouper" />
+				<git name="android_kernel_asus_grouper" />
+			</repos>
+		</device>
 	</oem>
 	<oem name="HTC">
 		<device>
@@ -629,6 +639,23 @@
 				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
 		</device>
+                <device>
+                        <name>Galaxy S III (AT&amp;T) (CM10)</name>
+			<model>D2-AT&amp;T</model>
+			<image>images/devices/samsung_i9300.png</image>
+			<code>d2att</code>
+				<repos>
+				<git name="android_device_samsung_d2att" />
+				<git name="android_kernel_samsung_d2" />
+				<git name="android_device_samsung_d2-common" />
+			 	<git name="android_hardware_samsung" />
+				<git name="android_packages_apps_SamsungServiceMode" />
+				<git name="android_devices_samsung_msm8960-common" />
+				<git name="android_hardware_qcom_display" />
+				<git name="android_hardware_qcom_audio" />
+				<git name="android_hardware_qcom_media" />
+			</repos>
+		</device>
 		<device>
 			<name>Galaxy S III</name>
 			<model>GT-I9300</model>
@@ -882,6 +909,17 @@
 			<code>mimmi</code>
 			<repos>
 				<git name="android_device_semc_mimmi" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia S</name>
+			<model>Nozomi</model>
+			<image>images/devices/semc_mimmi.png</image>
+			<code>nozomi</code>
+			<repos>
+				<git name="android_device_sony_nozomi" />
+				<git name="android_device_sony_fuji-common" />
+				<git name="sony-kernel-msm8660" />
 			</repos>
 		</device>
 		<device>
