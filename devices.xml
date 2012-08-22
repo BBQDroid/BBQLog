@@ -315,7 +315,7 @@
 				<git name="android_device_lge_p500" />
 			</repos>
 		</device>
-                <device>
+		<device>
 			<name>Optimus Me</name>
 			<model>P350</model>
 			<image>images/devices/lge_p350.png</image>
@@ -648,12 +648,12 @@
 				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
 		</device>
-                <device>
-                        <name>Galaxy S III (AT&amp;T) (CM10)</name>
+		<device>
+			<name>Galaxy S III (AT&amp;T) (CM10)</name>
 			<model>D2-AT&amp;T</model>
 			<image>images/devices/samsung_i9300.png</image>
 			<code>d2att</code>
-				<repos>
+			<repos>
 				<git name="android_device_samsung_d2att" />
 				<git name="android_kernel_samsung_d2" />
 				<git name="android_device_samsung_d2-common" />
