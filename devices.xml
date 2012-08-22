@@ -493,7 +493,7 @@
 	<oem name="Motorola">
 		<device>
 			<name>Atrix 4G</name>
-			<model></model>
+			<model>ME860</model>
 			<image>images/devices/motorola_olympus.png</image>
 			<code>olympus</code>
 			<repos>
@@ -502,7 +502,7 @@
 		</device>
 		<device>
 			<name>Backflip</name>
-			<model></model>
+			<model>MB300</model>
 			<image>images/devices/motorola_backflip.png</image>
 			<code>motus</code>
 			<repos>
@@ -511,7 +511,7 @@
 		</device>
 		<device>
 			<name>Cliq</name>
-			<model></model>
+			<model>MB300</model>
 			<image>images/devices/motorola_cliq.png</image>
 			<code>morrison</code>
 			<repos>
@@ -520,7 +520,7 @@
 		</device>
 		<device>
 			<name>Cliq XT</name>
-			<model></model>
+			<model>MB300</model>
 			<image>images/devices/motorola_cliqxt.png</image>
 			<code>zeppelin</code>
 			<repos>
@@ -529,7 +529,7 @@
 		</device>
 		<device>
 			<name>Defy</name>
-			<model></model>
+			<model>MB525</model>
 			<image>images/devices/motorola_defy.png</image>
 			<code>jordan</code>
 			<repos>
@@ -538,7 +538,7 @@
 		</device>
 		<device>
 			<name>Droid</name>
-			<model></model>
+			<model>A855</model>
 			<image>images/devices/motorola_droid.png</image>
 			<code>sholes</code>
 			<repos>
@@ -547,7 +547,7 @@
 		</device>
 		<device>
 			<name>Droid 2</name>
-			<model></model>
+			<model>A955</model>
 			<image>images/devices/motorola_droid2.png</image>
 			<code>droid2</code>
 			<repos>
@@ -557,7 +557,7 @@
 		</device>
 		<device>
 			<name>Droid 2 Global</name>
-			<model></model>
+			<model>A956</model>
 			<image>images/devices/motorola_droid2.png</image>
 			<code>droid2we</code>
 			<repos>
@@ -567,7 +567,7 @@
 		</device>
 		<device>
 			<name>Droid X</name>
-			<model></model>
+			<model>MB810</model>
 			<image>images/devices/motorola_droidx.png</image>
 			<code>shadow</code>
 			<repos>
@@ -577,7 +577,7 @@
 		</device>
 		<device>
 			<name>Photon 4G</name>
-			<model></model>
+			<model>MB855</model>
 			<image>images/devices/motorola_sunfire.png</image>
 			<code>sunfire</code>
 			<repos>
@@ -586,7 +586,7 @@
 		</device>
 		<device>
 			<name>Xoom (Verizon)</name>
-			<model></model>
+			<model>MZ600</model>
 			<image>images/devices/motorola_xoom.png</image>
 			<code>stingray</code>
 			<repos>
@@ -598,7 +598,7 @@
 		</device>
 		<device>
 			<name>Xoom (Wi-Fi)</name>
-			<model></model>
+			<model>MZ604</model>
 			<image>images/devices/motorola_xoom.png</image>
 			<code>wingray</code>
 			<repos>
