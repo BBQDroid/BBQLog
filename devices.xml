@@ -493,7 +493,7 @@
 	<oem name="Motorola">
 		<device>
 			<name>Atrix 4G</name>
-			<model>ME860</model>
+			<model>MB860</model>
 			<image>images/devices/motorola_olympus.png</image>
 			<code>olympus</code>
 			<repos>
@@ -511,7 +511,7 @@
 		</device>
 		<device>
 			<name>Cliq</name>
-			<model>MB300</model>
+			<model>MB200</model>
 			<image>images/devices/motorola_cliq.png</image>
 			<code>morrison</code>
 			<repos>
@@ -520,7 +520,7 @@
 		</device>
 		<device>
 			<name>Cliq XT</name>
-			<model>MB300</model>
+			<model>MB501</model>
 			<image>images/devices/motorola_cliqxt.png</image>
 			<code>zeppelin</code>
 			<repos>
