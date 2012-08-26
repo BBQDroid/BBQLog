@@ -216,6 +216,17 @@
 			</repos>
 		</device>
 		<device>
+			<name>Evo 4G LTE</name>
+			<model></model>
+			<image>images/devices/htc_jewel.png</image>
+			<code>jewel</code>
+			<repos>
+				<git name="android_device_htc_jewel" />
+				<git name="android_device_htc_msm8960-common" />
+				<git name="android_kernel_htc_msm8960" />
+			</repos>
+		</device>
+		<device>
 			<name>Evo Shift 4G</name>
 			<model></model>
 			<image>images/devices/htc_speedy.png</image>
@@ -313,6 +324,38 @@
 			</repos>
 		</device>
 		<device>
+			<name>One S</name>
+			<model></model>
+			<image>images/devices/htc_ville.png</image>
+			<code>ville</code>
+			<repos>
+				<git name="android_device_htc_msm8960-common" />
+				<git name="android_device_htc_ville" />
+				<git name="android_kernel_htc_msm8960" />
+			</repos>
+		</device>
+		<device>
+			<name>One X</name>
+			<model></model>
+			<image>images/devices/htc_endeavoru.png</image>
+			<code>endeavoru</code>
+			<repos>
+				<git name="android_device_htc_endeavoru" />
+				<git name="htc-kernel-endeavoru" />
+			</repos>
+		</device>
+		<device>
+			<name>One XL</name>
+			<model></model>
+			<image>images/devices/htc_evita.png</image>
+			<code>evita</code>
+			<repos>
+				<git name="android_device_htc_evita" />
+				<git name="android_device_htc_msm8960-common" />
+				<git name="android_kernel_htc_msm8960" />
+			</repos>
+		</device>
+		<device>
 			<name>Sensation</name>
 			<model></model>
 			<image>images/devices/htc_pyramid.png</image>
@@ -380,6 +423,16 @@
 			<repos>
 				<git name="android_device_lge_e739" />
 				<git name="android_device_lge_victor-common" />
+				<git name="lge-kernel-msm7x30" />
+			</repos>
+		</device>
+		<device>
+			<name>myTouch Q</name>
+			<model>C800</model>
+			<image>images/devices/lge_c800.png</image>
+			<code>c800</code>
+			<repos>
+				<git name="android_device_lge_c800" />
 				<git name="lge-kernel-msm7x30" />
 			</repos>
 		</device>
@@ -797,15 +850,58 @@
 			<image>images/devices/samsung_i9300.png</image>
 			<code>d2att</code>
 				<repos>
+				<git name="android_device_samsung_d2-common" />
 				<git name="android_device_samsung_d2att" />
 				<git name="android_kernel_samsung_d2" />
-				<git name="android_device_samsung_d2-common" />
-			 	<git name="android_hardware_samsung" />
-				<git name="android_packages_apps_SamsungServiceMode" />
 				<git name="android_devices_samsung_msm8960-common" />
-				<git name="android_hardware_qcom_display" />
-				<git name="android_hardware_qcom_audio" />
-				<git name="android_hardware_qcom_media" />
+			</repos>
+		</device>
+        <device>
+            <name>Galaxy S III (Sprint)</name>
+			<model>SPH-L710</model>
+			<image>images/devices/samsung_i9300.png</image>
+			<code>d2att</code>
+				<repos>
+				<git name="android_device_samsung_d2-common" />
+				<git name="android_device_samsung_d2spr" />
+				<git name="android_kernel_samsung_d2" />
+				<git name="android_devices_samsung_msm8960-common" />
+			</repos>
+		</device>
+        <device>
+            <name>Galaxy S III (T-Mobile)</name>
+			<model>SGH-T999</model>
+			<image>images/devices/samsung_i9300.png</image>
+			<code>d2att</code>
+				<repos>
+				<git name="android_device_samsung_d2-common" />
+				<git name="android_device_samsung_d2tmo" />
+				<git name="android_kernel_samsung_d2" />
+				<git name="android_devices_samsung_msm8960-common" />
+			</repos>
+		</device>
+        <device>
+            <name>Galaxy S III (US Cellular)</name>
+			<model>SCH-R530</model>
+			<image>images/devices/samsung_i9300.png</image>
+			<code>d2att</code>
+				<repos>
+				<git name="android_device_samsung_d2-common" />
+				<git name="android_device_samsung_d2usc" />
+				<git name="android_kernel_samsung_d2" />
+				<git name="android_devices_samsung_msm8960-common" />
+			</repos>
+		</device>
+        <device>
+            <name>Galaxy S III (Verizon)</name>
+			<model>SCH-I535</model>
+			<image>images/devices/samsung_i9300.png</image>
+			<code>d2att</code>
+				<repos>
+				<git name="android_device_samsung_d2-common" />
+				<git name="android_device_samsung_d2vzw" />
+				<git name="android_kernel_samsung_d2" />
+				<git name="android_devices_samsung_msm8960-common" />
 			</repos>
 		</device>
 		<device>
