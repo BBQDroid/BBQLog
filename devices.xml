@@ -1126,7 +1126,7 @@
 			</repos>
 		</device>
 	</oem>
-	<oem name="Sony (SEMC)">
+	<oem name="SEMC">
 		<device>
 			<name>Live with Walkman</name>
 			<model>WT19i</model>
@@ -1315,6 +1315,30 @@
 			<code>mimmi</code>
 			<repos>
 				<git name="android_device_semc_mimmi" />
+			</repos>
+		</device>
+	</oem>
+	<oem name="Sony">
+		<device>
+			<name>Xperia S</name>
+			<model>Nozomi</model>
+			<image>images/devices/sony_nozomi.png</image>
+			<code>nozomi</code>
+			<repos>
+				<git name="android_device_sony_nozomi" />
+				<git name="android_device_sony_fuji-common" />
+				<git name="sony-kernel-msm8660" />
+			</repos>
+		</device>
+		<device>
+			<name>Xperia Acro S</name>
+			<model>hikari</model>
+			<image>images/devices/sony_hikari.png</image>
+			<code>hikari</code>
+			<repos>
+				<git name="android_device_sony_hikari" />
+				<git name="android_device_sony_fuji-common" />
+				<git name="sony-kernel-msm8660" />
 			</repos>
 		</device>
 	</oem>
