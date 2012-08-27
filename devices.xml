@@ -126,6 +126,7 @@
 				<git name="android_kernel_samsung_crespo" />
 			</repos>
 		</device>
+	</oem>
 	<oem name="HTC">
 		<device>
 			<name>Aria</name>
