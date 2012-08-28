@@ -845,60 +845,60 @@
 				<git name="android_packages_apps_SamsungServiceMode" />
 			</repos>
 		</device>
-        <device>
-            <name>Galaxy S III (AT&amp;T)</name>
+		<device>
+			<name>Galaxy S III (AT&amp;T)</name>
 			<model>SGH-I747</model>
 			<image>images/devices/samsung_i9300.png</image>
 			<code>d2att</code>
-				<repos>
+			<repos>
 				<git name="android_device_samsung_d2-common" />
 				<git name="android_device_samsung_d2att" />
 				<git name="android_kernel_samsung_d2" />
 				<git name="android_devices_samsung_msm8960-common" />
 			</repos>
 		</device>
-        <device>
-            <name>Galaxy S III (Sprint)</name>
+		<device>
+			<name>Galaxy S III (Sprint)</name>
 			<model>SPH-L710</model>
 			<image>images/devices/samsung_i9300.png</image>
 			<code>d2att</code>
-				<repos>
+			<repos>
 				<git name="android_device_samsung_d2-common" />
 				<git name="android_device_samsung_d2spr" />
 				<git name="android_kernel_samsung_d2" />
 				<git name="android_devices_samsung_msm8960-common" />
 			</repos>
 		</device>
-        <device>
-            <name>Galaxy S III (T-Mobile)</name>
+		<device>
+			<name>Galaxy S III (T-Mobile)</name>
 			<model>SGH-T999</model>
 			<image>images/devices/samsung_i9300.png</image>
 			<code>d2att</code>
-				<repos>
+			<repos>
 				<git name="android_device_samsung_d2-common" />
 				<git name="android_device_samsung_d2tmo" />
 				<git name="android_kernel_samsung_d2" />
 				<git name="android_devices_samsung_msm8960-common" />
 			</repos>
 		</device>
-        <device>
-            <name>Galaxy S III (US Cellular)</name>
+		<device>
+			<name>Galaxy S III (US Cellular)</name>
 			<model>SCH-R530</model>
 			<image>images/devices/samsung_i9300.png</image>
 			<code>d2att</code>
-				<repos>
+			<repos>
 				<git name="android_device_samsung_d2-common" />
 				<git name="android_device_samsung_d2usc" />
 				<git name="android_kernel_samsung_d2" />
 				<git name="android_devices_samsung_msm8960-common" />
 			</repos>
 		</device>
-        <device>
-            <name>Galaxy S III (Verizon)</name>
+		<device>
+			<name>Galaxy S III (Verizon)</name>
 			<model>SCH-I535</model>
 			<image>images/devices/samsung_i9300.png</image>
 			<code>d2att</code>
-				<repos>
+			<repos>
 				<git name="android_device_samsung_d2-common" />
 				<git name="android_device_samsung_d2vzw" />
 				<git name="android_kernel_samsung_d2" />
