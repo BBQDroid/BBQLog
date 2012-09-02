@@ -861,7 +861,7 @@
 			<name>Galaxy S III (Sprint)</name>
 			<model>SPH-L710</model>
 			<image>images/devices/samsung_i9300.png</image>
-			<code>d2att</code>
+			<code>d2spr</code>
 			<repos>
 				<git name="android_device_samsung_d2-common" />
 				<git name="android_device_samsung_d2spr" />
@@ -873,7 +873,7 @@
 			<name>Galaxy S III (T-Mobile)</name>
 			<model>SGH-T999</model>
 			<image>images/devices/samsung_i9300.png</image>
-			<code>d2att</code>
+			<code>d2tmo</code>
 			<repos>
 				<git name="android_device_samsung_d2-common" />
 				<git name="android_device_samsung_d2tmo" />
@@ -885,7 +885,7 @@
 			<name>Galaxy S III (US Cellular)</name>
 			<model>SCH-R530</model>
 			<image>images/devices/samsung_i9300.png</image>
-			<code>d2att</code>
+			<code>d2usc</code>
 			<repos>
 				<git name="android_device_samsung_d2-common" />
 				<git name="android_device_samsung_d2usc" />
@@ -897,7 +897,7 @@
 			<name>Galaxy S III (Verizon)</name>
 			<model>SCH-I535</model>
 			<image>images/devices/samsung_i9300.png</image>
-			<code>d2att</code>
+			<code>d2vzw</code>
 			<repos>
 				<git name="android_device_samsung_d2-common" />
 				<git name="android_device_samsung_d2vzw" />
