@@ -765,12 +765,24 @@
 			</repos>
 		</device>
 		<device>
-			<name>Galaxy S II</name>
+			<name>Galaxy S II (CM9)</name>
 			<model>GT-I9100</model>
 			<image>images/devices/samsung_i9100.png</image>
 			<code>galaxys2</code>
 			<repos>
 				<git name="android_device_samsung_galaxys2" />
+				<git name="android_kernel_samsung_smdk4210" />
+				<git name="android_hardware_samsung" />
+				<git name="android_packages_apps_SamsungServiceMode" />
+			</repos>
+		</device>
+		<device>
+			<name>Galaxy S II (CM10)</name>
+			<model>GT-I9100</model>
+			<image>images/devices/samsung_i9100.png</image>
+			<code>i9100</code>
+			<repos>
+				<git name="android_device_samsung_i9100" />
 				<git name="android_kernel_samsung_smdk4210" />
 				<git name="android_hardware_samsung" />
 				<git name="android_packages_apps_SamsungServiceMode" />
