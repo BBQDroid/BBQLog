@@ -6,7 +6,9 @@ var global_CurrentDevice = undefined;
 var global_CurrentVersion = "cm10"; // default
 var global_CurrentDate = "";
 var global_DeviceCodeRepos = [];
+var global_ShowTranslations = false; // hide this shit by default
 
+var global_ShortNameToProject = [];
 var global_LastNightlyCode = 0;
 var global_NightliesCodeToDate = [];
 var global_NightliesCodeToPreviousDate = [];
@@ -23,8 +25,8 @@ var translations = ["translat", "localiz", "german", "french", "spanish",
  *  Initialization
  */
 $(function() {
+        loadProjects();
 	loadDevices();
-	updateBodyData();
 	
 	// Setup event listeners
 	$(window).bind( 'hashchange', function(e) { 
@@ -44,6 +46,41 @@ $(function() {
 		$('html, body').animate({scrollTop:0}, 'fast');
 	});
 });
+
+function toggleTranslations() {
+    global_ShowTranslations = !global_ShowTranslations;
+    if (global_ShowTranslations) {
+        $("#show-translation").text("Hide Translations");
+    } else {
+        $("#show-translation").text("Show Translations");
+    }
+    updateBodyData();
+}
+
+/**
+ * Update projects list
+ * @note For now, projects files are hardcoded. Ideally later, we'd read them on the fly from /projects/
+ */
+function loadProjects() {
+    $.ajax({
+            type:"GET",
+            url:"projects/cm-generic.xml",
+            dataType:"xml"})
+    .done(function(data) {
+            // clear up projectes
+            $("#dropdown-projects").html('');
+
+            // gather values
+            var projectName = $(data).find("project").children("name").text();
+            var shortName = $(data).find("project").children("shortname").text();
+
+            $(data).find("noversion").each(function() {
+                global_ShortNameToProject[shortName + $(this).text()] = {name: projectName, version: $(this).text()};
+                $("#dropdown-projects").append('<li><a href="#" onclick="setProject(\'' + shortName + '\', ' + $(this).text() + ');return false;"><strong>' + projectName + ' ' + $(this).text() + '</strong></a></li>');
+            });
+            updateBodyData();
+    });
+}
 
 /**
  * Update body contents based on the URL
@@ -70,7 +107,7 @@ function updateBodyData() {
 	}
 
 	global_CurrentDevice = params[0];
-	global_CurrentVersion = version; //(params[1] == 'undefined' ? 'cm10' : params[1]);
+	global_CurrentVersion = version;
 	global_CurrentDate = params[2];
 
 	if (_gaq != undefined)
@@ -78,19 +115,19 @@ function updateBodyData() {
 }
 
 /**
- *  Redirect to the device page based on the current selected CM version
+ *  Redirect to the device page based on the current selected project and version
  */
 function redirectToDevice(_device, _date) {
 	window.location = "#" + _device + "/" + global_CurrentVersion + "/" + _date;
 }
 
 /**
- *  Load devices list from devices.xml
+ *  Load devices list from cm-specific.xml
  */
 function loadDevices() {
 	$.ajax({
 		type:"GET",
-		url:"devices.xml",
+		url:"projects/cm-specific.xml",
 		dataType:"xml"})
 	.done(function(data) {
 		$("#nav_DevicesList").html('');
@@ -170,7 +207,6 @@ function updateListNightlies(_device, _version, _date) {
 		
 		// for each nightly
 		var stop = false;
-		var cm9found = false;
 		var cancel = false;
 
 		// Sort by date
@@ -184,29 +220,17 @@ function updateListNightlies(_device, _version, _date) {
 			if (cancel || ($(this).children("title").text().indexOf("EXPERIMENTAL") <= 0 && $(this).children("title").text().indexOf("NIGHTLY") <= 0))
 				return;
 
-			if (_version == "cm10" && $(this).children("title").text().indexOf("cm-10") ||
-				_version == "cm9" && $(this).children("title").text().indexOf("cm-9") ||
-				_version == "cm7" && $(this).children("title").text().indexOf("cm-7")) {
-				return;
-			}
+                        console.log($(this).children("title").text().indexOf("cm-10"));
 
-			// if we have a CM7 nightly and we are in CM9 changeset mode, redirect
-			if (_version == "cm9" && !cm9found && !stop && $(this).children("title").text().indexOf("cm-7") >= 0) {
-				//window.location = "#" + _device + '/cm7/next';
-				//window.location.reload();
-				///cancel=true;
-//				///updateBodyData();
-				//return;
-			} else if (_version == "cm10" && $(this).children("title").text().indexOf("cm-10") > 0) {
-				cm10found = true;
-			} else if (_version == "cm9" && $(this).children("title").text().indexOf("cm-9") > 0) {
-				cm9found = true;
+                        // CM-specific, yet we don't have any generic way to do it.
+			if (_version == "cm10" && $(this).children("title").text().indexOf("cm-10") == -1 ||
+				_version == "cm9" && $(this).children("title").text().indexOf("cm-9") == -1 ||
+				_version == "cm7" && $(this).children("title").text().indexOf("cm-7") == -1) {
+				return;
 			}
 
 			var nightlyTime = strtotime($(this).children("pubDate").text() + " UTC");
 			var nightlyCode = nightlyTime;
-
-			console.log(nightlyTime + " " + $(this).children("pubDate").text());
 
 			// if the current month changes, show a new header line
 			if (currMonth != date("m", nightlyTime) && !stop) {
@@ -237,6 +261,11 @@ function updateListNightlies(_device, _version, _date) {
 				return;
 			}
 		});
+
+		if ($("#log_NightliesList").children().length <= 2) {
+			$("#log_NightliesList").html("<li class='nav-header'>There is no nightlies for this version</li>");
+		}
+
 		
 		global_NightliesListReady = true;
 	});
@@ -251,6 +280,8 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	_amount = typeof _amount !== 'undefined' ? _amount : 50;
 	_append = typeof _append !== 'undefined' ? _append : false;
 	_sortCode = typeof _sortCode !== 'undefined' ? _sortCode : '';
+
+        // global_ShortNameToProject
 
 	if (global_NightliesListReady == false && _device != '') {
 		// the nightlies list isn't ready, which will fail changeset filtering. We delay this function
@@ -267,15 +298,6 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	// Remove all load more buttons
 	$(".load_more").remove();
 	
-	var versionNum = 10;
-	if (_version == "cm7") {
-		versionNum = 7;
-	} else if (_version == "cm9") {
-		versionNum = 9;
-	} else if (_version == "cm10") {
-		versionNum = 10;
-	}
-
 	// 'latest' for latest nightly
 	if (_date == "latest") {
 		_date = global_LastNightlyCode;
@@ -283,7 +305,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	
 	// if no device is set, show all latest changes. Else, show device+date
 	if (_device == '') {
-		$("#log_NightlyTitle").html("CyanogenMod " + versionNum + " for all devices<br /><small>Narrow down your query by selecting a device.</small>");
+		$("#log_NightlyTitle").html(global_ShortNameToProject[_version].name + ' ' + global_ShortNameToProject[_version].version + " for all devices<br /><small>Narrow down your query by selecting a device.</small>");
 	} else {
 		var nightlyDate;
 		if (_date != "next") {
@@ -327,7 +349,8 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 	}
 
 	// load all changes
-	$.getJSON("changesets.php?RomName=CyanogenMod&Version=" + versionNum + ageQuery + "&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
+        console.log("changesets.php?Project=" + global_ShortNameToProject[_version].name + "&Version=" + global_ShortNameToProject[_version].version + ageQuery + "&amount=" + _amount + "&sortCode=" + _sortCode);
+	$.getJSON("changesets.php?Project=" + global_ShortNameToProject[_version].name + "&Version=" + global_ShortNameToProject[_version].version + ageQuery + "&amount=" + _amount + "&sortCode=" + _sortCode, function(data) {
 		$(".loading").remove();
 		clearInterval(loadingDotsInterval);
 
@@ -377,7 +400,9 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 			
 			// set a specific style for translation
 			var itemStyle = "padding-left:10px;";
-			if (translation) {
+			if (translation && global_ShowTranslations == false) {
+				continue;
+			} else if (translation) {
 				itemStyle +="opacity:0.5;border-left:2px solid #9933CC;";
 			} else {
 				// if it's a repo for the device, put it in a special color
@@ -402,8 +427,6 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 			if (_device == '' || found || (data.result.changes[i].project.key.name.indexOf("android_device_") == -1 && data.result.changes[i].project.key.name.indexOf("android_kernel_") == -1)) {
 				$("#log_Changeset").append('<li style="' + itemStyle + '"><a target="_blank" href="https://github.com/' + data.result.changes[i].gituser + '/' + data.result.changes[i].repository + '/commit/' + data.result.changes[i].sha + '" style="color:white">' + data.result.changes[i].subject + '<br /><h6>Merged on <span style="color:#669900">' + date("M dS", strtotime(data.result.changes[i].lastUpdatedOn + " UTC")) + " at " + date("H:i:s", strtotime(data.result.changes[i].lastUpdatedOn + " UTC")) + '</span> in <span style="color:#FF8800">' + data.result.changes[i].project.key.name + '</span></h6></a></li>');
 			}
-
-			console.log(i + " " + (data.result.changes.length - 1));
 
 			var realChanges = $("#log_Changeset").children("li").size();
 			if (realChanges > 0) {
@@ -437,12 +460,12 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 }
 
 /**
- * Change the URL to fit specified CM version
+ * Change the URL to fit specified project and version
  */
-function setCMVersion(num) {
-	window.location = "#" + global_CurrentDevice + "/cm" + num +"/" + global_CurrentDate;
+function setProject(name, num) {
+	window.location = "#" + global_CurrentDevice + "/" + name + num +"/" + global_CurrentDate;
 	// reload nightlies based on the version
-	global_CurrentVersion = "cm"+num;
+	global_CurrentVersion = name+num;
 	updateListNightlies(global_CurrentDevice, global_CurrentVersion, global_CurrentDate);
 }
 

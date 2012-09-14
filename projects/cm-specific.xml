@@ -1,0 +1,2234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<name>Cyanogenmod</name>
+        <shortname>cm</shortname>
+        <owner>cyanogenmod</owner>
+        <infourl>cyanogenmod.com</infourl>
+        <logo>Link to the logo</logo>
+        <noversion>7</noversion>
+        <noversion>9</noversion>
+        <noversion>10</noversion>
+
+	<devicesList>
+		<oem name="Asus">
+			<device>
+				<name>Transformer</name>
+				<model>TF101</model>
+				<image>images/devices/asus_tf101.png</image>
+				<code>tf101</code>
+				<repos>
+					<git name="android_device_asus_tf101">
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<!--<git name="android_kernel_asus_tf101" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>-->
+				</repos>
+			</device>
+			<device>
+				<name>Transformer Prime</name>
+				<model>TF201</model>
+				<image>images/devices/asus_tf201.png</image>
+				<code>tf201</code>
+				<repos>
+					<git name="android_device_asus_tf201" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<!--<git name="android_kernel_asus_tf201" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>-->
+				</repos>
+			</device>
+			<device>
+				<name>Transformer Pad TF300T</name>
+				<model>TF300T</model>
+				<image>images/devices/asus_tf201.png</image>
+				<code>tf300t</code>
+				<repos>
+					<git name="android_device_asus_tf300t" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_asus_tf300t" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+		</oem>
+		<oem name="Geeksphone">
+			<!--<device>
+				<name>Geeksphone One</name>
+				<model></model>
+				<image>images/devices/geeksphone_one.png</image>
+				<code>one</code>
+				<repos>
+					<git name="android_device_geeksphone_one" >
+						<branch></branch>
+					</git>
+				</repos>
+			</device> -->
+			<device>
+				<name>Geeksphone Zero</name>
+				<model></model>
+				<image>images/devices/geeksphone_zero.png</image>
+				<code>zero</code>
+				<repos>
+					<git name="android_device_geeksphone_zero" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+		</oem>
+		<oem name="Google">
+			<device>
+				<name>Galaxy Nexus (GSM)</name>
+				<model>GT-I9250</model>
+				<image>images/devices/samsung_maguro.png</image>
+				<code>maguro</code>
+				<repos>
+					<git name="android_device_samsung_maguro" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_tuna" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_tuna" >
+						<branch name="jb">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Nexus (Sprint)</name>
+				<model>SPH-L700</model>
+				<image>images/devices/samsung_maguro.png</image>
+				<code>toroplus</code>
+				<repos>
+					<git name="android_device_samsung_toroplus" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_tuna" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_tuna" >
+						<branch name="jb">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Nexus (Verizon)</name>
+				<model>SGH-I515</model>
+				<image>images/devices/samsung_maguro.png</image>
+				<code>toro</code>
+				<repos>
+					<git name="android_device_samsung_toro" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_tuna" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_tuna" >
+						<branch name="jb">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Nexus 7</name>
+				<model></model>
+				<image>images/devices/asus_grouper.png</image>
+				<code>grouper</code>
+				<repos>
+					<git name="android_device_asus_grouper" >
+						<branch name="jellybean">10</branch>
+					</git>
+					<git name="android_kernel_asus_grouper" >
+						<branch name="jellybean">10</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Nexus One</name>
+				<model></model>
+				<image>images/devices/htc_passion.png</image>
+				<code>passion</code>
+				<repos>
+					<git name="android_device_htc_passion" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Nexus S</name>
+				<model></model>
+				<image>images/devices/samsung_crespo.png</image>
+				<code>crespo</code>
+				<repos>
+					<git name="android_device_samsung_crespo" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_kernel_samsung_crespo" >
+						<branch name="jb">10</branch>
+						<branch name="ics">9</branch>
+						<branch name="android-samsung-2.6.35">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Nexus S 4G</name>
+				<model>SPH-D720</model>
+				<image>images/devices/samsung_crespo.png</image>
+				<code>crespo4g</code>
+				<repos>
+					<git name="android_device_samsung_crespo4g" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_samsung_crespo" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_kernel_samsung_crespo" >
+						<branch name="jb">10</branch>
+						<branch name="ics">9</branch>
+						<branch name="android-samsung-2.6.35">7</branch>
+					</git>
+				</repos>
+			</device>
+		</oem>
+		<oem name="HTC">
+			<device>
+				<name>Aria</name>
+				<model></model>
+				<image>images/devices/htc_liberty.png</image>
+				<code>liberty</code>
+				<repos>
+					<git name="android_device_htc_liberty" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Desire (CDMA)</name>
+				<model></model>
+				<image>images/devices/htc_bravo.png</image>
+				<code>bravoc</code>
+				<repos>
+					<git name="android_device_htc_bravoc" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_passion-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Desire (GSM)</name>
+				<model></model>
+				<image>images/devices/htc_bravo.png</image>
+				<code>bravo</code>
+				<repos>
+					<git name="android_device_htc_bravo" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_passion-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Desire HD</name>
+				<model></model>
+				<image>images/devices/htc_ace.png</image>
+				<code>ace</code>
+				<repos>
+					<git name="android_device_htc_ace" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Desire S</name>
+				<model></model>
+				<image>images/devices/htc_saga.png</image>
+				<code>saga</code>
+				<repos>
+					<git name="android_device_htc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_saga" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="htc-kernel-msm7x30" >
+						<branch name="android-msm-2.6.35">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Desire Z / G2</name>
+				<model></model>
+				<image>images/devices/htc_vision.png</image>
+				<code>vision</code>
+				<repos>
+					<git name="android_device_htc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_vision" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Dream / Magic</name>
+				<model></model>
+				<image>images/devices/htc_dream_sapphire.png</image>
+				<code>dream_sapphire</code>
+				<repos>
+					<git name="android_device_htc_dream_sapphire" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Eris</name>
+				<model></model>
+				<image>images/devices/htc_bravo.png</image>
+				<code>desirec</code>
+				<repos>
+					<git name="android_device_htc_desirec" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Evo 4G</name>
+				<model></model>
+				<image>images/devices/htc_supersonic.png</image>
+				<code>supersonic</code>
+				<repos>
+					<git name="android_device_htc_supersonic" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_passion-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Evo 4G LTE</name>
+				<model></model>
+				<image>images/devices/htc_jewel.png</image>
+				<code>jewel</code>
+				<repos>
+					<git name="android_device_htc_jewel" >
+						<branch name="jellybean">10</branch>
+					</git>
+					<git name="android_device_htc_msm8960-common" >
+						<branch name="jellybean">10</branch>
+					</git>
+					<git name="android_kernel_htc_msm8960" >
+						<branch name="android-msm-jewel-3.0">10</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Evo Shift 4G</name>
+				<model></model>
+				<image>images/devices/htc_speedy.png</image>
+				<code>speedy</code>
+				<repos>
+					<git name="android_device_htc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_speedy" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Hero (CDMA)</name>
+				<model></model>
+				<image>images/devices/htc_hero.png</image>
+				<code>heroc</code>
+				<repos>
+					<git name="android_device_htc_heroc" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Hero (GSM)</name>
+				<model></model>
+				<image>images/devices/htc_hero.png</image>
+				<code>hero</code>
+				<repos>
+					<git name="android_device_htc_hero" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Incredible</name>
+				<model></model>
+				<image>images/devices/htc_inc.png</image>
+				<code>inc</code>
+				<repos>
+					<git name="android_device_htc_inc" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_passion-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Incredible 2</name>
+				<model></model>
+				<image>images/devices/htc_vivow.png</image>
+				<code>vivow</code>
+				<repos>
+					<git name="android_device_htc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_vivow" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Incredible S</name>
+				<model></model>
+				<image>images/devices/htc_vivo.png</image>
+				<code>vivo</code>
+				<repos>
+					<git name="android_device_htc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_vivo" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Legend</name>
+				<model></model>
+				<image>images/devices/htc_legend.png</image>
+				<code>legend</code>
+				<repos>
+					<git name="android_device_htc_legend" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>myTouch 3G Slide</name>
+				<model></model>
+				<image>images/devices/htc_espresso.png</image>
+				<code>espresso</code>
+				<repos>
+					<git name="android_device_htc_espresso" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>myTouch 4G / Panache</name>
+				<model></model>
+				<image>images/devices/htc_glacier.png</image>
+				<code>glacier</code>
+				<repos>
+					<git name="android_device_htc_glacier" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_htc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<!--<device>
+				<name>myTouch 4G Slide</name>
+				<model></model>
+				<image>images/devices/htc_doubleshot.png</image>
+				<code>doubleshot</code>
+				<repos>
+					<git name="android_device_htc_doubleshot" >
+						<branch></branch>
+					</git>
+					<git name="android_device_htc_msm8660-common" >
+						<branch></branch>
+					</git>
+					<git name="htc-kernel-doubleshot" >
+						<branch></branch>
+					</git>
+				</repos>
+			</device> -->
+			<device>
+				<name>One S</name>
+				<model></model>
+				<image>images/devices/htc_ville.png</image>
+				<code>ville</code>
+				<repos>
+					<git name="android_device_htc_msm8960-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_htc_ville" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_htc_msm8960" >
+						<branch name="android-msm-ville-3.0">10</branch>
+						<branch name="android-msm-ville-3.0">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>One X</name>
+				<model></model>
+				<image>images/devices/htc_endeavoru.png</image>
+				<code>endeavoru</code>
+				<repos>
+					<git name="android_device_htc_endeavoru" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_htc_endeavoru" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>One XL</name>
+				<model></model>
+				<image>images/devices/htc_evita.png</image>
+				<code>evita</code>
+				<repos>
+					<git name="android_device_htc_evita" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_htc_msm8960-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_htc_msm8960" >
+						<branch name="android-msm-evita-3.0">10</branch>
+						<branch name="android-msm-evita-3.0">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Sensation</name>
+				<model></model>
+				<image>images/devices/htc_pyramid.png</image>
+				<code>pyramid</code>
+				<repos>
+					<git name="android_device_htc_pyramid" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_htc_msm8660-common" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Tattoo</name>
+				<model></model>
+				<image>images/devices/htc_click.png</image>
+				<code>click</code>
+				<repos>
+					<git name="android_device_htc_click" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Wildfire</name>
+				<model></model>
+				<image>images/devices/htc_buzz.png</image>
+				<code>buzz</code>
+				<repos>
+					<git name="android_device_htc_buzz" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+		</oem>
+		<oem name="Huawei">
+			<device>
+				<name>Huawei Ideos</name>
+				<model>U8150</model>
+				<image>images/devices/huawei_u8150.png</image>
+				<code>u8150</code>
+				<repos>
+					<git name="android_device_huawei_u8150" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Huawei Pulse</name>
+				<model>U8220</model>
+				<image>images/devices/huawei_u8220.png</image>
+				<code>u8220</code>
+				<repos>
+					<git name="android_device_huawei_u8220" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+		</oem>
+		<oem name="LGE">
+			<device>
+				<name>G2x</name>
+				<model>P999</model>
+				<image>images/devices/lge_p999.png</image>
+				<code>p999</code>
+				<repos>
+					<git name="android_device_lge_p999" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_lge_star-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>myTouch</name>
+				<model>E739</model>
+				<image>images/devices/lge_e739.png</image>
+				<code>e739</code>
+				<repos>
+					<git name="android_device_lge_e739" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_lge_victor-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="lge-kernel-msm7x30" >
+						<branch name="android-msm-2.6.35-gb">7</branch>
+						<branch name="android-msm-2.6.35-ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>myTouch Q</name>
+				<model>C800</model>
+				<image>images/devices/lge_c800.png</image>
+				<code>c800</code>
+				<repos>
+					<git name="android_device_lge_c800" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="lge-kernel-msm7x30" >
+						<branch name="android-msm-2.6.35-ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus 2X</name>
+				<model>P990</model>
+				<image>images/devices/lge_p990.png</image>
+				<code>p990</code>
+				<repos>
+					<git name="android_device_lge_p990" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_lge_star-common" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus 3D</name>
+				<model>P920</model>
+				<image>images/devices/lge_p920.png</image>
+				<code>p920</code>
+				<repos>
+					<git name="android_device_lge_p920" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus Black</name>
+				<model>P970</model>
+				<image>images/devices/lge_p970.png</image>
+				<code>p970</code>
+				<repos>
+					<git name="android_device_lge_p970" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus Chic</name>
+				<model>E720</model>
+				<image>images/devices/lge_e720.png</image>
+				<code>e720</code>
+				<repos>
+					<git name="android_device_lge_e720" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus LTE</name>
+				<model>P930</model>
+				<image>images/devices/lge_p930.png</image>
+				<code>p930</code>
+				<repos>
+					<git name="android_device_lge_iprj-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_lge_p930" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="lge-kernel-iproj" >
+						<branch name="jb-vsync">10</branch>
+						<branch name="android-msm-3.0">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus LTE (SK Telecom)</name>
+				<model>SU640</model>
+				<image>images/devices/lge_p930.png</image>
+				<code>su640</code>
+				<repos>
+					<git name="android_device_lge_iprj-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_lge_su640" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="lge-kernel-iproj" >
+						<branch name="jb-vsync">10</branch>
+						<branch name="android-msm-3.0">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus Hub</name>
+				<model>E510</model>
+				<image>images/devices/lge_e510.png</image>
+				<code>e510</code>
+				<repos>
+					<git name="android_device_lge_e510" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus One</name>
+				<model>P500</model>
+				<image>images/devices/lge_p500.png</image>
+				<code>p500</code>
+				<repos>
+					<git name="android_device_lge_p500" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus Pro</name>
+				<model>C660</model>
+				<image>images/devices/lge_c660.png</image>
+				<code>c660</code>
+				<repos>
+					<git name="android_device_lge_c660" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus Sol</name>
+				<model>E730</model>
+				<image>images/devices/lge_e730.png</image>
+				<code>e730</code>
+				<repos>
+					<git name="android_device_lge_e730" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_lge_victor-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="lge-kernel-msm7x30" >
+						<branch name="android-msm-2.6.35-gb">7</branch>
+						<branch name="android-msm-2.6.35-ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Thrill 4G</name>
+				<model>P925</model>
+				<image>images/devices/lge_p925.png</image>
+				<code>p925</code>
+				<repos>
+					<git name="android_device_lge_p925" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+		</oem>
+		<oem name="Motorola">
+			<device>
+				<name>Atrix 4G</name>
+				<model>MB860</model>
+				<image>images/devices/motorola_olympus.png</image>
+				<code>olympus</code>
+				<repos>
+					<git name="android_device_motorola_olympus" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Backflip</name>
+				<model>MB300</model>
+				<image>images/devices/motorola_backflip.png</image>
+				<code>motus</code>
+				<repos>
+					<git name="android_device_motorola_motus" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Cliq</name>
+				<model>MB200</model>
+				<image>images/devices/motorola_cliq.png</image>
+				<code>morrison</code>
+				<repos>
+					<git name="android_device_motorola_morrison" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Cliq XT</name>
+				<model>MB501</model>
+				<image>images/devices/motorola_cliqxt.png</image>
+				<code>zeppelin</code>
+				<repos>
+					<git name="android_device_motorola_zeppelin" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Defy</name>
+				<model>MB525</model>
+				<image>images/devices/motorola_defy.png</image>
+				<code>jordan</code>
+				<repos>
+					<git name="android_device_motorola_jordan" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Droid</name>
+				<model>A855</model>
+				<image>images/devices/motorola_droid.png</image>
+				<code>sholes</code>
+				<repos>
+					<git name="android_device_motorola_sholes" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Droid 2</name>
+				<model>A955</model>
+				<image>images/devices/motorola_droid2.png</image>
+				<code>droid2</code>
+				<repos>
+					<git name="android_device_motorola_droid2" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Droid 2 Global</name>
+				<model>A956</model>
+				<image>images/devices/motorola_droid2.png</image>
+				<code>droid2we</code>
+				<repos>
+					<git name="android_device_motorola_droid2we" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Droid X</name>
+				<model>MB810</model>
+				<image>images/devices/motorola_droidx.png</image>
+				<code>shadow</code>
+				<repos>
+					<git name="android_device_motorola_shadow" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Photon 4G</name>
+				<model>MB855</model>
+				<image>images/devices/motorola_sunfire.png</image>
+				<code>sunfire</code>
+				<repos>
+					<git name="android_device_motorola_sunfire" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xoom (Verizon)</name>
+				<model>MZ600</model>
+				<image>images/devices/motorola_xoom.png</image>
+				<code>stingray</code>
+				<repos>
+					<git name="android_device_moto_common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_moto_stingray" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_moto_wingray" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="motorola-kernel-stingray" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xoom (Wi-Fi)</name>
+				<model>MZ604</model>
+				<image>images/devices/motorola_xoom.png</image>
+				<code>wingray</code>
+				<repos>
+					<git name="android_device_moto_wingray" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_moto_common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="motorola-kernel-stingray" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+		</oem>
+		<oem name="Samsung">
+			<device>
+				<name>Captivate (AT&amp;T)</name>
+				<model>SGH-I896/7</model>
+				<image>images/devices/samsung_captivate.png</image>
+				<code>captivatemtd</code>
+				<repos>
+					<git name="android_device_samsung_captivatemtd" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_aries-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_aries" >
+						<branch name="android-samsung-2.6.35">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="android-samsung-3.0-ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Epic 4G</name>
+				<model>SPH-D700</model>
+				<image>images/devices/samsung_epicmtd.png</image>
+				<code>epicmtd</code>
+				<repos>
+					<git name="android_device_samsung_epicmtd" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_victory" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Fascinate</name>
+				<model>SCH-I500</model>
+				<image>images/devices/samsung_fascinate.png</image>
+				<code>fascinatemtd</code>
+				<repos>
+					<git name="android_device_samsung_aries-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_fascinatemtd" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_samsung" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_aries" >
+						<branch name="android-samsung-2.6.35">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="android-samsung-3.0-ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Ace</name>
+				<model>GT-S5830</model>
+				<image>images/devices/samsung_cooper.png</image>
+				<code>cooper</code>
+				<repos>
+					<git name="android_device_samsung_cooper" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Mini</name>
+				<model>GT-S5570</model>
+				<image>images/devices/samsung_tass.png</image>
+				<code>tass</code>
+				<repos>
+					<git name="android_device_samsung_tass" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Note</name>
+				<model>GT-N7000</model>
+				<image>images/devices/samsung_n7000.png</image>
+				<code>n7000</code>
+				<repos>
+					<git name="android_device_samsung_n7000" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_galaxys2" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_smdk4210" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_samsung" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<!--<device>
+				<name>Galaxy Note (AT&amp;T)</name>
+				<model>SGH-I717</model>
+				<image>images/devices/samsung_n7000.png</image>
+				<code>quinacyatt</code>
+				<repos>
+					<git name="android_device_samsung_msm8660-common" >
+						<branch></branch>
+					</git>
+					<git name="android_device_samsung_quincyatt" >
+						<branch></branch>
+					</git>
+					<git name="android_device_samsung_quincy-common" >
+						<branch></branch>
+					</git>
+					<git name="android_kernel_samsung_msm8660-common" >
+						<branch></branch>
+					</git>
+				</repos>
+			</device> -->
+			<device>
+				<name>Galaxy S</name>
+				<model>GT-I9000</model>
+				<image>images/devices/samsung_galaxysbmtd.png</image>
+				<code>galaxysmtd</code>
+				<repos>
+					<git name="android_device_samsung_galaxysmtd" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_aries-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_aries" >
+						<branch name="android-samsung-2.6.35">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="android-samsung-3.0-ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S</name>
+				<model>GT-I9000B</model>
+				<image>images/devices/samsung_galaxysbmtd.png</image>
+				<code>galaxysbmtd</code>
+				<repos>
+					<git name="android_device_samsung_galaxysbmtd" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_aries-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_aries" >
+						<branch name="android-samsung-2.6.35">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="android-samsung-3.0-ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S II (intl)</name>
+				<model>GT-I9100</model>
+				<image>images/devices/samsung_i9100.png</image>
+				<code>galaxys2</code>
+				<repos>
+					<git name="android_device_samsung_galaxys2" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_smdk4210" >
+						<branch name="ics">9</branch>
+						<branch name="jellybean">10</branch>
+					</git>
+					<git name="android_hardware_samsung" >
+						<branch name="ics">9</branch>
+						<branch name="jellybean">10</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+						<branch name="jellybean">10</branch>
+					</git>
+					<git name="android_device_samsung_i9100" >
+						<branch name="jellybean">10</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S II</name>
+				<model>GT-I9100G</model>
+				<image>images/devices/samsung_i9100.png</image>
+				<code>i9100g</code>
+				<repos>
+					<git name="android_device_samsung_i9100g" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_t1" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_samsung" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S II (AT&amp;T) (CM9+)</name>
+				<model>SGH-I777</model>
+				<image>images/devices/samsung_i9100.png</image>
+				<code>i777</code>
+				<repos>
+					<git name="android_device_samsung_galaxys2att" >
+						<branch name="gingerbread">7</branch>
+					</git>
+					<git name="android_device_samsung_i777" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_smdk4210" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_galaxys2" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_samsung" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_i9100" >
+						<branch name="jellybean">10</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S II (T-Mobile)</name>
+				<model>SGH-T989</model>
+				<image>images/devices/samsung_hercules.jpg</image>
+				<code>hercules</code>
+				<repos>
+					<git name="android_device_samsung_hercules" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_msm8660-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_msm8660-common" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S II Skyrocket</name>
+				<model>SGH-I727</model>
+				<image>images/devices/samsung_skyrocket.jpg</image>
+				<code>skyrocket</code>
+				<repos>
+					<git name="android_device_samsung_skyrocket" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_msm8660-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_msm8660-common" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S III</name>
+				<model>GT-I9300</model>
+				<image>images/devices/samsung_i9300.png</image>
+				<code>i9300</code>
+				<repos>
+					<git name="android_device_samsung_i9300" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_smdk4412" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_samsung" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S III (AT&amp;T)</name>
+				<model>SGH-I747</model>
+				<image>images/devices/samsung_i9300.png</image>
+				<code>d2att</code>
+				<repos>
+					<git name="android_device_samsung_d2-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_d2att" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_d2" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_msm8960-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S III (Sprint)</name>
+				<model>SPH-L710</model>
+				<image>images/devices/samsung_i9300.png</image>
+				<code>d2spr</code>
+				<repos>
+					<git name="android_device_samsung_d2-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_d2spr" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_d2" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_msm8960-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S III (T-Mobile)</name>
+				<model>SGH-T999</model>
+				<image>images/devices/samsung_i9300.png</image>
+				<code>d2tmo</code>
+				<repos>
+					<git name="android_device_samsung_d2-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_d2tmo" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_d2" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_msm8960-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S III (US Cellular)</name>
+				<model>SCH-R530</model>
+				<image>images/devices/samsung_i9300.png</image>
+				<code>d2usc</code>
+				<repos>
+					<git name="android_device_samsung_d2-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_d2usc" >
+						<branch name="jellybean">10</branch>
+					</git>
+					<git name="android_kernel_samsung_d2" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_msm8960-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S III (Verizon)</name>
+				<model>SCH-I535</model>
+				<image>images/devices/samsung_i9300.png</image>
+				<code>d2vzw</code>
+				<repos>
+					<git name="android_device_samsung_d2-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_d2vzw" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_d2" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_msm8960-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 7 (GSM)</name>
+				<model>GT-P1000</model>
+				<image>images/devices/samsung_p1.png</image>
+				<code>p1</code>
+				<repos>
+					<git name="android_device_samsung_p1" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p1-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_p1" >
+						<branch name="jellybean">10</branch>
+						<branch name="cm-9.0.0">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 7 (CDMA)</name>
+				<model>SCH-I800 / SPH-P100</model>
+				<image>images/devices/samsung_p1.png</image>
+				<code>p1c</code>
+				<repos>
+					<git name="android_device_samsung_p1c" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p1-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_galaxytab-cdma" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 7</name>
+				<model>GT-P1000L</model>
+				<image>images/devices/samsung_p1.png</image>
+				<code>p1l</code>
+				<repos>
+					<git name="android_device_samsung_p1l" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p1" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p1-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_samsung" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_p1" >
+						<branch name="jellybean">10</branch>
+						<branch name="cm-9.0.0">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 7</name>
+				<model>GT-P1000N</model>
+				<image>images/devices/samsung_p1.png</image>
+				<code>p1n</code>
+				<repos>
+					<git name="android_device_samsung_p1n" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p1" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p1-common" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_samsung" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_p1" >
+						<branch name="jellybean">10</branch>
+						<branch name="cm-9.0.0">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 8.9 (GSM)</name>
+				<model>GT-P7300</model>
+				<image>images/devices/samsung_p5.png</image>
+				<code>p5</code>
+				<repos>
+					<git name="android_device_samsung_p5" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p5-common" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 8.9 (Wi-Fi)</name>
+				<model>GT-P7310</model>
+				<image>images/devices/samsung_p5.png</image>
+				<code>p5wifi</code>
+				<repos>
+					<git name="android_device_samsung_p5wifi" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p5-common" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 10.1 (GSM)</name>
+				<model>GT-P7500</model>
+				<image>images/devices/samsung_p4.png</image>
+				<code>p4</code>
+				<repos>
+					<git name="android_device_samsung_p4" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_Samsung_p4-common" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 10.1 (T-Mobile)</name>
+				<model>SGH-T859</model>
+				<image>images/devices/samsung_p4.png</image>
+				<code>p4tmo</code>
+				<repos>
+					<git name="android_device_samsung_p4tmo" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_Samsung_p4-common" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 10.1 (Verizon)</name>
+				<model>SCH-I905</model>
+				<image>images/devices/samsung_p4.png</image>
+				<code>p4vzw</code>
+				<repos>
+					<git name="android_device_samsung_p4vzw" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p4-common" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 10.1 (Wi-Fi)</name>
+				<model>GT-P7500</model>
+				<image>images/devices/samsung_p4.png</image>
+				<code>p4wifi</code>
+				<repos>
+					<git name="android_device_samsung_p4wifi" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p4-common" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 10.1v</name>
+				<model>GT-P7100</model>
+				<image>images/devices/samsung_p4.png</image>
+				<code>p3</code>
+				<repos>
+					<git name="android_device_samsung_p3" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p4-common" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 2 7.0 (GSM)</name>
+				<model>GT-P3100</model>
+				<image>images/devices/samsung_p31xx.png</image>
+				<code>p3100</code>
+				<repos>
+					<git name="android_device_samsung_p3100" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_espresso10" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 2 7.0 (Wi-Fi)</name>
+				<model>GT-P3110</model>
+				<image>images/devices/samsung_p31xx.png</image>
+				<code>p3110</code>
+				<repos>
+					<git name="android_device_samsung_p3100" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p3110" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_espresso10" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 2 7.0 (Wi-Fi+IR)</name>
+				<model>GT-P3113</model>
+				<image>images/devices/samsung_p31xx.png</image>
+				<code>p3113</code>
+				<repos>
+					<git name="android_device_samsung_p3100" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p3113" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_espresso10" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 2 10.1 (GSM)</name>
+				<model>GT-P5100</model>
+				<image>images/devices/samsung_p51xx.png</image>
+				<code>p5100</code>
+				<repos>
+					<git name="android_device_samsung_p5100" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_espresso10" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 2 10.1 (Wi-Fi)</name>
+				<model>GT-P5110</model>
+				<image>images/devices/samsung_p51xx.png</image>
+				<code>p5110</code>
+				<repos>
+					<git name="android_device_samsung_p5100" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p5110" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_espresso10" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy Tab 2 10.1 (Wi-Fi+IR)</name>
+				<model>GT-P5113</model>
+				<image>images/devices/samsung_p51xx.png</image>
+				<code>p5113</code>
+				<repos>
+					<git name="android_device_samsung_p5100" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_p5113" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_espresso10" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Mesmerize</name>
+				<model>Mesmerize</model>
+				<image>images/devices/samsung_mesmerize.png</image>
+				<code>mesmerizemtd</code>
+				<repos>
+					<git name="android_device_samsung_mesmerizemtd" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Showcase</name>
+				<model>Showcase</model>
+				<image>images/devices/samsung_mesmerize.png</image>
+				<code>showcasemtd</code>
+				<repos>
+					<git name="android_device_samsung_showcasemtd" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Vibrant</name>
+				<model>SGH-T959</model>
+				<image>images/devices/samsung_vibrant.png</image>
+				<code>vibrantmtd</code>
+				<repos>
+					<git name="android_device_samsung_vibrantmtd" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_samsung_aries-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_kernel_samsung_aries" >
+						<branch name="android-samsung-2.6.35">7</branch>
+						<branch name="jellybean">10</branch>
+						<branch name="android-samsung-3.0-ics">9</branch>
+					</git>
+				</repos>
+			</device>
+		</oem>
+		<oem name="Sony (SEMC)">
+			<device>
+				<name>Live with Walkman</name>
+				<model>WT19i</model>
+				<image>images/devices/semc_coconut.png</image>
+				<code>coconut</code>
+				<repos>
+					<git name="android_device_semc_coconut" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_mogami-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Acro S</name>
+				<model>LT26w</model>
+				<image>images/devices/sony_hikari.png</image>
+				<code>hikari</code>
+				<repos>
+					<git name="android_device_sony_hikari" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_sony_fuji-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="sony-kernel-msm8660" >
+						<branch name="android-msm-3.0">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Active</name>
+				<model>ST17i</model>
+				<image>images/devices/semc_satsuma.png</image>
+				<code>satsuma</code>
+				<repos>
+					<git name="android_device_semc_mogami-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_satsuma" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Arc</name>
+				<model>LT15i</model>
+				<image>images/devices/semc_anzu.png</image>
+				<code>anzu</code>
+				<repos>
+					<git name="android_device_semc_anzu" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_mogami-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Mini</name>
+				<model>ST15i</model>
+				<image>images/devices/semc_smultron.png</image>
+				<code>smultron</code>
+				<repos>
+					<git name="android_device_semc_mogami-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_smultron" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Mini Pro</name>
+				<model>SK17i</model>
+				<image>images/devices/semc_mango.png</image>
+				<code>mango</code>
+				<repos>
+					<git name="android_device_semc_mango" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_mogami-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Neo</name>
+				<model>MT15i</model>
+				<image>images/devices/semc_hallon.png</image>
+				<code>hallon</code>
+				<repos>
+					<git name="android_device_semc_hallon" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_mogami-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Neo V</name>
+				<model>MT11i</model>
+				<image>images/devices/semc_hallon.png</image>
+				<code>haida</code>
+				<repos>
+					<git name="android_device_semc_haida" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_mogami-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Play (GSM)</name>
+				<model>R800i</model>
+				<image>images/devices/semc_zeus.png</image>
+				<code>zeus</code>
+				<repos>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_zeus" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_zeus-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Play (CDMA)</name>
+				<model>R800x</model>
+				<image>images/devices/semc_zeus.png</image>
+				<code>zeusc</code>
+				<repos>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_zeusc" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_zeus-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Pro</name>
+				<model>MK16i</model>
+				<image>images/devices/semc_iyokan.png</image>
+				<code>iyokan</code>
+				<repos>
+					<git name="android_device_semc_iyokan" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_mogami-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Ray</name>
+				<model>ST18i</model>
+				<image>images/devices/semc_urushi.png</image>
+				<code>urushi</code>
+				<repos>
+					<git name="android_device_semc_mogami-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_msm7x30-common" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_semc_urushi" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+					<git name="semc-kernel-msm7x30" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia S</name>
+				<model>LT26i</model>
+				<image>images/devices/sony_nozomi.png</image>
+				<code>nozomi</code>
+				<repos>
+					<git name="android_device_sony_fuji-common" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_device_sony_nozomi" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="sony-kernel-msm8660" >
+						<branch name="android-msm-3.0">9</branch>
+					</git>
+				</repos>
+			</device>
+			<!--<device>
+				<name>Xperia X8</name>
+				<model>E15i</model>
+				<image>images/devices/semc_shakira.png</image>
+				<code>shakira</code>
+				<repos>
+					<git name="android_device_semc_shakira" >
+						<branch></branch>
+					</git>
+				</repos>
+			</device> -->
+			<!-- <device>
+				<name>Xperia X10</name>
+				<model>X10</model>
+				<image>images/devices/semc_es209ra.png</image>
+				<code>es209ra</code>
+				<repos>
+					<git name="android_device_semc_es209ra" >
+						<branch></branch>
+					</git>
+				</repos>
+			</device> -->
+			<!--<device>
+				<name>Xperia X10 Mini</name>
+				<model>E10i</model>
+				<image>images/devices/semc_robyn.png</image>
+				<code>robyn</code>
+				<repos>
+					<git name="android_device_semc_robyn" >
+						<branch></branch>
+					</git>
+				</repos>
+			</device> -->
+			<!--<device>
+				<name>Xperia X10 Mini Pro</name>
+				<model>U20i</model>
+				<image>images/devices/semc_mimmi.png</image>
+				<code>mimmi</code>
+				<repos>
+					<git name="android_device_semc_mimmi" >
+						<branch></branch>
+					</git>
+				</repos>
+			</device> -->
+		</oem>
+		<oem name="ZTE">
+			<device>
+				<name>Blade</name>
+				<model>Blade</model>
+				<image>images/devices/zte_blade.png</image>
+				<code>blade</code>
+				<repos>
+					<git name="android_device_zte_blade" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="zte-kernel-msm7x27" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>V9</name>
+				<model>V9</model>
+				<image>images/devices/zte_v9.png</image>
+				<code>v9</code>
+				<repos>
+					<git name="android_device_zte_v9" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="zte-kernel-msm7x27" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+		</oem>
+		<oem name="Others">
+			<device>
+				<name>Advent Vega</name>
+				<model></model>
+				<image>images/devices/advent_vega.png</image>
+				<code>vega</code>
+				<repos>
+					<git name="android_device_advent_vega" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>B&amp;N Nook Color</name>
+				<model>Encore</model>
+				<image>images/devices/nook_color.png</image>
+				<code>encore</code>
+				<repos>
+					<git name="android_device_bn_encore" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<!-- <device>
+				<name>Commtiva Z71</name>
+				<model></model>
+				<image>images/devices/commtiva_z71.png</image>
+				<code>z71</code>
+				<repos>
+					<git name="android_device_commtiva_z71" >
+						<branch></branch>
+					</git>
+				</repos>
+			</device> -->
+			<device>
+				<name>HP Touchpad</name>
+				<model>Tenderloin</model>
+				<image>images/devices/hp_tenderloin.png</image>
+				<code>tenderloin</code>
+				<repos>
+					<git name="android_device_hp_tenderloin" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="hp-kernel-tenderloin" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_msm7k" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_qcom_display" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_qcom_gps" >
+						<branch name="ics">9</branch>
+					</git>
+					<git name="android_hardware_qcom_media" >
+						<branch name="ics">9</branch>
+					</git>
+				</repos>
+			</device>
+			<!-- <device>
+				<name>Viewsonic G Tablet</name>
+				<model>SMB_A1002</model>
+				<image>images/devices/viewsonic_gtablet.png</image>
+				<code>smb_a1002</code>
+				<repos>
+					<git name="android_device_malata_smb-common" >
+						<branch></branch>
+					</git>
+					<git name="android_device_malata_smb_a1002" >
+						<branch></branch>
+					</git>
+				</repos>
+			</device> -->
+		</oem>
+	</devicesList>
+</project>

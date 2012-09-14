@@ -10,3 +10,9 @@ body {
 .top:hover {
 	color: white;
 }
+.loading-spinner {
+	display: block;
+	background: url(/images/ajax-loader.gif) no-repeat;
+	width: 16px;
+	height: 16px;
+}
