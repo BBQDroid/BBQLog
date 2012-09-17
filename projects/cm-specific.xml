@@ -37,10 +37,10 @@
 						<branch name="jellybean">10</branch>
 						<branch name="ics">9</branch>
 					</git>
-					<!--<git name="android_kernel_asus_tf201" >
-						<branch name="jellybean">10</branch>
-						<branch name="ics">9</branch>
-					</git>-->
+					<git name="android_kernel_asus_tf201" >
+						<branch name="rel-14r7-cleanup">10</branch>
+						<branch name="rel-14r7-cleanup">9</branch>
+					</git>
 				</repos>
 			</device>
 			<device>
@@ -1145,7 +1145,7 @@
 				</repos>
 			</device>
 			<device>
-				<name>Galaxy S II (intl)</name>
+				<name>Galaxy S II (intl) / CM9</name>
 				<model>GT-I9100</model>
 				<image>images/devices/samsung_i9100.png</image>
 				<code>galaxys2</code>
@@ -1154,6 +1154,27 @@
 						<branch name="gingerbread">7</branch>
 						<branch name="ics">9</branch>
 					</git>
+					<git name="android_kernel_samsung_smdk4210" >
+						<branch name="ics">9</branch>
+						<branch name="jellybean">10</branch>
+					</git>
+					<git name="android_hardware_samsung" >
+						<branch name="ics">9</branch>
+						<branch name="jellybean">10</branch>
+					</git>
+					<git name="android_packages_apps_SamsungServiceMode" >
+						<branch name="gingerbread">7</branch>
+						<branch name="ics">9</branch>
+						<branch name="jellybean">10</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Galaxy S II (intl) / CM10</name>
+				<model>GT-I9100</model>
+				<image>images/devices/samsung_i9100.png</image>
+				<code>i9100</code>
+				<repos>
 					<git name="android_kernel_samsung_smdk4210" >
 						<branch name="ics">9</branch>
 						<branch name="jellybean">10</branch>
