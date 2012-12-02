@@ -796,6 +796,17 @@
 					</git>
 				</repos>
 			</device>
+                        <device>
+				<name>Optimus Me</name>
+				<model>P350</model>
+				<image>images/devices/lge_p350.png</image>
+				<code>p350</code>
+				<repos>
+					<git name="android_device_lge_p350" >
+						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
 		</oem>
 		<oem name="Motorola">
 			<device>
