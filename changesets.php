@@ -22,8 +22,8 @@ $Project = strtolower(mysql_real_escape_string($_GET['Project']));
 $Version = strtolower(mysql_real_escape_string($_GET['Version']));
 $Amount = intval($_GET['amount']);
 
-if ($Amount <= 0 || $Amount > 50)
-	$Amount = 50;
+//if ($Amount <= 0 || $Amount > 150)
+	$Amount = 150;
 
 $commits = mysql_query("
     SELECT * FROM commits

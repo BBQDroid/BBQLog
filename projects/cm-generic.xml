@@ -12,77 +12,96 @@
 	<git name="android">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_abi_cpp">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_bionic">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_bootable_bootloader_legacy">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_bootable_diskinstaller">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_bootable_recovery">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_build">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_cts">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_dalvik">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_development">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_device_common">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_device_generic_armv7-a">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_device_generic_armv7-a-neon">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_device_generic_goldfish">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_device_google_accessory_arduino">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_device_google_accessory_demokit">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_device_sample">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_docs_source.android.com">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_aac">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_alsa-lib">
 		<branch name="gingerbread">7</branch>
@@ -92,54 +111,66 @@
 	</git>
 	<git name="android_external_android-mock">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_antlr">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_apache-harmony">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_apache-http">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_apache-xml">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_astl">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_bash">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_bison">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_blktrace">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_bluetooth_bluez">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_bluetooth_glib">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_bluetooth_hcidump">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_bootmenu">
@@ -149,39 +180,48 @@
 	<git name="android_external_bouncycastle">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_bsdiff">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_busybox">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_bzip2">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_checkpolicy">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_chromium">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_chromium-trace">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_cibu-fonts">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_clang">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_clearsilver">
@@ -191,47 +231,58 @@
 	<git name="android_external_compcache">
 		<branch name="master">7</branch>
 		<branch name="master">10</branch>
+		<branch name="master">10.1</branch>
 		<branch name="master">9</branch>
 	</git>
 	<git name="android_external_compiler-rt">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_dbus">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_dexmaker">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_dhcpcd">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_dnsmasq">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_doclava">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_e2fsprogs">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_easymock">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_eclipse-basebuilder">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_eclipse-windowbuilder">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_elfcopy">
 		<branch name="gingerbread">7</branch>
@@ -239,96 +290,117 @@
 	<git name="android_external_elfutils">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_embunit">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_emma">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_esd">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_expat">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_eyes-free">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_fdlibm">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_flac">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_freetype">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_fsck_msdos">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_ganymed-ssh2">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_gcc-demangle">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_genext2fs">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_giflib">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_google-diff-match-patch">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_grub">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_gtest">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_guava">
 		<branch name="gingerbread">7</branch>
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 		<branch name="ics">9</branch>
 	</git>
 	<git name="android_external_hamcrest">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_harfbuzz">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_hostapd">
 		<branch name="gingerbread">7</branch>
 	</git>
 	<git name="android_external_hyphenation">
 		<branch name="jellybean">10</branch>
+		<branch name="cm-10.1">10.1</branch>
 	</git>
 	<git name="android_external_icu4c">
 		<branch name="gingerbread">7</branch>

@@ -3,7 +3,7 @@
  */
 
 var global_CurrentDevice = undefined;
-var global_CurrentVersion = "cm10"; // default
+var global_CurrentVersion = "cm10.1"; // default
 var global_CurrentDate = "";
 var global_DeviceCodeRepos = [];
 var global_ShowTranslations = false; // hide this shit by default
@@ -64,7 +64,7 @@ function toggleTranslations() {
 function loadProjects() {
     $.ajax({
             type:"GET",
-            url:"projects/cm-generic.xml",
+            url:"projects/cm.xml",
             dataType:"xml"})
     .done(function(data) {
             // clear up projectes
@@ -73,8 +73,8 @@ function loadProjects() {
             // gather values
             var projectName = $(data).find("project").children("name").text();
             var shortName = $(data).find("project").children("shortname").text();
-
-            $(data).find("noversion").each(function() {
+		
+            $(data).find("version").each(function() {
                 global_ShortNameToProject[shortName + $(this).text()] = {name: projectName, version: $(this).text()};
                 $("#dropdown-projects").append('<li><a href="#" onclick="setProject(\'' + shortName + '\', ' + $(this).text() + ');return false;"><strong>' + projectName + ' ' + $(this).text() + '</strong></a></li>');
             });
@@ -88,7 +88,7 @@ function loadProjects() {
 function updateBodyData() {
 	var url = window.location.hash.substring(1);
 	var params = url.split("/");
-	var version = (params[1] == undefined ? "cm10" : params[1]);
+	var version = (params[1] == undefined ? "cm10.1" : params[1]);
 	
 	if (global_CurrentDevice != params[0]) {
 		updateListNightlies(params[0], params[1], params[2]);
@@ -122,12 +122,12 @@ function redirectToDevice(_device, _date) {
 }
 
 /**
- *  Load devices list from cm-specific.xml
+ *  Load devices list from cm.xml
  */
 function loadDevices() {
 	$.ajax({
 		type:"GET",
-		url:"projects/cm-specific.xml",
+		url:"projects/cm.xml",
 		dataType:"xml"})
 	.done(function(data) {
 		$("#nav_DevicesList").html('');
@@ -330,7 +330,7 @@ function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) 
 		var dots = $('.loading .loading-dots');
 		if (dots.length <= 0) return;
 		dots.append(".");
-		console.log(dots);
+		//console.log(dots);
 		if (dots.html().length > 3) {
 			dots.html("");
 		}

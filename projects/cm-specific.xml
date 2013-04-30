@@ -59,6 +59,20 @@
 					</git>
 				</repos>
 			</device>
+			<device>
+				<name>Transformer Pad Infinity TF700T</name>
+				<model>TF700T</model>
+				<image>images/devices/asus_tf201.png</image>
+				<code>tf700t</code>
+				<repos>
+					<git name="android_device_asus_tf700t" >
+						<branch name="jellybean">10</branch>
+					</git>
+					<git name="android_kernel_asus_tf700t" >
+						<branch name="jellybean">10</branch>
+					</git>
+				</repos>
+			</device>
 		</oem>
 		<oem name="Geeksphone">
 			<!--<device>
@@ -667,6 +681,17 @@
 				<repos>
 					<git name="android_device_lge_p920" >
 						<branch name="gingerbread">7</branch>
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Optimus Me</name>
+				<model>P350</model>
+				<image>images/devices/lge_p350.png</image>
+				<code>p350</code>
+				<repos>
+					<git name="android_device_lge_p350">
+						<branch name="gingerbread">Ã</branch>
 					</git>
 				</repos>
 			</device>
