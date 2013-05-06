@@ -1659,6 +1659,13 @@
 		<git name="android_kernel_oppo_find5">
 			<branch name="cm-10.1" version="10.1" />
 		</git>
+			</git>
+		<git name="android_device_sony_yuga">
+			<branch name="cm-10.1" version="10.1" />
+		</git>
+		<git name="android_kernel_sony_apq8064">
+			<branch name="cm-10.1" version="10.1" />
+		</git>
 		<git name="android_device_samsung_crespo" >
 			<branch name="jellybean" version="10" />
 			<branch name="cm-10.1" version="10.1" />
@@ -4570,6 +4577,20 @@
 					<git name="sony-kernel-msm8x60" >
 						<branch name="jellybean" version="10" />
 						<branch name="mr1-staging" version="10.1" />
+					</git>
+				</repos>
+			</device>
+			<device>
+			<name>Xperia Z</name>
+				<model>LT36p</model>
+				<image>images/devices/sony_yuga.png</image>
+				<code>yuga</code>
+				<repos>
+					<git name="android_device_sony_yuga" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_kernel_sony_apq8064" >
+						<branch name="cm-10.1" version="10.1" />
 					</git>
 				</repos>
 			</device>
