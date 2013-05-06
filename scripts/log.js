@@ -277,7 +277,7 @@ function updateListNightlies(_device, _version, _date) {
  * Updates the changeset list
  */
 function updateChangeset(_device, _version, _date, _amount, _append, _sortCode) {
-	_amount = typeof _amount !== 'undefined' ? _amount : 50;
+	_amount = typeof _amount !== 'undefined' ? _amount : 150;
 	_append = typeof _append !== 'undefined' ? _append : false;
 	_sortCode = typeof _sortCode !== 'undefined' ? _sortCode : '';
 
