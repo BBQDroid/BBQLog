@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
 	<name>Cyanogenmod</name>
@@ -2646,7 +2645,7 @@
 				<code>dream_sapphire</code>
 				<repos>
 					<git name="android_device_htc_dream_sapphire" >
-						branch name="gingerbread" version="7" />
+						<branch name="gingerbread" version="7" />
 					</git>
 				</repos>
 			</device>
