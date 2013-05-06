@@ -1827,6 +1827,12 @@
 		<git name="lge-kernel-mako">
 			<branch name="jellybean" version="10" />
 		</git>
+		<git name="android_device_lge_e975" >
+                        <branch name="cm-10.1" version="10" />
+                </git>
+                <git name="lge-kernel-gproj">
+                        <branch name="cm-10.1" version="10" />
+                </git>
 		<git name="android_device_lge_p930" >
 			<branch name="jellybean" version="10" />
 			<branch name="ics" version="9" />
@@ -3027,6 +3033,20 @@
 					</git>
 				</repos>
 			</device>
+			<device>
+                                <name>Optimus G (intl)</name>
+                                <model>E975</model>
+                                <image>images/devices/lge_e975.png</image>
+                                <code>e975</code>
+                                <repos>
+                                        <git name="android_device_lge_e975" >
+                                                <branch name="cm-10.1" version="10.1" />
+                                        </git>
+                                        <git name="lge-kernel-gproj" >
+                                                <branch name="cm-10.1" version="10.1" />
+                                        </git>
+                                </repos>
+                        </device>
 			<device>
 				<name>Optimus LTE</name>
 				<model>P930</model>
