@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
 	<name>Cyanogenmod</name>
@@ -1652,6 +1653,12 @@
 		<git name="android_kernel_htc_msm8660">
 			<branch name="jellybean" version="10" />
 		</git>
+		<git name="android_device_oppo_find5">
+			<branch name="cm-10.1" version="10.1" />
+		</git>
+		<git name="android_kernel_oppo_find5">
+			<branch name="cm-10.1" version="10.1" />
+		</git>
 		<git name="android_device_samsung_crespo" >
 			<branch name="jellybean" version="10" />
 			<branch name="cm-10.1" version="10.1" />
@@ -2639,7 +2646,7 @@
 				<code>dream_sapphire</code>
 				<repos>
 					<git name="android_device_htc_dream_sapphire" >
-						<branch name="gingerbread" version="7" />
+						branch name="gingerbread" version="7" />
 					</git>
 				</repos>
 			</device>
@@ -4700,6 +4707,20 @@
 					</git>
 					<git name="android_hardware_qcom_media" >
 						<branch name="ics" version="9" />
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Find 5</name>
+				<model></model>
+				<image></image>
+				<code>find5</code>
+				<repos>
+					<git name="android_device_oppo_find5">
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_kernel_oppo_find5">
+						<branch name="cm-10.1" version="10.1" />
 					</git>
 				</repos>
 			</device>
