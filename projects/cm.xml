@@ -4556,20 +4556,95 @@
 			<device>
 				<name>Xperia T</name>
 				<model>LT30p</model>
-				<image>images/devices/sony_nozomi.png</image>
+				<image>images/devices/sony_mint.png</image>
 				<code>mint</code>
 				<repos>
+					<git name="android_device_sony_common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_qcom-common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
 					<git name="android_device_sony_blue-common" >
 						<branch name="jellybean" version="10" />
-						<branch name="mr1-staging" version="10.1" />
+						<branch name="cm-10.1" version="10.1" />
 					</git>
 					<git name="android_device_sony_mint" >
 						<branch name="jellybean" version="10" />
-						<branch name="mr1-staging" version="10.1" />
+						<branch name="cm-10.1" version="10.1" />
 					</git>
-					<git name="sony-kernel-msm8x60" >
+					<git name="android_kernel_sony_msm8x60" >
 						<branch name="jellybean" version="10" />
-						<branch name="mr1-staging" version="10.1" />
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia V</name>
+				<model>LT25i</model>
+				<image>images/devices/sony_tsubasa.png</image>
+				<code>tsubasa</code>
+				<repos>
+					<git name="android_device_sony_common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_qcom-common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_blue-common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_tsubasa" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_kernel_sony_msm8x60" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Z</name>
+				<model>C6603</model>
+				<image>images/devices/sony_yuga.png</image>
+				<code>yuga</code>
+				<repos>
+					<git name="android_device_sony_common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_qcom-common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_fusion3-common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_yuga" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_kernel_sony_apq8064" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia ZL</name>
+				<model>C6503</model>
+				<image>images/devices/sony_odin.png</image>
+				<code>odin</code>
+				<repos>
+					<git name="android_device_sony_common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_qcom-common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_fusion3-common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_odin" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_kernel_sony_apq8064" >
+						<branch name="cm-10.1" version="10.1" />
 					</git>
 				</repos>
 			</device>
