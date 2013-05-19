@@ -4704,6 +4704,35 @@
 						<branch name="jellybean" version="10" />
 						<branch name="cm-10.1" version="10.1" />
 					</git>
+					<git name="android_hardware_sony_DASH" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+				</repos>
+			</device>
+			<device>
+				<name>Xperia Tablet Z</name>
+				<model>SGP321</model>
+				<image>images/devices/sony_pollux.png</image>
+				<code>pollux</code>
+				<repos>
+					<git name="android_device_sony_common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_qcom-common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_fusion3-common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_device_sony_pollux" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_kernel_sony_apq8064" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_hardware_sony_DASH" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
 				</repos>
 			</device>
 			<device>
@@ -4725,6 +4754,9 @@
 						<branch name="cm-10.1" version="10.1" />
 					</git>
 					<git name="android_kernel_sony_msm8x60" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_hardware_sony_DASH" >
 						<branch name="cm-10.1" version="10.1" />
 					</git>
 				</repos>
@@ -4750,6 +4782,9 @@
 					<git name="android_kernel_sony_apq8064" >
 						<branch name="cm-10.1" version="10.1" />
 					</git>
+					<git name="android_hardware_sony_DASH" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
 				</repos>
 			</device>
 			<device>
@@ -4771,6 +4806,9 @@
 						<branch name="cm-10.1" version="10.1" />
 					</git>
 					<git name="android_kernel_sony_apq8064" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
+					<git name="android_hardware_sony_DASH" >
 						<branch name="cm-10.1" version="10.1" />
 					</git>
 				</repos>
