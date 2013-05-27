@@ -4724,6 +4724,9 @@
 					<git name="android_device_sony_fusion3-common" >
 						<branch name="cm-10.1" version="10.1" />
 					</git>
+					<git name="android_device_sony_pollux-common" >
+						<branch name="cm-10.1" version="10.1" />
+					</git>
 					<git name="android_device_sony_pollux" >
 						<branch name="cm-10.1" version="10.1" />
 					</git>
