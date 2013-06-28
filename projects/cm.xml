@@ -2300,7 +2300,12 @@
 			<branch name="cm-10.1" version="10.1" />
 		</git>
 		<git name="android_device_bn_encore" >
+			<branch name="cm-10.1" version="10.1" />
+			<branch name="jellybean" version="10" />
 			<branch name="gingerbread" version="7" />
+		</git>
+		<git name="android_kernel_bn_encore" >
+			<branch name="encore-omap3-3" version="10.1" />
 		</git>
 		<git name="android_device_hp_tenderloin" >
 			<branch name="ics" version="9" />
@@ -4903,7 +4908,12 @@
 				<code>encore</code>
 				<repos>
 					<git name="android_device_bn_encore" >
+						<branch name="cm-10.1" version="10.1" />
+						<branch name="jellybean" version="10" />
 						<branch name="gingerbread" version="7" />
+					</git>
+					<git name="android_kernel_bn_encore">
+						<branch name="encore-omap3-3" version="10.1" />
 					</git>
 				</repos>
 			</device>
